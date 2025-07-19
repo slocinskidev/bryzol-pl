@@ -10,7 +10,7 @@ import heroImage from "@/assets/hero.jpeg";
 
 export function Hero() {
 	return (
-		<div id="home" className="relative min-h-screen font-inter">
+		<div id="home" className="relative min-h-screen font-inter pt-32 lg:pt-40">
 			<div className="absolute inset-0 z-0">
 				<Image
 					src={heroImage}
@@ -22,7 +22,7 @@ export function Hero() {
 				<div className="absolute inset-0 bg-black/50" />
 			</div>
 
-			<div className="relative z-10 flex min-h-screen items-center justify-center px-6">
+			<div className="relative z-10 flex min-h-[calc(100vh-8rem)] items-center justify-center px-6 pb-20">
 				<div className="text-center max-w-4xl relative">
 					<motion.div
 						initial={{ opacity: 0, y: 20 }}
@@ -97,7 +97,7 @@ export function Hero() {
 						initial={{ opacity: 0, y: 20 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.8, delay: 0.8 }}
-						className="flex flex-col sm:flex-row items-center justify-center gap-4"
+						className="flex-col sm:flex-row items-center justify-center gap-4 hidden md:flex"
 					>
 						<motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
 							<Button
@@ -133,7 +133,7 @@ export function Hero() {
 				initial={{ opacity: 0, y: 20 }}
 				animate={{ opacity: 1, y: 0 }}
 				transition={{ duration: 0.8, delay: 1.2 }}
-				className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20"
+				className="absolute bottom-2 left-1/2 transform -translate-x-1/2 z-20 pb-4 hidden md:block"
 			>
 				<div className="flex flex-col items-center gap-4">
 					<motion.span

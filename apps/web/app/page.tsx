@@ -8,10 +8,12 @@ export default function Page() {
 	return (
 		<div className="bg-white dark:bg-black transition-colors duration-500">
 			<Hero />
-			<About />
-			<Services />
-			<Menu />
-			<Contact />
+			<div className="relative z-10">
+				<About />
+				<Services />
+				<Menu />
+				<Contact />
+			</div>
 		</div>
 	);
 }
