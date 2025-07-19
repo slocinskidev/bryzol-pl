@@ -1,6 +1,8 @@
 "use client";
 
+import { AuroraText } from "@workspace/ui/components/aurora-text";
 import { Button } from "@workspace/ui/components/button";
+import { WordRotate } from "@workspace/ui/components/word-rotate";
 import { ArrowRight, Mail, Phone } from "lucide-react";
 import { motion } from "motion/react";
 import Image from "next/image";
@@ -17,7 +19,7 @@ export function Hero() {
 					className="object-cover"
 					priority
 				/>
-				<div className="absolute inset-0 bg-black/40" />
+				<div className="absolute inset-0 bg-black/50" />
 			</div>
 
 			<div className="relative z-10 flex min-h-screen items-center justify-center px-6">
@@ -26,14 +28,33 @@ export function Hero() {
 						initial={{ opacity: 0, y: 20 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.8, delay: 0.2 }}
+						className="mb-4"
+					>
+						<WordRotate
+							words={[
+								"Profesjonalny catering",
+								"Domowe smaki",
+								"Mania gotowania",
+							]}
+							className="text-lg md:text-xl text-white/70 font-medium tracking-wide"
+						/>
+					</motion.div>
+
+					<motion.div
+						initial={{ opacity: 0, y: 20 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.8, delay: 0.3 }}
 						className="mb-6"
 					>
 						<h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 tracking-tight">
-							Catering, który robi wrażenie
+							Catering, który{" "}
+							<AuroraText
+								className="text-4xl md:text-6xl lg:text-7xl font-bold"
+								speed={0.8}
+							>
+								robi wrażenie
+							</AuroraText>
 						</h1>
-						<h2 className="text-2xl md:text-3xl lg:text-4xl font-light text-white/90 mb-6">
-							Od pierwszego kęsa
-						</h2>
 					</motion.div>
 
 					<motion.div
@@ -45,7 +66,13 @@ export function Hero() {
 						<p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-3xl mx-auto">
 							Wyjątkowe dania z sercem, podane ze smakiem. Od codziennych
 							obiadów po eleganckie przyjęcia. Bryzol łączy domową kuchnię z
-							nowoczesną jakością. Zaskocz gości. Zachwyć siebie.
+							nowoczesną jakością.{" "}
+							<AuroraText
+								className="text-lg md:text-xl font-semibold"
+								speed={0.9}
+							>
+								Zaskocz gości. Zachwyć siebie.
+							</AuroraText>
 						</p>
 					</motion.div>
 
