@@ -82,14 +82,10 @@ export function Hero() {
 						transition={{ duration: 0.8, delay: 0.6 }}
 						className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
 					>
-						<Button size="lg">
-							Zobacz menu
-							<ArrowRight className="w-5 h-5" />
-						</Button>
+						<Button size="lg">Zobacz menu</Button>
 
 						<Button size="lg" variant="outline">
 							Skontaktuj się
-							<ArrowRight className="w-5 h-5" />
 						</Button>
 					</motion.div>
 
