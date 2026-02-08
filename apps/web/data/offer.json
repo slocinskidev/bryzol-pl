@@ -1,0 +1,1368 @@
+{
+  "sections": [
+    {
+      "id": "pelna-oferta",
+      "slug": "pelna-oferta",
+      "title": "Pełna oferta cateringowa",
+      "description": "Catering na wszelkie okazje. Żory i okolice do 30 km.",
+      "categories": [
+        {
+          "id": "dania-cieple",
+          "title": "Dania ciepłe",
+          "note": "Minimalne zamówienie to 5 szt./porcji. Jedna porcja to 100–130 g mięsa gotowego.",
+          "items": [
+            {
+              "id": "pieczen-wieprzowa",
+              "name": "Pieczeń wieprzowa",
+              "price": 19,
+              "unit": "porcja"
+            },
+            {
+              "id": "poledwiczki-grzybowe",
+              "name": "Polędwiczki wieprzowe z sosem grzybowym lub pieprzowym",
+              "price": 22,
+              "unit": "porcja"
+            },
+            {
+              "id": "poledwiczka-wloska",
+              "name": "Polędwiczka wieprzowa po włosku (ser, sos pomidorowy)",
+              "price": 23,
+              "unit": "porcja"
+            },
+            {
+              "id": "udko-kaczki",
+              "name": "Udko z kaczki z rozmarynem pieczone lub w pomarańczach",
+              "price": 32,
+              "unit": "szt"
+            },
+            {
+              "id": "piers-kaczki",
+              "name": "Pierś z kaczki z rozmarynem",
+              "price": 26,
+              "unit": "porcja"
+            },
+            {
+              "id": "piers-kurczaka-camembert",
+              "name": "Pierś z kurczaka z masłem ziołowym i serem camembert",
+              "price": 23,
+              "unit": "szt"
+            },
+            {
+              "id": "kurczak-caprese",
+              "name": "Kurczak Caprese (grillowana pierś, mozzarella, pomidor, bazylia)",
+              "price": 22,
+              "unit": "szt"
+            },
+            {
+              "id": "filet-indyka",
+              "name": "Filet z indyka w migdałach",
+              "price": 22,
+              "unit": "szt"
+            },
+            {
+              "id": "skrzydelka-bbq",
+              "name": "Skrzydełka BBQ",
+              "price": 5,
+              "unit": "szt"
+            },
+            {
+              "id": "skrzydelka-slodko-ostre",
+              "name": "Skrzydełka słodko-ostre",
+              "price": 6,
+              "unit": "szt"
+            },
+            {
+              "id": "kotleciki-drobiowe",
+              "name": "Kotleciki drobiowe (80 g)",
+              "price": 9,
+              "unit": "porcja"
+            },
+            {
+              "id": "kotlet-de-volaille",
+              "name": "Kotlet de volaille (masło, pierś z kurczaka, natka pietruszki, panierka)",
+              "price": 23,
+              "unit": "szt"
+            },
+            {
+              "id": "kotlet-schabowy",
+              "name": "Kotlet schabowy",
+              "price": 19,
+              "unit": "szt"
+            },
+            {
+              "id": "szwajcar",
+              "name": "Szwajcar (schab, ser, panierka)",
+              "price": 22,
+              "unit": "szt"
+            },
+            {
+              "id": "schab-pieczarki",
+              "name": "Panierowany schab z pieczarkami",
+              "price": 22,
+              "unit": "szt"
+            },
+            {
+              "id": "schab-ser-wedzony",
+              "name": "Schab z serem wędzonym (sauté)",
+              "price": 23,
+              "unit": "szt"
+            },
+            {
+              "id": "rolada-drobiowa-szpinak",
+              "name": "Rolada drobiowa ze szpinakiem w szynce",
+              "price": 21,
+              "unit": "szt"
+            },
+            {
+              "id": "roladka-kurczak-warzywa",
+              "name": "Panierowana roladka z kurczaka z farszem warzywno-serowym",
+              "price": 24,
+              "unit": "szt"
+            },
+            {
+              "id": "rolada-wieprzowa",
+              "name": "Rolada wieprzowa (farsz krojony)",
+              "price": 24,
+              "unit": "szt"
+            },
+            {
+              "id": "rolada-wolowa",
+              "name": "Rolada wołowa (farsz krojony)",
+              "price": 34,
+              "unit": "szt"
+            },
+            {
+              "id": "golonka-bawarska",
+              "name": "Golonka po bawarsku pieczona duszona w warzywach ok. 250 g",
+              "price": 33,
+              "unit": "szt"
+            },
+            {
+              "id": "udko-kurczaka-faszerowane",
+              "name": "Udko z kurczaka b/k faszerowane z suszonymi pomidorami",
+              "price": 19,
+              "unit": "szt"
+            },
+            {
+              "id": "udko-kurczaka-rozmaryn",
+              "name": "Udko z kurczaka b/k z rozmarynem",
+              "price": 12,
+              "unit": "szt"
+            },
+            {
+              "id": "udko-kurczaka-czosnek",
+              "name": "Udko z kurczaka z/k z czosnkiem",
+              "price": 12,
+              "unit": "szt"
+            },
+            {
+              "id": "karkowka-grill",
+              "name": "Karkówka z grilla (150 g)",
+              "price": 25,
+              "unit": "szt"
+            },
+            {
+              "id": "filet-kurczak-grill",
+              "name": "Filet z kurczaka z grilla (130 g)",
+              "price": 21,
+              "unit": "szt"
+            },
+            {
+              "id": "wolowina-nerkowce",
+              "name": "Wołowina z orzechami nerkowca i selerem naciowym (kuchnia orientalna)",
+              "price": 35,
+              "unit": "porcja"
+            },
+            {
+              "id": "krolik-smietana",
+              "name": "Królik w śmietanie (200 g)",
+              "price": 39,
+              "unit": "porcja"
+            },
+            {
+              "id": "zeberka-pieczone",
+              "name": "Żeberka pieczone 150 g",
+              "price": 27,
+              "unit": "szt"
+            },
+            {
+              "id": "policzki-wolowe",
+              "name": "Policzki wołowe w sosie winnym w vol au vent (100 g)",
+              "price": 31,
+              "unit": "porcja"
+            },
+            {
+              "id": "mostek-wołowy-bbq",
+              "name": "Mostek wołowy bbq (100 g)",
+              "price": 29,
+              "unit": "porcja"
+            },
+            {
+              "id": "zeberka-wołowe-bbq",
+              "name": "Żeberka wołowe bbq (300 g)",
+              "price": 34,
+              "unit": "szt"
+            },
+            {
+              "id": "ozorki-chrzan",
+              "name": "Ozorki wołowe z sosem chrzanowym (100 g)",
+              "price": 28,
+              "unit": "porcja"
+            },
+            {
+              "id": "cielecina-szynka",
+              "name": "Cielęcina w szynce dojrzewającej (120 g)",
+              "price": 38,
+              "unit": "porcja"
+            },
+            {
+              "id": "kaszanka-cebula",
+              "name": "Kaszanka z cebulą w foli",
+              "price": 13,
+              "unit": "szt"
+            },
+            {
+              "id": "sliwka-boczek",
+              "name": "Śliwka w boczku",
+              "price": 4,
+              "unit": "szt"
+            },
+            {
+              "id": "pieczarki-faszerowane",
+              "name": "Pieczarki faszerowane mięsem",
+              "price": 5,
+              "unit": "szt"
+            },
+            {
+              "id": "krokiet",
+              "name": "Krokiet z mięsem lub kapusta grzyb",
+              "price": 11,
+              "unit": "szt"
+            },
+            {
+              "id": "kielbasa-pieczona",
+              "name": "Kiełbasa pieczona",
+              "price": 12,
+              "unit": "szt"
+            },
+            {
+              "id": "pierogi-gotowane",
+              "name": "Pierogi z mięsem, ruskie, kapusta grzyb – gotowane",
+              "price": 3.8,
+              "unit": "szt"
+            },
+            {
+              "id": "pierogi-opiekane",
+              "name": "Pierogi z mięsem, ruskie, kapusta grzyb – opiekane",
+              "price": 4.1,
+              "unit": "szt"
+            }
+          ]
+        },
+        {
+          "id": "ryby",
+          "title": "Ryby",
+          "items": [
+            {
+              "id": "losos-szpinak",
+              "name": "Łosoś ze szpinakiem 150 g",
+              "price": 35,
+              "unit": "szt"
+            },
+            {
+              "id": "miruna-maslany",
+              "name": "Miruna w sosie maślane cytrynowym 120 g",
+              "price": 32,
+              "unit": "szt"
+            },
+            {
+              "id": "krewetki-czosnek",
+              "name": "Krewetki w sosie czosnkowym 100 g",
+              "price": 28,
+              "unit": "porcja"
+            },
+            {
+              "id": "roladka-sola",
+              "name": "Roladka z soli ze szpinakiem i serem pleśniowym 100 g",
+              "price": 32,
+              "unit": "szt"
+            }
+          ]
+        },
+        {
+          "id": "pieczenie",
+          "title": "Pieczenie",
+          "items": [
+            {
+              "id": "udziec-wieprzowy",
+              "name": "Udziec wieprzowy pieczony 10–12 kg (40–50 osób)",
+              "price": 85,
+              "unit": "kg"
+            },
+            {
+              "id": "indyk-faszerowany",
+              "name": "Indyk b/k faszerowany mięsem (15–20 osób)",
+              "price": 420,
+              "unit": "szt"
+            },
+            {
+              "id": "kaczka-faszerowana",
+              "name": "Kaczka b/k faszerowana mięsem i owocami (8–10 osób)",
+              "price": 195,
+              "unit": "szt"
+            },
+            {
+              "id": "poledwica-wolowa",
+              "name": "Polędwica wołowa w ziołach pieczona w całości podana z grzybami (8–10 osób)",
+              "price": 390,
+              "unit": "szt"
+            }
+          ]
+        },
+        {
+          "id": "zapiekanki",
+          "title": "Zapiekanki",
+          "note": "Foremka 30×20 cm – 6–8 osób.",
+          "items": [
+            {
+              "id": "cukinia-zapiekana",
+              "name": "Cukinia zapiekana z pomidorami (cukinia, sos pomidorowy, sos beszamelowy, ser)",
+              "price": 110,
+              "unit": "szt"
+            },
+            {
+              "id": "musaka",
+              "name": "Musaka (bakłażan, sos beszamelowy, sos mięsny z cynamonem, ser)",
+              "price": 140,
+              "unit": "szt"
+            },
+            {
+              "id": "lasagne-szpinak",
+              "name": "Lasagne ze szpinakiem (makaron, szpinak, feta, lazur, sos beszamelowy, zioła, mozzarella)",
+              "price": 120,
+              "unit": "szt"
+            }
+          ]
+        },
+        {
+          "id": "wegetarianskie",
+          "title": "Wegetariańskie",
+          "items": [
+            {
+              "id": "paluch-mozzarella",
+              "name": "Paluch z serem mozzarella",
+              "price": 4,
+              "unit": "szt"
+            },
+            {
+              "id": "krazki-cebulowe",
+              "name": "Krążki cebulowe 100 g",
+              "price": 10,
+              "unit": "porcja"
+            },
+            {
+              "id": "pieczarka-panierowana",
+              "name": "Pieczarka panierowana",
+              "price": 4,
+              "unit": "szt"
+            },
+            {
+              "id": "cukinia-pomidory-mozzarella",
+              "name": "Cukinia z suszonymi pomidorami i mozzarellą",
+              "price": 6,
+              "unit": "szt"
+            },
+            {
+              "id": "szaszlyk-warzywny",
+              "name": "Szaszłyk warzywny (cukinia, papryka, cebula, pieczarka)",
+              "price": 14,
+              "unit": "szt"
+            },
+            {
+              "id": "ziemniak-faszerowany",
+              "name": "Ziemniak faszerowany z serem i ziołami (pół ziemniaka)",
+              "price": 5,
+              "unit": "szt"
+            },
+            {
+              "id": "pierogi-ruskie-opiekane",
+              "name": "Pierogi ruskie – opiekane",
+              "price": 4.1,
+              "unit": "szt"
+            },
+            {
+              "id": "pierogi-ruskie-gotowane",
+              "name": "Pierogi ruskie – gotowane",
+              "price": 3.8,
+              "unit": "szt"
+            },
+            {
+              "id": "krokiet-kapusta-grzyby",
+              "name": "Krokiet z kapustą i grzybami",
+              "price": 11,
+              "unit": "szt"
+            }
+          ]
+        },
+        {
+          "id": "zupy",
+          "title": "Zupy",
+          "note": "Porcja to 350 ml zupy.",
+          "items": [
+            {
+              "id": "krem-brokul",
+              "name": "Krem z brokuł z grzankami",
+              "price": 11,
+              "unit": "porcja"
+            },
+            {
+              "id": "krem-pieczarkowy",
+              "name": "Krem pieczarkowy z groszkiem ptysiowym",
+              "price": 11,
+              "unit": "porcja"
+            },
+            {
+              "id": "krem-szpinakowy",
+              "name": "Krem szpinakowy ze śmietanką i prażonymi migdałami",
+              "price": 11,
+              "unit": "porcja"
+            },
+            {
+              "id": "krem-pomidorowy",
+              "name": "Krem pomidorowy z mozzarellą, grzankami",
+              "price": 11,
+              "unit": "porcja"
+            },
+            {
+              "id": "krem-cebulowy",
+              "name": "Krem cebulowy z grzankami",
+              "price": 11,
+              "unit": "porcja"
+            },
+            {
+              "id": "krem-dyniowy",
+              "name": "Krem z dyni (sezonowo – jesień oraz zima)",
+              "price": 11,
+              "unit": "porcja"
+            },
+            { "id": "zurek", "name": "Żurek", "price": 12, "unit": "porcja" },
+            {
+              "id": "zupa-meksykanska",
+              "name": "Zupa meksykańska (mięso mielone, mięso z kurczaka, fasola, kukurydza, papryka, pomidory)",
+              "price": 13,
+              "unit": "porcja"
+            },
+            {
+              "id": "zupa-gulaszowa",
+              "name": "Zupa gulaszowa (wieprzowina, ziemniaki, ogórek)",
+              "price": 16,
+              "unit": "porcja"
+            },
+            {
+              "id": "bogracz",
+              "name": "Bogracz (wołowina, kluseczki, papryka)",
+              "price": 20,
+              "unit": "porcja"
+            },
+            {
+              "id": "zupa-toskanska",
+              "name": "Zupa toskańska z łososiem (cukinia, pomidory, zioła, łosoś świeży)",
+              "price": 13,
+              "unit": "porcja"
+            },
+            {
+              "id": "zupa-tajska",
+              "name": "Zupa tajska z mleczkiem kokosowym (pikantna)",
+              "price": 20,
+              "unit": "porcja"
+            },
+            {
+              "id": "rosol",
+              "name": "Rosół z makaronem",
+              "price": 9,
+              "unit": "porcja"
+            },
+            {
+              "id": "barszcz",
+              "name": "Barszcz",
+              "price": 9,
+              "unit": "porcja"
+            },
+            {
+              "id": "zupa-grzybowa",
+              "name": "Zupa grzybowa",
+              "price": 11,
+              "unit": "porcja"
+            },
+            {
+              "id": "zupa-serowa",
+              "name": "Zupa serowa",
+              "price": 11,
+              "unit": "porcja"
+            },
+            {
+              "id": "grochowka",
+              "name": "Grochówka",
+              "price": 11,
+              "unit": "porcja"
+            },
+            {
+              "id": "gazpacho",
+              "name": "Gazpacho",
+              "price": 12,
+              "unit": "porcja"
+            },
+            {
+              "id": "chlodnik",
+              "name": "Chłodnik litewski",
+              "price": 9,
+              "unit": "porcja"
+            }
+          ]
+        },
+        {
+          "id": "przekaski-zimne",
+          "title": "Przekąski zimne",
+          "items": [
+            {
+              "id": "ruloniki-szynka-grzyby",
+              "name": "Ruloniki z szynki z nadzieniem grzybowym lub chrzanowym",
+              "price": 3.5,
+              "unit": "szt"
+            },
+            {
+              "id": "ruloniki-ser-orzechy",
+              "name": "Ruloniki z sera żółtego z pastą orzechową",
+              "price": 3.5,
+              "unit": "szt"
+            },
+            {
+              "id": "rulonik-szynka-dojrzewajaca",
+              "name": "Rulonik z szynki dojrzewającej z rukolą i orzechami",
+              "price": 5.5,
+              "unit": "szt"
+            },
+            {
+              "id": "jajka-pieczarki",
+              "name": "Jajka faszerowane pieczarkami",
+              "price": 4.5,
+              "unit": "szt"
+            },
+            {
+              "id": "jajka-lososiowa",
+              "name": "Jajka faszerowane pastą łososiową",
+              "price": 5,
+              "unit": "szt"
+            },
+            {
+              "id": "tatar-sledziowy",
+              "name": "Tatar śledziowy w vol au vent",
+              "price": 4,
+              "unit": "szt"
+            },
+            {
+              "id": "tatar-lososc",
+              "name": "Tatar z łososia 40 g",
+              "price": 9,
+              "unit": "szt"
+            },
+            {
+              "id": "tatar-wolowy",
+              "name": "Tatar wołowy z ogórkiem i cebulą 60 g",
+              "price": 11,
+              "unit": "szt"
+            },
+            {
+              "id": "sledz-korzenny",
+              "name": "Śledź korzenny na jajku",
+              "price": 5,
+              "unit": "szt"
+            },
+            {
+              "id": "sledz-bakalie",
+              "name": "Śledź z bakaliami 100 g",
+              "price": 7,
+              "unit": "porcja"
+            },
+            {
+              "id": "sledz-smietana",
+              "name": "Śledź w śmietanie 100 g",
+              "price": 6,
+              "unit": "porcja"
+            },
+            {
+              "id": "losos-ajwar",
+              "name": "Łosoś z ajwarem",
+              "price": 5.5,
+              "unit": "szt"
+            },
+            {
+              "id": "poledwiczki-pomidory",
+              "name": "Polędwiczka wieprzowa nadziewana pomidorami suszonymi 1,5 plastra",
+              "price": 5.5,
+              "unit": "porcja"
+            },
+            {
+              "id": "pomidorki-mozzarella",
+              "name": "Pomidorki koktajlowe z mozzarellą (koreczek)",
+              "price": 4,
+              "unit": "szt"
+            },
+            {
+              "id": "muszle-makaronowe",
+              "name": "Muszle makaronowe nadziewane farszem warzywno-mięsnym",
+              "price": 4.5,
+              "unit": "szt"
+            },
+            {
+              "id": "tortilla-kurczak",
+              "name": "Tortilla z kurczakiem (pokrojona na kawałki – jeden kęs)",
+              "price": 5,
+              "unit": "szt"
+            },
+            {
+              "id": "tortilla-wolowina",
+              "name": "Tortilla z szarpaną wołowiną (pokrojona na kawałki – jeden kęs)",
+              "price": 7,
+              "unit": "szt"
+            },
+            {
+              "id": "tortilla-warzywa",
+              "name": "Tortilla z warzywami i serem (pokrojona na kawałki – jeden kęs)",
+              "price": 5,
+              "unit": "szt"
+            },
+            {
+              "id": "kurczak-patyk",
+              "name": "Pikantny kurczak na patyku z sosem czosnkowym lub sosem słodko ostrym",
+              "price": 4,
+              "unit": "szt"
+            },
+            {
+              "id": "rozbef-kaczka",
+              "name": "Rozbef lub pierś z kaczki z konfiturą z cebuli czerwonej i wiśniami 1,5 plastra",
+              "price": 6,
+              "unit": "porcja"
+            },
+            {
+              "id": "ryba-grecka",
+              "name": "Ryba po grecku 100 g",
+              "price": 11,
+              "unit": "porcja"
+            },
+            {
+              "id": "galaretka-drobiowa",
+              "name": "Galaretka drobiowa",
+              "price": 8,
+              "unit": "szt"
+            },
+            {
+              "id": "galaretka-wieprzowa",
+              "name": "Galaretka wieprzowa na polędwiczkach",
+              "price": 9,
+              "unit": "szt"
+            },
+            {
+              "id": "galaretka-kaczka",
+              "name": "Galaretka z kaczki i żurawiną",
+              "price": 14,
+              "unit": "szt"
+            },
+            {
+              "id": "krewetki-melon",
+              "name": "Krewetki z melonem i ogórkiem (koreczek)",
+              "price": 5,
+              "unit": "szt"
+            },
+            {
+              "id": "tartinki",
+              "name": "Tartinki (małe kanapeczki z wędliną, jarskie, z rybą)",
+              "price": 5.5,
+              "unit": "szt"
+            },
+            {
+              "id": "koreczki-mix",
+              "name": "Koreczki mix (ser, kurczak, śledź, łosoś wędzony, owoce, itp.)",
+              "price": 3,
+              "unit": "szt"
+            },
+            {
+              "id": "sakiewki-szynka",
+              "name": "Sakiewki z szynki dojrzewającej (ser pleśniowy, kiełki rzodkiewki, pasta chrzanowa)",
+              "price": 5.5,
+              "unit": "szt"
+            },
+            {
+              "id": "pasta-makrela",
+              "name": "Pasta z makreli w papierze ryżowym z prażonymi pestkami (makrela, cebula, ogórek, pestki, kiełki rzodkiewki, majonez)",
+              "price": 6,
+              "unit": "szt"
+            },
+            {
+              "id": "pasztet-konfitura",
+              "name": "Pasztet pieczony z konfiturą z czerwonej cebuli i wiśniami 30 g",
+              "price": 4.5,
+              "unit": "szt"
+            },
+            {
+              "id": "omlet-lososc",
+              "name": "Omlet z łososiem wędzonym (pokrojony na kawałki – jeden kęs)",
+              "price": 4,
+              "unit": "szt"
+            },
+            {
+              "id": "mini-hamburgery-wolowina",
+              "name": "Mini hamburgery z wołowiną (wołowina przed obróbką 60 g)",
+              "price": 8,
+              "unit": "szt"
+            },
+            {
+              "id": "mini-hamburgery-cukinia",
+              "name": "Mini hamburgery z grillowaną cukinią",
+              "price": 7,
+              "unit": "szt"
+            },
+            {
+              "id": "pierozki-salatka",
+              "name": "Pierożki (mięsne lub warzywne) na sałatce jarzynowej",
+              "price": 4,
+              "unit": "szt"
+            },
+            {
+              "id": "kuleczki-miesne",
+              "name": "Kuleczki mięsne z tzatzykami",
+              "price": 4.5,
+              "unit": "szt"
+            },
+            {
+              "id": "galantynka-drobiowa",
+              "name": "Galantynka drobiowa z nadzieniem pieprzowym",
+              "price": 5,
+              "unit": "szt"
+            },
+            {
+              "id": "sliwka-boczek-dijon",
+              "name": "Śliwka w boczku na sałacie z sosem dijon",
+              "price": 5,
+              "unit": "szt"
+            },
+            {
+              "id": "cukinia-feta",
+              "name": "Cukinia grillowana z serem feta i orzechami",
+              "price": 5,
+              "unit": "szt"
+            },
+            {
+              "id": "mini-croissant-jajeczna",
+              "name": "Mini croissant z pastą jajeczną",
+              "price": 6,
+              "unit": "szt"
+            },
+            {
+              "id": "mini-croissant-lososc",
+              "name": "Mini croissant z wędzonym łososiem",
+              "price": 6,
+              "unit": "szt"
+            }
+          ]
+        },
+        {
+          "id": "salatki",
+          "title": "Sałatki",
+          "note": "dla 5–7 osób",
+          "items": [
+            {
+              "id": "salatka-lekka",
+              "name": "Sałatka lekka – mix sałat, pomidorki, mango, kiełki, ogórek, pestki prażone, sos winegret",
+              "price": 48,
+              "unit": "szt"
+            },
+            {
+              "id": "salatka-twarda",
+              "name": "Sałatka twarda – cukinia, pomidor, papryka, kiełki smażone, ser feta, zioła, czosnek, cytryna",
+              "price": 45,
+              "unit": "szt"
+            },
+            {
+              "id": "salatka-caprese",
+              "name": "Sałatka caprese – pomidor, mozzarella, bazylia, oliwa",
+              "price": 39,
+              "unit": "szt"
+            },
+            {
+              "id": "salatka-grecka",
+              "name": "Sałatka grecka – sałata, oliwki, papryka, cebula, pomidor, feta, ogórek, sos winegret",
+              "price": 45,
+              "unit": "szt"
+            },
+            {
+              "id": "salatka-kurczak",
+              "name": "Sałatka z kurczakiem – sałata, pomidorki, kukurydza, papryka, ogórek, winogrono, sos czosnkowy",
+              "price": 48,
+              "unit": "szt"
+            },
+            {
+              "id": "salatka-fasolkowa",
+              "name": "Sałatka fasolkowa – fasola szparagowa, cebula, pomidor, migdały, sos winegret",
+              "price": 41,
+              "unit": "szt"
+            },
+            {
+              "id": "salatka-lazur",
+              "name": "Sałatka lazur – roszponka, ser, pomidor, cebula, oliwki, papryka, orzechy, sos jogurtowy",
+              "price": 45,
+              "unit": "szt"
+            },
+            {
+              "id": "salatka-kaczka",
+              "name": "Sałatka z kaczką – rukola, pomidory suszone, pomarańcze, orzechy, parmezan, kaczka, krem balsamiczny",
+              "price": 55,
+              "unit": "szt"
+            },
+            {
+              "id": "brokuly-migdalowy",
+              "name": "Brokuły z sosem czosnkowym i prażonymi migdałami",
+              "price": 41,
+              "unit": "porcja"
+            },
+            {
+              "id": "salatka-jarzynowa-kg",
+              "name": "Sałatka jarzynowa 1 kg",
+              "price": 45,
+              "unit": "szt"
+            }
+          ]
+        },
+        {
+          "id": "dodatki",
+          "title": "Dodatki",
+          "items": [
+            {
+              "id": "ryz-groszek",
+              "name": "Ryż z groszkiem i marchewką (na ciepło) 100 g",
+              "price": 6,
+              "unit": "porcja"
+            },
+            {
+              "id": "kluski-slaskie",
+              "name": "Kluski śląskie jasne/ciemne (prosimy o informację czy ugotowane, czy nie?) 200 g",
+              "price": 8,
+              "unit": "porcja"
+            },
+            {
+              "id": "ziemniaki-pieczone",
+              "name": "Ziemniaki pieczone 150 g",
+              "price": 8,
+              "unit": "porcja"
+            },
+            {
+              "id": "ziemniaki-puree",
+              "name": "Ziemniaki purée z boczkiem 100 g",
+              "price": 6,
+              "unit": "porcja"
+            },
+            {
+              "id": "dufinki",
+              "name": "Dufinki (kuleczki ziemniaczane) 100 g",
+              "price": 7,
+              "unit": "porcja"
+            },
+            {
+              "id": "kasza-gryczana",
+              "name": "Kasza gryczana z czosnkiem i natką pietruszki 100 g",
+              "price": 6,
+              "unit": "porcja"
+            },
+            {
+              "id": "peczatto",
+              "name": "Pęczatto z warzywami (włoszczyzna, śmietana, ser) 100 g",
+              "price": 7,
+              "unit": "porcja"
+            },
+            {
+              "id": "makaron-penne",
+              "name": "Makaron penne z sosem serowym 200 g",
+              "price": 8,
+              "unit": "porcja"
+            },
+            {
+              "id": "ziemniaki-gratin",
+              "name": "Ziemniaki gratin (lazania ziemniaczana) 60 g",
+              "price": 7,
+              "unit": "porcja"
+            },
+            {
+              "id": "ziemniaki-faszerowane-boczek",
+              "name": "Ziemniaki faszerowane z boczkiem i serem (pół ziemniaka)",
+              "price": 6,
+              "unit": "szt"
+            },
+            {
+              "id": "talarek-ziemniaczany",
+              "name": "Talarek ziemniaczany zapiekany (boczek, zioła, ser)",
+              "price": 5,
+              "unit": "szt"
+            },
+            {
+              "id": "kapusta-lekka",
+              "name": "Kapusta lekka (kapusta świeża – na ciepło) 100 g",
+              "price": 6,
+              "unit": "porcja"
+            },
+            {
+              "id": "kapusta-zasmazana",
+              "name": "Kapusta zasmażana (kapusta kiszona, boczek) 100 g",
+              "price": 7,
+              "unit": "porcja"
+            },
+            {
+              "id": "kapusta-czerwona",
+              "name": "Kapusta czerwona z boczkiem (lub bez) 100 g",
+              "price": 6,
+              "unit": "porcja"
+            },
+            {
+              "id": "bukiet-warzyw",
+              "name": "Bukiet warzyw (brokuły, kalafior, fasolka, marchew) 100 g",
+              "price": 9,
+              "unit": "porcja"
+            },
+            {
+              "id": "marchewka-ser",
+              "name": "Marchewka mini z sosem serowym (na ciepło) 100 g",
+              "price": 7,
+              "unit": "porcja"
+            },
+            {
+              "id": "brokuly-ser",
+              "name": "Brokuły z sosem serowym (na ciepło) 100 g",
+              "price": 10,
+              "unit": "porcja"
+            },
+            {
+              "id": "fasolka-bulka",
+              "name": "Fasolka szparagowa z bułką tartą 100 g",
+              "price": 8,
+              "unit": "porcja"
+            },
+            {
+              "id": "marchewka-pomarancza",
+              "name": "Marchewka z pomarańczą (na zimno) 100 g",
+              "price": 5,
+              "unit": "porcja"
+            },
+            {
+              "id": "coleslaw",
+              "name": "Coleslaw (kapusta, cebula, chrzan, majonez, na zimno) 100 g",
+              "price": 5,
+              "unit": "porcja"
+            },
+            {
+              "id": "pekinska",
+              "name": "Pekińska kolorowa (papryka, pomidor, ogórek, kukurydza, winegret) 100 g",
+              "price": 5,
+              "unit": "porcja"
+            },
+            {
+              "id": "buraczki-zasmazane",
+              "name": "Buraczki zasmażane z tymiankiem 100 g",
+              "price": 7,
+              "unit": "porcja"
+            },
+            {
+              "id": "buraczki-chrzan",
+              "name": "Buraczki tarte z chrzanem 100 g",
+              "price": 5,
+              "unit": "porcja"
+            },
+            {
+              "id": "sos-pieczeniowy",
+              "name": "Sos pieczeniowy",
+              "price": 20,
+              "unit": "L"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "blachy",
+      "slug": "blachy-biesiadne-koryta",
+      "title": "Blachy biesiadne / Koryta",
+      "description": "Autorskie zestawy na blachach, korytach lub paterach. 8–10 osób.",
+      "categories": [
+        {
+          "id": "blachy-sezonowe",
+          "title": "Blachy sezonowe",
+          "items": [
+            {
+              "id": "wiosenna",
+              "name": "Wiosenna (8–10 osób)",
+              "price": 690,
+              "unit": "szt",
+              "description": "Udko b/k z rozmarynem 6 szt., kotleciki drobiowe 10 szt., skrzydełka słodko-ostre 10 szt., schab z serem wędzonym 6 szt., pieczeń wieprzowa 1 kg, paluszki serowe 6 szt., fasolka szparagowa 700 g, makaron rurki z sosem czosnkowym 1,5 kg"
+            },
+            {
+              "id": "letnia",
+              "name": "Letnia (8–10 osób)",
+              "price": 739,
+              "unit": "szt",
+              "description": "Udko b/k z rozmarynem 5 szt., pierogi ruskie opiekane 10 szt., karkówka z grilla 5 szt., filet z kurczaka z grilla 5 szt., ziemniaki faszerowane z boczkiem 10 szt., kotlet schabowy 5 szt., schab z serem wędzonym 5 szt., brokuły z sosem serowym 800 g, ziemniaki z koperkiem 1,5 kg"
+            },
+            {
+              "id": "jesienna",
+              "name": "Jesienna (8–10 osób)",
+              "price": 580,
+              "unit": "szt",
+              "description": "Pieczeń wieprzowa 0,5 kg, udko z kurczaka z/k z czosnkiem 4 szt., skrzydełka pikantne w miodzie 10 szt., roladka wieprzowa 4 szt., szwajcar 4 szt., pieczarki panierowane 10 szt., kaszanka z cebulą 5 szt., kapusta zasmażana 1,5 kg, ziemniaki pieczone 1,5 kg"
+            },
+            {
+              "id": "zimowa",
+              "name": "Zimowa (8–10 osób)",
+              "price": 849,
+              "unit": "szt",
+              "description": "Pieczeń wieprzowa 1 kg, golonki po bawarsku 1 kg, kaszanka 5 szt., schab z serem wędzonym 5 szt., śliwki w boczku 20 szt., kiełbaski pieczone 6 szt., kotleciki drobiowe 10 szt., kapusta zasmażana 1,5 kg, ziemniaki pieczone 1,5 kg, pieczarki faszerowane 10 szt."
+            }
+          ]
+        },
+        {
+          "id": "blachy-tematyczne",
+          "title": "Blachy tematyczne",
+          "items": [
+            {
+              "id": "slaska",
+              "name": "Śląska (8–10 osób)",
+              "price": 845,
+              "unit": "szt",
+              "description": "Rolada wołowa 5 szt., udko z kaczki 5 szt., kotlet schabowy 5 szt., kotlet de volaille 5 szt., pieczeń 500 g, kluski śląskie 10 porcji, kapusta czerwona 1 kg, colesław 1 kg, sos pieczeniowy 1 l"
+            },
+            {
+              "id": "miesna",
+              "name": "Mięsna (8–10 osób)",
+              "price": 690,
+              "unit": "szt",
+              "description": "Schab z serem wędzonym 5 szt., polędwiczki wieprzowe z sosem pieprzowym 5 porcji, kotleciki drobiowe 5 szt., roladka drobiowa ze szpinakiem 5 szt., rolada wołowa 5 szt., udko z kaczki 5 szt."
+            },
+            {
+              "id": "keto",
+              "name": "Keto blacha (10 osób)",
+              "price": 729,
+              "unit": "szt",
+              "description": "Udko z kurczaka b/k, schab z serem wędzonym, karkówka grill 5 szt., pierś z kurczaka z masłem ziołowym i camembertem 5 szt., golonka b/k 3 szt., serki wędzone (oscypki), warzywa grillowane 1,5 kg, brokuł z sosem serowym 1 kg"
+            },
+            {
+              "id": "wegetarianska",
+              "name": "Wegetariańska (8–10 osób)",
+              "price": 450,
+              "unit": "szt",
+              "description": "Ziemniaki faszerowane z serem i ziołami 10 szt., cukinia z suszonymi pomidorami i mozzarellą 10 szt., pieczarki panierowane 10 szt., szaszłyki warzywne 10 szt., pierogi z serem opiekane 10 szt., paluszki serowe 10 szt., krążki cebulowe 15 szt., makaron rurki z sosem serowym 1,5 kg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "przykladowe-zestawy",
+      "slug": "przykladowe-zestawy",
+      "title": "Przykładowe zestawy",
+      "description": "Zestawy dla 10 osób. Podanie na blachach, korytach lub paterach.",
+      "categories": [
+        {
+          "id": "zestawy-10",
+          "title": "Zestawy dla 10 osób",
+          "items": [
+            {
+              "id": "zestaw-10-osob",
+              "name": "Zestaw dla 10 osób",
+              "price": 770,
+              "unit": "szt",
+              "description": "Polędwiczki wieprzowe z sosem pieprzowym lub grzybowym 6 porcji, udko z kurczaka b/k lub z/k 6 szt., schab z serem wędzonym lub pieczeń 6 szt., kotleciki drobiowe lub de volaille 6 szt., pierś z kaczki lub udko 6 porcji, ziemniaki pieczone lub purée z boczkiem 10 porcji, pęczotto lub risotto 1 kg, kapusta lekka lub zasmażana 1,5 kg"
+            },
+            {
+              "id": "przekaski-10-osob",
+              "name": "Przekąski dla 10 osób",
+              "price": 525,
+              "unit": "szt",
+              "description": "Sakiewki z szynki 16 szt., polędwiczki z suszonymi pomidorami 10 szt., galantynki drobiowe 10 szt., śledź korzenny na jajku 8 szt., łosoś z ajwarem 10 szt., pomidorki koktajlowe z mozzarellą 16 szt., tatar wołowy (60 g) 8 szt., sałatka lekka 1 miska, brokuły z sosem czosnkowym 1 miska"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dania-na-dowoz",
+      "slug": "dania-na-dowoz",
+      "title": "Dania na dowóz",
+      "description": "Ciasto ogniowe, pierogi, sałatki, śniadania i dania główne pod drzwi.",
+      "categories": [
+        {
+          "id": "ciasto-ogniowe",
+          "title": "Ciasto ogniowe / Podpłomyk",
+          "items": [
+            {
+              "id": "ciasto-boczek",
+              "name": "Ciasto ogniowe BOCZEK",
+              "price": 29,
+              "unit": "szt",
+              "description": "podpłomyk, sos czosnkowy, cebula biała, boczek, ser mozzarella"
+            },
+            {
+              "id": "ciasto-kurczak",
+              "name": "Ciasto ogniowe KURCZAK",
+              "price": 29,
+              "unit": "szt",
+              "description": "podpłomyk, sos czosnkowy, kurczak, brokuł, papryka, ser mozzarella"
+            },
+            {
+              "id": "ciasto-wegetarianskie",
+              "name": "Ciasto ogniowe WEGETARIAŃSKIE",
+              "price": 29,
+              "unit": "szt",
+              "description": "podpłomyk, sos czosnkowy, cebula, brokuł, papryka, ser mozzarella"
+            },
+            {
+              "id": "ciasto-tunczyk",
+              "name": "Ciasto ogniowe TUŃCZYK",
+              "price": 37,
+              "unit": "szt",
+              "description": "podpłomyk, sos czosnkowy, cebula, tuńczyk, ser mozzarella"
+            },
+            {
+              "id": "ciasto-krewetki",
+              "name": "Ciasto ogniowe KREWETKI",
+              "price": 37,
+              "unit": "szt",
+              "description": "podpłomyk, sos czosnkowy, cebula biała, krewetki, ser mozzarella"
+            },
+            {
+              "id": "ciasto-wloskie",
+              "name": "Ciasto ogniowe WŁOSKIE",
+              "price": 32,
+              "unit": "szt",
+              "description": "podpłomyk, sos czosnkowy, cebula, rukola, szynka dojrzewająca, ser grana padano"
+            },
+            {
+              "id": "ciasto-serowe",
+              "name": "Ciasto ogniowe SEROWE",
+              "price": 32,
+              "unit": "szt",
+              "description": "podpłomyk, sos czosnkowy, rokpol, mozzarella, grana padano"
+            },
+            {
+              "id": "ciasto-ogniste",
+              "name": "Ciasto ogniowe OGNISTE",
+              "price": 37,
+              "unit": "szt",
+              "description": "podpłomyk, sos pomidorowy, salami, kurczak, jalapeño, ogórek konserwowy, ser typu feta, ser mozzarella"
+            }
+          ]
+        },
+        {
+          "id": "pierogi-dowoz",
+          "title": "Pierogi",
+          "items": [
+            {
+              "id": "pierogi-ser-ziemniaki",
+              "name": "Pierogi z serem i ziemniakami okraszone cebulką",
+              "price": 29,
+              "unit": "szt"
+            },
+            {
+              "id": "pierogi-mieso",
+              "name": "Pierogi z mięsem okraszone cebulką",
+              "price": 31,
+              "unit": "szt"
+            }
+          ]
+        },
+        {
+          "id": "salatki-dowoz",
+          "title": "Sałatki",
+          "items": [
+            {
+              "id": "salatka-grecka-dowoz",
+              "name": "Sałatka grecka",
+              "price": 24,
+              "unit": "szt",
+              "description": "sałata lodowa, rukola, pomidor świeży, ogórek zielony, oliwki, papryka świeża, cebula czerwona, ser feta, sos winegret"
+            },
+            {
+              "id": "salatka-kurczak-dowoz",
+              "name": "Sałatka z kurczakiem",
+              "price": 29,
+              "unit": "szt",
+              "description": "kurczak, sałata lodowa, rukola, pomidor świeży, ogórek zielony, pestki słonecznika, cebula czerwona, grzanki, sos czosnkowy"
+            },
+            {
+              "id": "salatka-tunczyk-dowoz",
+              "name": "Sałatka z tuńczykiem",
+              "price": 29,
+              "unit": "szt",
+              "description": "sałata lodowa, rukola, papryka świeża, kukurydza konserwowa, ogórek zielony, cebula czerwona, oliwki, tuńczyk, sos jogurtowy"
+            },
+            {
+              "id": "salatka-krewetki-dowoz",
+              "name": "Sałatka z krewetkami",
+              "price": 29,
+              "unit": "szt",
+              "description": "sałata lodowa, rukola, papryka świeża, orzech włoski, pomidor świeży, ser grana padano, awokado świeże, krewetki, sos winegret"
+            }
+          ]
+        },
+        {
+          "id": "sniadania-dowoz",
+          "title": "Śniadania – do godz. 12:00",
+          "items": [
+            {
+              "id": "jajecznica",
+              "name": "Jajecznica z 5 jajek z boczkiem",
+              "price": 20,
+              "unit": "szt",
+              "description": "+ pieczywo"
+            },
+            {
+              "id": "omlet-boczek",
+              "name": "Omlet z 4 jajek z boczkiem, cebulą i serem",
+              "price": 20,
+              "unit": "szt",
+              "description": "+ pieczywo"
+            },
+            {
+              "id": "kielbasa-smazona",
+              "name": "Kiełbasa smażona z cebulą i musztardą",
+              "price": 20,
+              "unit": "szt",
+              "description": "+ pieczywo"
+            },
+            {
+              "id": "club-sandwich",
+              "name": "Club Sandwich z kurczakiem, boczkiem, pomidorem i serem",
+              "price": 20,
+              "unit": "szt"
+            }
+          ]
+        },
+        {
+          "id": "dania-glowne-dowoz",
+          "title": "Dania główne",
+          "items": [
+            {
+              "id": "kotlet-schabowy-dowoz",
+              "name": "Kotlet schabowy smażony na smalcu",
+              "price": 35,
+              "unit": "szt",
+              "description": "z ćwiartkami ziemniaczanymi i mizerią"
+            },
+            {
+              "id": "kotlet-drobiowy-dowoz",
+              "name": "Kotlet drobiowy",
+              "price": 34,
+              "unit": "szt",
+              "description": "z kulkami ziemniaczanymi i mizerią"
+            },
+            {
+              "id": "rolada-wolowa-dowoz",
+              "name": "Rolada wołowa",
+              "price": 48,
+              "unit": "szt",
+              "description": "z kluskami śląskimi, czerwoną kapustą i sezamem"
+            },
+            {
+              "id": "golonko-dowoz",
+              "name": "Golonko pieczone bez kości",
+              "price": 39,
+              "unit": "szt",
+              "description": "z ćwiartkami ziemniaczanymi i kapustą zasmażaną"
+            },
+            {
+              "id": "filet-mintaj-dowoz",
+              "name": "Filet panierowany z mintaja",
+              "price": 38,
+              "unit": "szt",
+              "description": "z kulkami ziemniaczanymi i mizerią"
+            }
+          ]
+        },
+        {
+          "id": "sosy-dowoz",
+          "title": "Sosy",
+          "items": [
+            {
+              "id": "sos-czosnkowy",
+              "name": "Sos czosnkowy 80 ml",
+              "price": 4,
+              "unit": "szt"
+            },
+            {
+              "id": "sos-pomidorowy",
+              "name": "Sos pomidorowy 80 ml",
+              "price": 4,
+              "unit": "szt"
+            },
+            {
+              "id": "sos-jogurtowy",
+              "name": "Sos jogurtowy 80 ml",
+              "price": 4,
+              "unit": "szt"
+            },
+            {
+              "id": "sos-winegret",
+              "name": "Sos winegret 80 ml",
+              "price": 4,
+              "unit": "szt"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "domowe-obiady",
+      "slug": "domowe-obiady",
+      "title": "Domowe obiady / Dania dnia",
+      "description": "Zestaw obiadowy: zupa + drugie danie. Odbiór od 13:00 lub dowóz. Transport w Żorach gratis.",
+      "meta": {
+        "priceNote": "Poniedziałek – Sobota 33,00 zł (zupa + drugie danie). Zamówienia na kolejny dzień do 9:00."
+      },
+      "categories": [
+        {
+          "id": "dania-dnia",
+          "title": "Dania dnia",
+          "note": "Menu tygodniowe na Facebooku: facebook.com/bryzolcatering. Przykład tygodnia poniżej.",
+          "items": [
+            {
+              "id": "pn",
+              "name": "Poniedziałek",
+              "description": "Zupa: Gulaszowa. Zestaw 1: Łazanki (kapusta, pieczarki, kiełbasa). Zestaw 2: Łazanki z warzywami"
+            },
+            {
+              "id": "wt",
+              "name": "Wtorek",
+              "description": "Zupa: Serowa z grzankami. Zestaw 1: Schab zapiekany w sosie pomidorowym, ziemniaki, surówka. Zestaw 2: Cukinia zapiekana w sosie pomidorowym, ziemniaki, surówka"
+            },
+            {
+              "id": "sr",
+              "name": "Środa",
+              "description": "Zupa: Barszcz zabielany z ziemniakami. Zestaw 1: Klopsiki w sosie ogórkowym, kasza, surówka. Zestaw 2: Boczniaki duszone, kasza, surówka"
+            },
+            {
+              "id": "cz",
+              "name": "Czwartek",
+              "description": "Zupa: Kapuśniak. Zestaw 1: Roladka wieprzowa, ziemniaki, surówka. Zestaw 2: Roladka z bakłażana z warzywami i serem, ziemniaki, surówka"
+            },
+            {
+              "id": "pt",
+              "name": "Piątek",
+              "description": "Zupa: Dyniowa. Zestaw 1: Pierogi z mięsem. Zestaw 2: Pierogi ruskie"
+            },
+            {
+              "id": "sb",
+              "name": "Sobota",
+              "description": "Zupa: Rybna. Zestaw 1: Bitki wieprzowe, kopytka, surówka"
+            },
+            { "id": "nd", "name": "Niedziela", "description": "Nieczynne" }
+          ]
+        }
+      ]
+    }
+  ]
+}

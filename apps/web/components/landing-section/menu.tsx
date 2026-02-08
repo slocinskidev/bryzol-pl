@@ -29,7 +29,7 @@ export function Menu() {
 					ofertę i wybierz coś na dziś lub na Waszą imprezę.
 				</p>
 				<Button size="lg" asChild>
-					<Link href="/menu">Zobacz pełne menu</Link>
+					<Link href="/oferta">Zobacz pełne menu</Link>
 				</Button>
 			</motion.div>
 		</section>

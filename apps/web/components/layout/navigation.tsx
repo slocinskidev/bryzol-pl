@@ -5,6 +5,7 @@ import { ThemeToggle } from "@workspace/ui/components/theme-toggle";
 import { cn } from "@workspace/ui/lib/utils";
 import { motion } from "motion/react";
 import Image from "next/image";
+import { usePathname, useRouter } from "next/navigation";
 import { useRef, useState } from "react";
 import logo from "@/assets/logo-simple.png";
 import { type NavigationItem, navigationItems } from "./constants";
@@ -15,6 +16,8 @@ import { NavigationDrawer } from "./navigation-drawer";
 export function Navigation() {
 	const [mobileNavOpen, setMobileNavOpen] = useState(false);
 	const navRefs = useRef<{ [key: string]: HTMLButtonElement | null }>({});
+	const router = useRouter();
+	const pathname = usePathname();
 
 	const activeSection = useActiveSection();
 	const activeItemRect = useActiveItemRect(activeSection, navRefs);
@@ -34,7 +37,21 @@ export function Navigation() {
 		}
 	};
 
-	const handleLogoClick = () => scrollToSection("#home");
+	const handleItemClick = (href: string) => {
+		if (href.startsWith("/")) {
+			router.push(href);
+		} else {
+			scrollToSection(href);
+		}
+	};
+
+	const handleLogoClick = () => {
+		if (pathname === "/") {
+			scrollToSection("#home");
+		} else {
+			router.push("/");
+		}
+	};
 
 	return (
 		<motion.nav
@@ -52,14 +69,14 @@ export function Navigation() {
 						activeSection={activeSection}
 						activeItemRect={activeItemRect}
 						navRefs={navRefs}
-						onItemClick={scrollToSection}
+						onItemClick={handleItemClick}
 					/>
 					<NavigationActions
 						mobileNavOpen={mobileNavOpen}
 						onMobileNavChange={setMobileNavOpen}
 						navigationItems={navigationItems}
 						activeSection={activeSection}
-						onItemClick={scrollToSection}
+						onItemClick={handleItemClick}
 					/>
 				</div>
 			</div>
