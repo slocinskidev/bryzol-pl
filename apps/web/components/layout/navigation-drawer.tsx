@@ -84,7 +84,17 @@ export function NavigationDrawer({
 						))}
 					</div>
 
-					<Button size="lg">Zamów teraz</Button>
+					<Button
+						size="lg"
+						onClick={() => {
+							onOpenChange(false);
+							setTimeout(() => {
+								onItemClick("#contact");
+							}, 300);
+						}}
+					>
+						Zapytaj o ofertę
+					</Button>
 				</div>
 			</DrawerContent>
 		</Drawer>

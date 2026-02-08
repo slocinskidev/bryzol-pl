@@ -6,7 +6,7 @@ import { Services } from "@/components/landing-section/services";
 
 export default function Page() {
 	return (
-		<div className="bg-white dark:bg-black transition-colors duration-500">
+		<div className="bg-background transition-colors duration-500">
 			<Hero />
 			<About />
 			<Services />

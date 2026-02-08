@@ -19,8 +19,8 @@
   --secondary-foreground: oklch(0.1408 0.0044 285.8229);
   --muted: oklch(0.9702 0 0);
   --muted-foreground: oklch(0.5517 0.0138 285.9385);
-  --accent: oklch(0.9702 0 0);
-  --accent-foreground: oklch(0.1408 0.0044 285.8229);
+  --accent: oklch(0.75 0.12 85);
+  --accent-foreground: oklch(0.22 0.04 75);
   --destructive: oklch(0.5662 0.1511 23.2227);
   --destructive-foreground: oklch(0.9851 0 0);
   --border: oklch(0.9197 0.0040 286.3202);
@@ -39,9 +39,10 @@
   --sidebar-accent-foreground: oklch(0.1408 0.0044 285.8229);
   --sidebar-border: oklch(0.9197 0.0040 286.3202);
   --sidebar-ring: oklch(0.4710 0.0715 134.2954);
-  --font-sans: Inter, sans-serif;
+  --font-sans: ui-sans-serif, system-ui, sans-serif;
   --font-serif: serif;
-  --font-mono: monospace;
+  --font-mono: ui-monospace, monospace;
+  --font-display: Georgia, ui-serif, serif;
   --radius: 0.5rem;
   --shadow-2xs: 0px 2px 4px 0px hsl(0 0% 0% / 0.03);
   --shadow-xs: 0px 2px 4px 0px hsl(0 0% 0% / 0.03);
@@ -68,8 +69,8 @@
   --secondary-foreground: oklch(0.9851 0 0);
   --muted: oklch(0.2739 0.0055 286.0326);
   --muted-foreground: oklch(0.7118 0.0129 286.0665);
-  --accent: oklch(0.2739 0.0055 286.0326);
-  --accent-foreground: oklch(0.9851 0 0);
+  --accent: oklch(0.65 0.14 85);
+  --accent-foreground: oklch(0.98 0.01 85);
   --destructive: oklch(0.4811 0.1279 23.1869);
   --destructive-foreground: oklch(0.9851 0 0);
   --border: oklch(0.2739 0.0055 286.0326);
@@ -88,9 +89,10 @@
   --sidebar-accent-foreground: oklch(0.9851 0 0);
   --sidebar-border: oklch(0.2739 0.0055 286.0326);
   --sidebar-ring: oklch(0.4710 0.0715 134.2954);
-  --font-sans: Inter, sans-serif;
+  --font-sans: ui-sans-serif, system-ui, sans-serif;
   --font-serif: serif;
-  --font-mono: monospace;
+  --font-mono: ui-monospace, monospace;
+  --font-display: Georgia, ui-serif, serif;
   --radius: 0.5rem;
   --shadow-2xs: 0px 2px 8px 0px hsl(0 0% 0% / 0.05);
   --shadow-xs: 0px 2px 8px 0px hsl(0 0% 0% / 0.05);
@@ -139,6 +141,7 @@
   --font-sans: var(--font-sans);
   --font-mono: var(--font-mono);
   --font-serif: var(--font-serif);
+  --font-display: var(--font-display);
 
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);

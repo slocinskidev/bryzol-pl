@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Cormorant_Garamond, Geist, Geist_Mono } from "next/font/google";
 
 import "@workspace/ui/globals.css";
 import { Navigation } from "@/components/layout/navigation";
@@ -6,12 +6,18 @@ import { Providers } from "@/components/layout/providers";
 
 const fontSans = Geist({
 	subsets: ["latin"],
-	variable: "--font-sans",
+	variable: "--font-geist-sans",
 });
 
 const fontMono = Geist_Mono({
 	subsets: ["latin"],
-	variable: "--font-mono",
+	variable: "--font-geist-mono",
+});
+
+const fontDisplay = Cormorant_Garamond({
+	subsets: ["latin"],
+	weight: ["400", "500", "600", "700"],
+	variable: "--font-cormorant",
 });
 
 export default function RootLayout({
@@ -28,7 +34,14 @@ export default function RootLayout({
 				/>
 			</head>
 			<body
-				className={`${fontSans.variable} ${fontMono.variable} font-sans antialiased`}
+				className={`${fontSans.variable} ${fontMono.variable} ${fontDisplay.variable} font-sans antialiased`}
+				style={
+					{
+						"--font-sans":
+							"var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif",
+						"--font-display": "var(--font-cormorant), Georgia, ui-serif, serif",
+					} as React.CSSProperties
+				}
 			>
 				<Providers>
 					<Navigation />

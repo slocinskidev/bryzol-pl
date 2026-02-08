@@ -220,8 +220,8 @@ function NavigationActions({
 			className="flex items-center gap-4"
 		>
 			<ThemeToggle className="hidden lg:flex" />
-			<Button size="sm" className="hidden md:flex">
-				Zamów teraz
+			<Button size="sm" className="hidden md:flex" asChild>
+				<a href="#contact">Zapytaj o ofertę</a>
 			</Button>
 
 			<NavigationDrawer

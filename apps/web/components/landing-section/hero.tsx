@@ -3,23 +3,24 @@
 import { AuroraText } from "@workspace/ui/components/aurora-text";
 import { Button } from "@workspace/ui/components/button";
 import { WordRotate } from "@workspace/ui/components/word-rotate";
-import { ArrowRight, Mail, Phone } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 import { motion } from "motion/react";
 import Image from "next/image";
 import heroImage from "@/assets/hero.jpeg";
 
 export function Hero() {
 	return (
-		<div id="home" className="relative min-h-screen font-inter pt-32 lg:pt-40">
+		<div id="home" className="relative min-h-screen font-sans pt-32 lg:pt-40">
 			<div className="absolute inset-0 z-0">
 				<Image
 					src={heroImage}
-					alt="Elegant catering setup with buffet table"
+					alt="Aranżacja cateringu Bryzol — elegancki stół i dania na przyjęcie"
 					fill
 					className="object-cover"
 					priority
 				/>
 				<div className="absolute inset-0 bg-black/50" />
+				<div className="absolute inset-0 bg-primary/10" aria-hidden />
 			</div>
 
 			<div className="relative z-10 flex min-h-[calc(100vh-8rem)] items-center justify-center px-6 pb-20">
@@ -32,9 +33,9 @@ export function Hero() {
 					>
 						<WordRotate
 							words={[
-								"Profesjonalny catering",
-								"Domowe smaki",
-								"Mania gotowania",
+								"Domowe obiady",
+								"Imprezy okolicznościowe",
+								"Dania na dowóz",
 							]}
 							className="text-lg md:text-xl text-white/70 font-medium tracking-wide"
 						/>
@@ -46,10 +47,10 @@ export function Hero() {
 						transition={{ duration: 0.8, delay: 0.3 }}
 						className="mb-6"
 					>
-						<h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 tracking-tight">
+						<h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 tracking-tight">
 							Catering, który{" "}
 							<AuroraText
-								className="text-4xl md:text-6xl lg:text-7xl font-bold"
+								className="text-4xl md:text-6xl lg:text-7xl font-bold text-accent"
 								speed={0.8}
 							>
 								robi wrażenie
@@ -64,14 +65,13 @@ export function Hero() {
 						className="mb-12"
 					>
 						<p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-3xl mx-auto">
-							Wyjątkowe dania z sercem, podane ze smakiem. Od codziennych
-							obiadów po eleganckie przyjęcia. Bryzol łączy domową kuchnię z
-							nowoczesną jakością.{" "}
+							Domowy smak na każdą okazję — obiady na dowóz, małe przyjęcia,
+							imprezy firmowe. Dopasowane menu i punktualna dostawa.{" "}
 							<AuroraText
-								className="text-lg md:text-xl font-semibold"
+								className="text-lg md:text-xl font-semibold text-accent"
 								speed={0.9}
 							>
-								Zaskocz gości. Zachwyć siebie.
+								Ty się cieszysz. My dbamy o resztę.
 							</AuroraText>
 						</p>
 					</motion.div>
@@ -82,10 +82,16 @@ export function Hero() {
 						transition={{ duration: 0.8, delay: 0.6 }}
 						className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
 					>
-						<Button size="lg">Zobacz menu</Button>
-
-						<Button size="lg" variant="outline">
-							Skontaktuj się
+						<Button size="lg" asChild>
+							<a href="#menu">Zobacz menu</a>
+						</Button>
+						<Button
+							size="lg"
+							variant="accent"
+							className="border-accent text-accent hover:bg-accent hover:text-accent-foreground"
+							asChild
+						>
+							<a href="#contact">Skontaktuj się</a>
 						</Button>
 					</motion.div>
 
