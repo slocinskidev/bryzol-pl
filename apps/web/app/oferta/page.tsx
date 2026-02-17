@@ -1,4 +1,6 @@
+import { ScrollProgress } from "@workspace/ui/components/scroll-progress";
 import { Offer } from "@/components/offer/offer";
+import { OfferSectionNav } from "@/components/offer/offer-section-nav";
 import { getOffer } from "@/lib/offer";
 
 export const metadata = {
@@ -12,8 +14,9 @@ export default async function OfertaPage() {
 
 	return (
 		<main className="min-h-screen bg-background pb-20">
+			<ScrollProgress variant="brand" />
 			<div className="border-b border-border bg-muted/30 py-12 text-center">
-				<h1 className="font-display text-4xl font-bold tracking-tight text-gray-900 dark:text-white md:text-5xl">
+				<h1 className="font-display text-4xl font-bold tracking-tight text-foreground md:text-5xl">
 					Nasza oferta
 				</h1>
 				<p className="mx-auto mt-3 max-w-2xl text-lg text-muted-foreground">
@@ -23,7 +26,8 @@ export default async function OfertaPage() {
 			</div>
 
 			<Offer.Root>
-				<div className="space-y-20">
+				<OfferSectionNav sections={sections} />
+				<div className="space-y-16 pt-8">
 					{sections.map((section) => (
 						<Offer.Section key={section.id} section={section}>
 							{section.categories.map((category) => (
