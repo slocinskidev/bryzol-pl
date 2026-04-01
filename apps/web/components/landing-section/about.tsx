@@ -1,13 +1,15 @@
 'use client';
 
+import { Card } from '@heroui/react/card';
 import { AuroraText } from '@workspace/ui/components/aurora-text';
 import { Award, ChefHat, Heart, Users } from 'lucide-react';
 import { motion } from 'motion/react';
 import Image from 'next/image';
 import bgTexture from '@/assets/bg-texture.png';
 import heroImage from '@/assets/hero.jpeg';
+import { cn } from '@workspace/ui/lib/utils';
 
-export function About() {
+export function About({ hideSectionHeader = false }: { hideSectionHeader?: boolean }) {
 	return (
 		<section
 			id="about"
@@ -28,34 +30,40 @@ export function About() {
 			</div>
 
 			<div className="container relative z-10 mx-auto max-w-7xl px-6">
-				{/* Eyebrow + heading — editorial restaurant style */}
-				<motion.header
-					initial={{ opacity: 0, y: 24 }}
-					whileInView={{ opacity: 1, y: 0 }}
-					transition={{ duration: 0.7 }}
-					viewport={{ once: true }}
-					className="mx-auto max-w-3xl text-center"
-				>
-					<p className="mb-3 font-semibold text-accent text-sm uppercase tracking-[0.2em]">
-						Poznaj nas
-					</p>
-					<h2 className="font-bold font-display text-4xl text-gray-900 tracking-tight sm:text-5xl md:text-6xl lg:text-7xl dark:text-white">
-						O nas
-					</h2>
-					<div
-						className="mx-auto mt-4 h-0.5 w-16 rounded-full bg-accent"
-						aria-hidden
-					/>
-					<div className="mx-auto mt-8 max-w-2xl space-y-2 text-gray-600 text-lg leading-relaxed md:text-xl md:leading-[1.65] dark:text-gray-300">
-						<p>Nie budujemy historii o wielkiej firmie.</p>
-						<p className="font-semibold text-gray-900 dark:text-white">
-							Budujemy ją na talerzu.
+				{!hideSectionHeader ? (
+					<motion.header
+						initial={{ opacity: 0, y: 24 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.7 }}
+						viewport={{ once: true }}
+						className="mx-auto max-w-3xl text-center"
+					>
+						<p className="mb-3 font-semibold text-accent text-sm uppercase tracking-[0.2em]">
+							Poznaj nas
 						</p>
-					</div>
-				</motion.header>
+						<h2 className="font-bold font-display text-4xl text-gray-900 tracking-tight sm:text-5xl md:text-6xl lg:text-7xl dark:text-white">
+							O nas
+						</h2>
+						<div
+							className="mx-auto mt-4 h-0.5 w-16 rounded-full bg-accent"
+							aria-hidden
+						/>
+						<div className="mx-auto mt-8 max-w-2xl space-y-2 text-gray-600 text-lg leading-relaxed md:text-xl md:leading-[1.65] dark:text-gray-300">
+							<p>Nie budujemy historii o wielkiej firmie.</p>
+							<p className="font-semibold text-gray-900 dark:text-white">
+								Budujemy ją na talerzu.
+							</p>
+						</div>
+					</motion.header>
+				) : null}
 
 				{/* Story block: image + pull-quote — magazine / restaurant editorial */}
-				<div className="mt-20 grid gap-14 lg:mt-28 lg:grid-cols-2 lg:items-center lg:gap-20">
+				<div
+					className={cn(
+						'grid gap-14 lg:grid-cols-2 lg:items-center lg:gap-20',
+						hideSectionHeader ? 'mt-10 lg:mt-16' : 'mt-20 lg:mt-28',
+					)}
+				>
 					{/* Featured image — framed, warm overlay */}
 					<motion.div
 						initial={{ opacity: 0, x: -32 }}
@@ -143,19 +151,24 @@ export function About() {
 							whileInView={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.6, delay: 0.3 }}
 							viewport={{ once: true }}
-							className="mt-10 flex items-center gap-4 rounded-2xl border border-accent/20 bg-accent/5 px-6 py-5 dark:border-accent/15 dark:bg-accent/10"
+							className="mt-10"
 						>
-							<div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border-2 border-accent/30 bg-accent/10 dark:bg-accent/20">
-								<ChefHat className="h-7 w-7 text-accent" aria-hidden />
-							</div>
-							<div>
-								<p className="font-semibold text-gray-900 dark:text-white">
-									Andrzej Słociński
-								</p>
-								<p className="text-gray-500 text-sm dark:text-gray-400">
-									Założyciel Bryzol Catering
-								</p>
-							</div>
+							<Card
+								variant="transparent"
+								className="flex flex-row items-center gap-4 border-accent/20 bg-accent/5 px-6 py-5 dark:border-accent/15 dark:bg-accent/10"
+							>
+								<div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border-2 border-accent/30 bg-accent/10 dark:bg-accent/20">
+									<ChefHat className="h-7 w-7 text-accent" aria-hidden />
+								</div>
+								<Card.Content className="min-w-0 p-0">
+									<p className="font-semibold text-gray-900 dark:text-white">
+										Andrzej Słociński
+									</p>
+									<p className="text-gray-500 text-sm dark:text-gray-400">
+										Założyciel Bryzol Catering
+									</p>
+								</Card.Content>
+							</Card>
 						</motion.div>
 					</motion.div>
 				</div>
@@ -215,17 +228,26 @@ export function About() {
 								whileInView={{ opacity: 1, y: 0 }}
 								transition={{ duration: 0.5, delay }}
 								viewport={{ once: true }}
-								className="group flex flex-col text-center"
+								className="group h-full text-center"
 							>
-								<div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border border-accent/20 bg-accent/5 text-accent transition-colors duration-300 group-hover:border-accent/40 group-hover:bg-accent/10 dark:border-stone-600 dark:bg-stone-800/80 dark:group-hover:border-accent/30 dark:group-hover:bg-accent/10">
-									<Icon className="h-8 w-8" aria-hidden />
-								</div>
-								<h4 className="mt-5 font-display font-semibold text-gray-900 text-lg dark:text-white">
-									{title}
-								</h4>
-								<p className="mt-3 flex-1 text-gray-600 text-sm leading-[1.7] dark:text-gray-300">
-									{description}
-								</p>
+								<Card
+									variant="transparent"
+									className="group flex h-full flex-col border border-accent/20 bg-accent/5 transition-colors duration-300 hover:border-accent/40 hover:bg-accent/10 dark:border-stone-600 dark:bg-stone-800/80 dark:hover:border-accent/30 dark:hover:bg-accent/10"
+								>
+									<Card.Header className="flex flex-col items-center gap-0 p-6 pb-0">
+										<div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border border-accent/20 bg-accent/5 text-accent transition-colors duration-300 group-hover:border-accent/40 group-hover:bg-accent/10 dark:border-stone-600 dark:bg-stone-800/80 dark:group-hover:border-accent/30 dark:group-hover:bg-accent/10">
+											<Icon className="h-8 w-8" aria-hidden />
+										</div>
+										<Card.Title className="mt-5 font-display font-semibold text-gray-900 text-lg dark:text-white">
+											{title}
+										</Card.Title>
+									</Card.Header>
+									<Card.Content className="flex flex-1 flex-col p-6 pt-3">
+										<Card.Description className="flex-1 text-gray-600 text-sm leading-[1.7] dark:text-gray-300">
+											{description}
+										</Card.Description>
+									</Card.Content>
+								</Card>
 							</motion.article>
 						))}
 					</div>

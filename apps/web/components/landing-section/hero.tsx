@@ -82,15 +82,10 @@ export function Hero() {
 						transition={{ duration: 0.8, delay: 0.6 }}
 						className="mb-12 flex flex-col items-center justify-center gap-4 sm:flex-row"
 					>
-						<ButtonLink href="/oferta" size="lg">
+						<ButtonLink href="/oferta/cateringowa" size="lg">
 							Zobacz menu
 						</ButtonLink>
-						<ButtonLink
-							href="/kontakt"
-							size="lg"
-							variant="outline"
-							className="border-2 border-accent bg-transparent text-accent hover:bg-accent hover:text-accent-foreground"
-						>
+						<ButtonLink href="/kontakt" size="lg" variant="secondary">
 							Skontaktuj się
 						</ButtonLink>
 					</motion.div>

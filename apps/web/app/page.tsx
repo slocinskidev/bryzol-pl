@@ -1,3 +1,4 @@
+import { Card } from '@heroui/react/card';
 import { Mail, MapPin, Phone } from 'lucide-react';
 import { ButtonAnchor, ButtonLink } from '@/components/button-link';
 import { About } from '@/components/landing-section/about';
@@ -32,15 +33,20 @@ export default function Page() {
 				<div className="absolute inset-0 bg-black/50" />
 				<div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(0,0,0,0.52)_0%,rgba(0,0,0,0.3)_55%,rgba(0,0,0,0.64)_100%)]" />
 				<div className="container relative z-10 mx-auto flex min-h-[78vh] items-center px-6 py-14 lg:py-20">
-					<div className="w-full max-w-xl rounded-2xl border border-white/20 bg-background/90 p-6 shadow-2xl backdrop-blur-md dark:bg-black/75">
-						<h2 className="font-bold font-display text-4xl text-gray-900 tracking-tight md:text-5xl dark:text-white">
-							Kontakt
-						</h2>
-						<p className="mt-4 text-gray-600 text-lg leading-relaxed dark:text-gray-300">
-							Zadzwon lub napisz, a przygotujemy szybka propozycje menu i
-							wycene.
-						</p>
-						<div className="mt-6 space-y-4">
+					<Card
+						variant="transparent"
+						className="w-full max-w-xl rounded-2xl border border-white/20 bg-background/90 p-6 shadow-2xl backdrop-blur-md dark:bg-black/75"
+					>
+						<Card.Header className="gap-0 p-0">
+							<Card.Title className="font-bold font-display text-4xl text-gray-900 tracking-tight md:text-5xl dark:text-white">
+								Kontakt
+							</Card.Title>
+							<Card.Description className="mt-4 text-gray-600 text-lg leading-relaxed dark:text-gray-300">
+								Zadzwoń lub napisz, a przygotujemy szybką propozycję menu i
+								wycenę.
+							</Card.Description>
+						</Card.Header>
+						<Card.Content className="mt-6 space-y-4 p-0">
 							<a
 								href={`tel:${contact.phone.replace(/\s/g, '')}`}
 								className="group flex items-center gap-3 text-gray-700 transition-colors hover:text-accent dark:text-gray-200"
@@ -65,10 +71,10 @@ export default function Page() {
 								<MapPin className="mt-0.5 h-5 w-5 text-accent" aria-hidden />
 								<span>{contact.address}</span>
 							</p>
-						</div>
-						<div className="mt-6 flex flex-wrap gap-3">
+						</Card.Content>
+						<Card.Footer className="mt-6 flex flex-wrap gap-3 p-0">
 							<ButtonLink href="/kontakt" size="sm">
-								Pelna strona kontaktu
+								Pełna strona kontaktu
 							</ButtonLink>
 							<ButtonAnchor
 								href={contact.directionsUrl}
@@ -79,8 +85,8 @@ export default function Page() {
 							>
 								Jak dojechać
 							</ButtonAnchor>
-						</div>
-					</div>
+						</Card.Footer>
+					</Card>
 				</div>
 			</section>
 		</div>

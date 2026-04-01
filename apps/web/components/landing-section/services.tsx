@@ -1,8 +1,9 @@
 'use client';
 
-import { ButtonLink } from '@/components/button-link';
+import { Card } from '@heroui/react/card';
 import { Briefcase, Cake, UtensilsCrossed } from 'lucide-react';
 import { motion } from 'motion/react';
+import { ButtonLink } from '@/components/button-link';
 
 const services = [
 	{
@@ -63,17 +64,24 @@ export function Services() {
 							whileInView={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.8, delay: 0.2 * (index + 1) }}
 							viewport={{ once: true }}
-							className="group rounded-2xl border border-gray-200/90 bg-white/90 p-8 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-xl dark:border-stone-700 dark:bg-stone-800/90"
+							className="h-full transition-all duration-300 hover:-translate-y-1"
 						>
-							<div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl border border-accent/20 bg-accent/10 transition-colors duration-300 group-hover:bg-accent/20 dark:bg-accent/20">
-								<Icon className="h-7 w-7 text-accent" aria-hidden />
-							</div>
-							<h3 className="mb-3 font-semibold text-gray-900 text-xl dark:text-white">
-								{title}
-							</h3>
-							<p className="text-gray-600 leading-relaxed dark:text-gray-300">
-								{description}
-							</p>
+							<Card
+								variant="default"
+								className="group h-full border-gray-200/90 bg-white/90 p-8 shadow-lg transition-all duration-300 hover:border-accent/40 hover:shadow-xl dark:border-stone-700 dark:bg-stone-800/90"
+							>
+								<Card.Header className="gap-0 p-0">
+									<div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl border border-accent/20 bg-accent/10 transition-colors duration-300 group-hover:bg-accent/20 dark:bg-accent/20">
+										<Icon className="h-7 w-7 text-accent" aria-hidden />
+									</div>
+									<Card.Title className="mb-3 font-semibold text-gray-900 text-xl dark:text-white">
+										{title}
+									</Card.Title>
+									<Card.Description className="text-gray-600 leading-relaxed dark:text-gray-300">
+										{description}
+									</Card.Description>
+								</Card.Header>
+							</Card>
 						</motion.div>
 					))}
 				</div>

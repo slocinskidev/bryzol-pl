@@ -1,5 +1,7 @@
 'use client';
 
+import { Card } from '@heroui/react/card';
+import { PageHeader } from '@/components/layout/page-header';
 import { Mail, MapPin, Phone } from 'lucide-react';
 import { motion } from 'motion/react';
 import { contact } from '@/lib/contact';
@@ -11,21 +13,12 @@ export function Contact() {
 			className="relative min-h-screen bg-gradient-to-b from-background to-accent/5 py-20 lg:py-32 dark:to-accent/10"
 		>
 			<div className="container mx-auto max-w-7xl px-6">
-				<motion.div
-					initial={{ opacity: 0, y: 20 }}
-					whileInView={{ opacity: 1, y: 0 }}
-					transition={{ duration: 0.8 }}
-					viewport={{ once: true }}
-					className="mx-auto mb-16 max-w-4xl text-center"
-				>
-					<h2 className="mb-4 font-bold font-display text-4xl text-gray-900 tracking-tight md:text-5xl lg:text-6xl dark:text-white">
-						Kontakt
-					</h2>
-					<div
-						className="mx-auto h-1 w-24 rounded-full bg-accent"
-						aria-hidden
-					/>
-				</motion.div>
+				<PageHeader
+					variant="inline"
+					as="h2"
+					title="Kontakt"
+					innerClassName="mb-16"
+				/>
 
 				<div className="grid items-start gap-12 lg:grid-cols-2 lg:gap-16">
 					<div className="space-y-10">
@@ -93,35 +86,41 @@ export function Contact() {
 						whileInView={{ opacity: 1, x: 0 }}
 						transition={{ duration: 0.8, delay: 0.4 }}
 						viewport={{ once: true }}
-						className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg dark:border-stone-700 dark:bg-stone-800"
 					>
-						<div className="p-6 lg:p-8">
-							<h3 className="mb-4 flex items-center gap-2 font-semibold text-gray-900 text-xl dark:text-white">
-								<MapPin className="h-5 w-5 text-accent" aria-hidden />
-								Lokalizacja
-							</h3>
-							<p className="mb-6 text-gray-600 dark:text-gray-300">
-								{contact.address}
-							</p>
-							<div className="flex flex-col gap-3 sm:flex-row">
-								<a
-									href={contact.directionsUrl}
-									target="_blank"
-									rel="noopener noreferrer"
-									className="inline-flex min-h-[44px] flex-1 items-center justify-center rounded-md border-2 border-accent bg-transparent px-5 py-2.5 font-medium text-accent transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus focus-visible:ring-offset-2"
-								>
-									Jak dojechać
-								</a>
-								<a
-									href={contact.mapSearchUrl}
-									target="_blank"
-									rel="noopener noreferrer"
-									className="inline-flex min-h-[44px] flex-1 items-center justify-center rounded-md bg-accent px-5 py-2.5 font-medium text-accent-foreground transition hover:bg-accent-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus focus-visible:ring-offset-2"
-								>
-									Zobacz na mapie
-								</a>
-							</div>
-						</div>
+						<Card
+							variant="default"
+							className="overflow-hidden border-gray-200 bg-white shadow-lg dark:border-stone-700 dark:bg-stone-800"
+						>
+							<Card.Content className="flex flex-col gap-6 p-6 lg:p-8">
+								<div>
+									<h3 className="mb-4 flex items-center gap-2 font-semibold text-gray-900 text-xl dark:text-white">
+										<MapPin className="h-5 w-5 text-accent" aria-hidden />
+										Lokalizacja
+									</h3>
+									<p className="mb-6 text-gray-600 dark:text-gray-300">
+										{contact.address}
+									</p>
+								</div>
+								<div className="flex flex-col gap-3 sm:flex-row">
+									<a
+										href={contact.directionsUrl}
+										target="_blank"
+										rel="noopener noreferrer"
+										className="inline-flex min-h-[44px] flex-1 items-center justify-center rounded-md border-2 border-accent bg-transparent px-5 py-2.5 font-medium text-accent transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus focus-visible:ring-offset-2"
+									>
+										Jak dojechać
+									</a>
+									<a
+										href={contact.mapSearchUrl}
+										target="_blank"
+										rel="noopener noreferrer"
+										className="inline-flex min-h-[44px] flex-1 items-center justify-center rounded-md bg-accent px-5 py-2.5 font-medium text-accent-foreground transition hover:bg-accent-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus focus-visible:ring-offset-2"
+									>
+										Zobacz na mapie
+									</a>
+								</div>
+							</Card.Content>
+						</Card>
 					</motion.div>
 				</div>
 			</div>

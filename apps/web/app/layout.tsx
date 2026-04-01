@@ -34,7 +34,7 @@ export default function RootLayout({
 				/>
 			</head>
 			<body
-				className={`${fontSans.variable} ${fontMono.variable} ${fontDisplay.variable} bg-background font-sans text-foreground antialiased`}
+				className={`${fontSans.variable} ${fontMono.variable} ${fontDisplay.variable} scroll-pt-32 bg-background font-sans text-foreground antialiased`}
 				style={
 					{
 						"--font-sans":

@@ -1,7 +1,9 @@
-"use client";
+'use client';
 
-import { motion, useReducedMotion } from "motion/react";
-import type { OfferSection } from "@/lib/offer";
+import { Card } from '@heroui/react/card';
+import { Separator } from '@heroui/react/separator';
+import { motion, useReducedMotion } from 'motion/react';
+import type { OfferSection } from '@/lib/offer';
 
 export function OfferSectionWrapper({
 	section,
@@ -17,29 +19,32 @@ export function OfferSectionWrapper({
 	return (
 		<motion.section
 			id={section.slug}
-			className="scroll-mt-28 rounded-2xl border border-border bg-surface p-6 shadow-sm md:p-8 lg:p-10"
+			className="scroll-mt-28"
 			initial={reduceMotion ? visible : hidden}
 			whileInView={visible}
-			viewport={{ once: true, margin: "-40px 0px -40px 0px" }}
+			viewport={{ once: true, margin: '-40px 0px -40px 0px' }}
 			transition={{ duration: 0.4 }}
 		>
-			<header className="mb-8">
-				<h2 className="font-display text-3xl font-bold tracking-tight text-foreground md:text-4xl">
-					{section.title}
-				</h2>
-				{section.description ? (
-					<p className="mt-2 text-lg text-muted">
-						{section.description}
-					</p>
-				) : null}
-				{section.meta?.priceNote ? (
-					<p className="mt-2 text-sm font-medium text-accent">
-						{section.meta.priceNote}
-					</p>
-				) : null}
-				<div className="mt-4 h-0.5 w-12 rounded-full bg-accent" aria-hidden />
-			</header>
-			{children}
+			<Card variant="default" className="gap-6 p-6 shadow-sm md:p-8 lg:p-10">
+				<Card.Header className="mb-0 gap-0 pb-0">
+					<Card.Title className="font-bold font-display text-3xl text-foreground tracking-tight md:text-4xl">
+						{section.title}
+					</Card.Title>
+					{section.description ? (
+						<Card.Description className="mt-2 text-lg text-muted">
+							{section.description}
+						</Card.Description>
+					) : null}
+					{section.meta?.priceNote ? (
+						<p className="mt-2 font-medium text-accent text-sm">
+							{section.meta.priceNote}
+						</p>
+					) : null}
+					<div className="mt-4 h-0.5 w-12 rounded-full bg-accent" aria-hidden />
+				</Card.Header>
+				<Separator className="bg-border" />
+				<Card.Content>{children}</Card.Content>
+			</Card>
 		</motion.section>
 	);
 }

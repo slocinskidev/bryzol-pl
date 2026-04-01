@@ -1,9 +1,16 @@
+import { PageHeader } from '@/components/layout/page-header';
 import { About } from '@/components/landing-section/about';
 
 export default function AboutPage() {
 	return (
-		<div className="bg-background pt-24 transition-colors duration-500">
-			<About />
+		<div className="bg-background pt-32 transition-colors duration-500">
+			<PageHeader
+				variant="soft"
+				eyebrow="Poznaj nas"
+				title="O nas"
+				description="Nie budujemy historii o wielkiej firmie. Budujemy ją na talerzu."
+			/>
+			<About hideSectionHeader />
 			<section className="pb-20 lg:pb-28">
 				<div className="container mx-auto max-w-7xl px-6">
 					<div className="mx-auto max-w-3xl text-center">

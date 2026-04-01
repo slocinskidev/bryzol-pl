@@ -1,5 +1,6 @@
 'use client';
 
+import { Surface } from '@heroui/react/surface';
 import { ThemeToggle } from '@workspace/ui/components/theme-toggle';
 import { cn } from '@workspace/ui/lib/utils';
 import { motion } from 'motion/react';
@@ -38,7 +39,10 @@ export function Navigation() {
 			aria-label="Main navigation"
 		>
 			<div className="mx-auto max-w-7xl">
-				<div className="flex items-center justify-between rounded-2xl border border-border bg-surface/95 px-6 py-3 shadow-xl backdrop-blur-md dark:bg-surface-secondary/90">
+				<Surface
+					variant="transparent"
+					className="flex items-center justify-between rounded-2xl border border-border bg-surface/95 px-6 py-3 shadow-xl backdrop-blur-md dark:bg-surface-secondary/90"
+				>
 					<NavigationLogo onClick={handleLogoClick} />
 					<DesktopNavigation
 						items={navigationItems}
@@ -54,7 +58,7 @@ export function Navigation() {
 						activeSection={activeSection}
 						onItemClick={handleItemClick}
 					/>
-				</div>
+				</Surface>
 			</div>
 		</motion.nav>
 	);
@@ -107,7 +111,7 @@ function DesktopNavigation({
 			initial={{ opacity: 0, y: -20 }}
 			animate={{ opacity: 1, y: 0 }}
 			transition={{ duration: 0.8, delay: 0.4 }}
-			className="nav-container relative hidden items-center gap-8 lg:flex"
+			className="nav-container relative hidden flex-wrap items-center justify-end gap-x-1 gap-y-1 lg:flex xl:gap-x-2"
 		>
 			<motion.div
 				className="absolute bottom-0 h-0.5 rounded-full bg-accent"
@@ -170,7 +174,7 @@ function NavigationItemComponent({
 					}
 				}}
 				className={cn(
-					'relative flex items-center gap-1 overflow-hidden rounded-lg px-3 py-2 font-bold text-sm transition-all duration-300',
+					'relative flex items-center gap-1 overflow-hidden rounded-lg px-2 py-2 font-bold text-xs transition-all duration-300 lg:px-3 lg:text-sm',
 					'text-gray-900 hover:text-accent dark:text-white',
 					isActive && 'text-accent',
 				)}
@@ -213,8 +217,8 @@ function NavigationActions({
 			className="flex items-center gap-4"
 		>
 			<ThemeToggle className="hidden lg:flex" />
-			<ButtonLink href="/kontakt" size="sm" className="hidden md:flex">
-				Zapytaj o ofertę
+			<ButtonLink href="/kontakt" size="sm" className="flex shrink-0">
+				Kontakt
 			</ButtonLink>
 
 			<NavigationDrawer

@@ -1,5 +1,6 @@
 'use client';
 
+import { Card } from '@heroui/react/card';
 import { CheckCircle2 } from 'lucide-react';
 import { motion } from 'motion/react';
 
@@ -49,23 +50,32 @@ export function SocialProof() {
 						whileInView={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.5 }}
 						viewport={{ once: true }}
-						className="rounded-2xl border border-white/40 bg-surface/90 p-6 shadow-lg backdrop-blur-sm dark:border-stone-700/80"
+						className="h-full"
 					>
-						<h3 className="font-semibold text-gray-900 text-xl dark:text-white">
-							Jak wyglada wspolpraca
-						</h3>
-						<ul className="mt-5 space-y-4">
-							{processSteps.map((step, index) => (
-								<li key={step} className="flex items-start gap-3">
-									<div className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-accent/15 font-bold text-accent text-xs">
-										{index + 1}
-									</div>
-									<span className="text-gray-600 text-sm leading-relaxed dark:text-gray-300">
-										{step}
-									</span>
-								</li>
-							))}
-						</ul>
+						<Card
+							variant="default"
+							className="h-full border-white/40 bg-surface/90 shadow-lg backdrop-blur-sm dark:border-stone-700/80"
+						>
+							<Card.Header className="gap-0 p-6 pb-0">
+								<Card.Title className="font-semibold text-gray-900 text-xl dark:text-white">
+									Jak wygląda współpraca
+								</Card.Title>
+							</Card.Header>
+							<Card.Content className="p-6 pt-5">
+								<ul className="space-y-4">
+									{processSteps.map((step, index) => (
+										<li key={step} className="flex items-start gap-3">
+											<div className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-accent/15 font-bold text-accent text-xs">
+												{index + 1}
+											</div>
+											<span className="text-gray-600 text-sm leading-relaxed dark:text-gray-300">
+												{step}
+											</span>
+										</li>
+									))}
+								</ul>
+							</Card.Content>
+						</Card>
 					</motion.article>
 
 					<motion.article
@@ -73,22 +83,31 @@ export function SocialProof() {
 						whileInView={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.5, delay: 0.08 }}
 						viewport={{ once: true }}
-						className="rounded-2xl border border-white/40 bg-surface/90 p-6 shadow-lg backdrop-blur-sm dark:border-stone-700/80"
+						className="h-full"
 					>
-						<h3 className="font-semibold text-gray-900 text-xl dark:text-white">
-							Co obslugujemy
-						</h3>
-						<div className="mt-5 flex flex-wrap gap-2">
-							{serviceTypes.map((service) => (
-								<span
-									key={service}
-									className="inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent/10 px-3 py-1.5 text-accent text-sm"
-								>
-									<CheckCircle2 className="h-3.5 w-3.5" aria-hidden />
-									{service}
-								</span>
-							))}
-						</div>
+						<Card
+							variant="default"
+							className="h-full border-white/40 bg-surface/90 shadow-lg backdrop-blur-sm dark:border-stone-700/80"
+						>
+							<Card.Header className="gap-0 p-6 pb-0">
+								<Card.Title className="font-semibold text-gray-900 text-xl dark:text-white">
+									Co obsługujemy
+								</Card.Title>
+							</Card.Header>
+							<Card.Content className="p-6 pt-5">
+								<div className="flex flex-wrap gap-2">
+									{serviceTypes.map((service) => (
+										<span
+											key={service}
+											className="inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent/10 px-3 py-1.5 text-accent text-sm"
+										>
+											<CheckCircle2 className="h-3.5 w-3.5" aria-hidden />
+											{service}
+										</span>
+									))}
+								</div>
+							</Card.Content>
+						</Card>
 					</motion.article>
 				</div>
 			</div>

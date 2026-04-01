@@ -1,7 +1,20 @@
 export const navigationItems = [
 	{ href: '/', label: 'Strona główna', id: 'home' },
-	{ href: '/oferta', label: 'Oferta', id: 'oferta' },
-	{ href: '/kontakt', label: 'Kontakt', id: 'contact' },
+	{
+		href: '/oferta/cateringowa',
+		label: 'Oferta cateringowa',
+		id: 'oferta-catering',
+	},
+	{
+		href: '/oferta/dania-na-dowoz',
+		label: 'Dania na dowóz',
+		id: 'oferta-dowoz',
+	},
+	{
+		href: '/oferta/domowe-obiady',
+		label: 'Domowe obiady',
+		id: 'oferta-obiady',
+	},
 ] as const;
 
 export type NavigationItem = (typeof navigationItems)[number];
