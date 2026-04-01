@@ -1,13 +1,7 @@
 'use client';
 
-import { Button } from '@workspace/ui/components/button';
-import {
-	Drawer,
-	DrawerContent,
-	DrawerHeader,
-	DrawerTitle,
-	DrawerTrigger,
-} from '@workspace/ui/components/drawer';
+import { Button } from '@heroui/react/button';
+import { Drawer } from '@heroui/react/drawer';
 import { ThemeToggle } from '@workspace/ui/components/theme-toggle';
 import { cn } from '@workspace/ui/lib/utils';
 import { Menu } from 'lucide-react';
@@ -32,70 +26,79 @@ export function NavigationDrawer({
 	onOpenChange,
 }: NavigationDrawerProps) {
 	return (
-		<Drawer open={open} onOpenChange={onOpenChange}>
-			<DrawerTrigger asChild>
-				<Button variant="ghost" size="sm" className="lg:hidden">
-					<Menu />
-					<span>Menu</span>
-				</Button>
-			</DrawerTrigger>
-			<DrawerContent>
-				<DrawerHeader>
-					<DrawerTitle className="sr-only">Nawigacja</DrawerTitle>
-					<div className="flex items-center justify-between">
-						<div className="flex items-center gap-2">
-							<div className="flex size-12 items-center justify-center rounded-md bg-primary shadow-lg">
-								<Image
-									src={logo}
-									alt="Bryzol Catering"
-									width={48}
-									height={48}
-									className="size-10 object-contain"
-								/>
+		<>
+			<Button
+				variant="ghost"
+				size="sm"
+				className="lg:hidden"
+				onPress={() => onOpenChange(true)}
+			>
+				<Menu />
+				<span>Menu</span>
+			</Button>
+
+			<Drawer.Backdrop isOpen={open} onOpenChange={onOpenChange} variant="blur">
+				<Drawer.Content placement="bottom">
+					<Drawer.Dialog>
+						<Drawer.Handle />
+						<Drawer.Header>
+							<Drawer.Heading className="sr-only">Nawigacja</Drawer.Heading>
+							<div className="flex items-center justify-between">
+								<div className="flex items-center gap-2">
+									<div className="flex size-12 items-center justify-center rounded-md bg-accent shadow-lg">
+										<Image
+											src={logo}
+											alt="Bryzol Catering"
+											width={48}
+											height={48}
+											className="size-10 object-contain"
+										/>
+									</div>
+									<span className="font-bold text-2xl text-accent">Bryzol</span>
+								</div>
+
+								<ThemeToggle />
 							</div>
-							<span className="font-bold text-2xl text-primary">Bryzol</span>
-						</div>
+						</Drawer.Header>
 
-						<ThemeToggle />
-					</div>
-				</DrawerHeader>
+						<Drawer.Body className="flex flex-col gap-4 px-6 pb-6">
+							<div className="flex flex-col gap-1 overflow-y-auto">
+								{navigationItems.map((item) => (
+									<Button
+										variant="ghost"
+										size="lg"
+										key={item.id}
+										onPress={() => {
+											onOpenChange(false);
+											setTimeout(() => {
+												onItemClick(item.href);
+											}, 300);
+										}}
+										className={cn(
+											'h-12 justify-start',
+											activeSection === item.id && 'text-accent',
+										)}
+									>
+										{item.label}
+									</Button>
+								))}
+							</div>
 
-				<div className="flex flex-col gap-4 px-6 pb-6">
-					<div className="flex flex-col gap-1 overflow-y-auto">
-						{navigationItems.map((item) => (
 							<Button
-								variant="ghost"
 								size="lg"
-								key={item.id}
-								onClick={() => {
+								onPress={() => {
 									onOpenChange(false);
 									setTimeout(() => {
-										onItemClick(item.href);
+										onItemClick('/kontakt');
 									}, 300);
 								}}
-								className={cn(
-									'h-12 justify-start',
-									activeSection === item.id && 'text-primary',
-								)}
 							>
-								{item.label}
+								Zapytaj o ofertę
 							</Button>
-						))}
-					</div>
-
-					<Button
-						size="lg"
-						onClick={() => {
-							onOpenChange(false);
-							setTimeout(() => {
-								onItemClick('/kontakt');
-							}, 300);
-						}}
-					>
-						Zapytaj o ofertę
-					</Button>
-				</div>
-			</DrawerContent>
-		</Drawer>
+						</Drawer.Body>
+					</Drawer.Dialog>
+				</Drawer.Content>
+			</Drawer.Backdrop>
+		</>
 	);
 }

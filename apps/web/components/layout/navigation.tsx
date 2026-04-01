@@ -1,6 +1,5 @@
 'use client';
 
-import { Button } from '@workspace/ui/components/button';
 import { ThemeToggle } from '@workspace/ui/components/theme-toggle';
 import { cn } from '@workspace/ui/lib/utils';
 import { motion } from 'motion/react';
@@ -8,6 +7,7 @@ import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useRef, useState } from 'react';
 import logo from '@/assets/logo-simple.png';
+import { ButtonLink } from '@/components/button-link';
 import { type NavigationItem, navigationItems } from './constants';
 import { useActiveItemRect } from './hooks/use-active-item-rect';
 import { useActiveSection } from './hooks/use-active-section';
@@ -38,7 +38,7 @@ export function Navigation() {
 			aria-label="Main navigation"
 		>
 			<div className="mx-auto max-w-7xl">
-				<div className="flex items-center justify-between rounded-2xl border bg-gray-50/95 px-6 py-3 shadow-xl transition-all duration-500 dark:bg-black/90">
+				<div className="flex items-center justify-between rounded-2xl border border-border bg-surface/95 px-6 py-3 shadow-xl backdrop-blur-md dark:bg-surface-secondary/90">
 					<NavigationLogo onClick={handleLogoClick} />
 					<DesktopNavigation
 						items={navigationItems}
@@ -72,7 +72,7 @@ function NavigationLogo({ onClick }: { onClick: () => void }) {
 			<motion.div
 				whileHover={{ scale: 1.05 }}
 				whileTap={{ scale: 0.95 }}
-				className="flex size-10 items-center justify-center rounded-md bg-primary shadow-lg"
+				className="flex size-10 items-center justify-center rounded-md bg-accent shadow-lg"
 			>
 				<Image
 					src={logo}
@@ -110,7 +110,7 @@ function DesktopNavigation({
 			className="nav-container relative hidden items-center gap-8 lg:flex"
 		>
 			<motion.div
-				className="absolute bottom-0 h-0.5 rounded-full bg-primary"
+				className="absolute bottom-0 h-0.5 rounded-full bg-accent"
 				initial={{ width: 0, left: 0 }}
 				animate={{
 					width: activeItemRect.width,
@@ -171,8 +171,8 @@ function NavigationItemComponent({
 				}}
 				className={cn(
 					'relative flex items-center gap-1 overflow-hidden rounded-lg px-3 py-2 font-bold text-sm transition-all duration-300',
-					'text-gray-900 hover:text-primary dark:text-white',
-					isActive && 'text-primary',
+					'text-gray-900 hover:text-accent dark:text-white',
+					isActive && 'text-accent',
 				)}
 				whileHover={{
 					scale: 1.05,
@@ -181,7 +181,7 @@ function NavigationItemComponent({
 				whileTap={{ scale: 0.95 }}
 			>
 				<motion.div
-					className="absolute inset-0 rounded-lg bg-primary/10"
+					className="absolute inset-0 rounded-lg bg-accent/10"
 					initial={{ scale: 0, opacity: 0 }}
 					whileHover={{ scale: 1, opacity: 1 }}
 					transition={{ duration: 0.2 }}
@@ -213,9 +213,9 @@ function NavigationActions({
 			className="flex items-center gap-4"
 		>
 			<ThemeToggle className="hidden lg:flex" />
-			<Button size="sm" className="hidden md:flex" asChild>
-				<a href="/kontakt">Zapytaj o ofertę</a>
-			</Button>
+			<ButtonLink href="/kontakt" size="sm" className="hidden md:flex">
+				Zapytaj o ofertę
+			</ButtonLink>
 
 			<NavigationDrawer
 				open={mobileNavOpen}

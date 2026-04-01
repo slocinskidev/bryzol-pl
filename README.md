@@ -1,31 +1,30 @@
-# shadcn/ui monorepo template
+# bryzol-pl
 
-This template is for creating a monorepo with shadcn/ui.
+Monorepo for Bryzol Catering (Next.js app + shared UI package).
 
-## Usage
+## Stack
+
+- **Framework:** Next.js (App Router)
+- **UI:** [HeroUI v3](https://www.heroui.com/) (`@heroui/react`, `@heroui/styles`)
+- **Styling:** Tailwind CSS v4, shared tokens in `packages/ui/src/styles/globals.css`
+- **Package manager:** pnpm
+
+## Scripts
 
 ```bash
-pnpm dlx shadcn@latest init
+pnpm dev          # Turbo dev (web + packages)
+pnpm build        # Production build
+pnpm check-types  # TypeScript
+pnpm lint         # Biome
 ```
 
-## Adding components
+## Packages
 
-To add components to your app, run the following command at the root of your `web` app:
+- `apps/web` — marketing site
+- `packages/ui` — `@workspace/ui`: global CSS, small primitives (e.g. `ThemeToggle`, `ScrollProgress`, re-exports of `Drawer`)
 
-```bash
-pnpm dlx shadcn@latest add button -c apps/web
-```
+Link buttons that need Next.js routing use `apps/web/components/button-link.tsx` (`ButtonLink` / `ButtonAnchor`) so HeroUI `buttonVariants` apply without `Button` + `render` typing issues.
 
-This will place the ui components in the `packages/ui/src/components` directory.
+## Theme
 
-## Tailwind
-
-Your `tailwind.config.ts` and `globals.css` are already set up to use the components from the `ui` package.
-
-## Using components
-
-To use the components in your app, import them from the `ui` package.
-
-```tsx
-import { Button } from "@workspace/ui/components/button"
-```
+Customize colors in `packages/ui/src/styles/globals.css` (HeroUI CSS variables). `apps/web/components/layout/providers.tsx` syncs `data-theme` with `next-themes` for HeroUI selectors.

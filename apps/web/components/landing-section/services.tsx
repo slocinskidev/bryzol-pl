@@ -1,9 +1,8 @@
 'use client';
 
-import { Button } from '@workspace/ui/components/button';
+import { ButtonLink } from '@/components/button-link';
 import { Briefcase, Cake, UtensilsCrossed } from 'lucide-react';
 import { motion } from 'motion/react';
-import Link from 'next/link';
 
 const services = [
 	{
@@ -30,10 +29,10 @@ export function Services() {
 	return (
 		<section
 			id="services"
-			className="relative flex min-h-screen items-center justify-center bg-gradient-to-b from-background via-background to-primary/5 py-20 lg:py-32 dark:to-primary/10"
+			className="relative flex min-h-screen items-center justify-center bg-gradient-to-b from-background via-background to-accent/5 py-20 lg:py-32 dark:to-accent/10"
 		>
 			<div
-				className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_80%_10%,hsl(var(--primary)/0.14),transparent_42%)]"
+				className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_80%_10%,color-mix(in_oklab,var(--accent)_14%,transparent),transparent_42%)]"
 				aria-hidden
 			/>
 			<div className="container mx-auto max-w-7xl px-6">
@@ -66,8 +65,8 @@ export function Services() {
 							viewport={{ once: true }}
 							className="group rounded-2xl border border-gray-200/90 bg-white/90 p-8 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-xl dark:border-stone-700 dark:bg-stone-800/90"
 						>
-							<div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl border border-primary/20 bg-primary/10 transition-colors duration-300 group-hover:bg-primary/20 dark:bg-primary/20">
-								<Icon className="h-7 w-7 text-primary" aria-hidden />
+							<div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl border border-accent/20 bg-accent/10 transition-colors duration-300 group-hover:bg-accent/20 dark:bg-accent/20">
+								<Icon className="h-7 w-7 text-accent" aria-hidden />
 							</div>
 							<h3 className="mb-3 font-semibold text-gray-900 text-xl dark:text-white">
 								{title}
@@ -79,9 +78,9 @@ export function Services() {
 					))}
 				</div>
 				<div className="mt-10 flex items-center justify-center">
-					<Button size="lg" variant="outline" asChild>
-						<Link href="/oferta">Zobacz pełną ofertę usług</Link>
-					</Button>
+					<ButtonLink href="/oferta" size="lg" variant="outline">
+						Zobacz pełną ofertę usług
+					</ButtonLink>
 				</div>
 			</div>
 		</section>

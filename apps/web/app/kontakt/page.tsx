@@ -14,12 +14,12 @@ export default function ContactPage() {
 			<Contact />
 			<section className="pb-20 lg:pb-28">
 				<div className="container mx-auto max-w-7xl px-6">
-					<div className="overflow-hidden rounded-2xl border border-border bg-card shadow-lg">
+					<div className="overflow-hidden rounded-2xl border border-border bg-surface shadow-lg">
 						<div className="border-border border-b p-6">
 							<h2 className="font-bold font-display text-3xl text-foreground">
 								Mapa dojazdu
 							</h2>
-							<p className="mt-2 text-muted-foreground">
+							<p className="mt-2 text-muted">
 								Znajdz nas pod adresem: {contact.address}
 							</p>
 						</div>

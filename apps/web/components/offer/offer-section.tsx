@@ -17,7 +17,7 @@ export function OfferSectionWrapper({
 	return (
 		<motion.section
 			id={section.slug}
-			className="scroll-mt-28 rounded-2xl border border-border bg-card p-6 shadow-sm md:p-8 lg:p-10"
+			className="scroll-mt-28 rounded-2xl border border-border bg-surface p-6 shadow-sm md:p-8 lg:p-10"
 			initial={reduceMotion ? visible : hidden}
 			whileInView={visible}
 			viewport={{ once: true, margin: "-40px 0px -40px 0px" }}
@@ -28,7 +28,7 @@ export function OfferSectionWrapper({
 					{section.title}
 				</h2>
 				{section.description ? (
-					<p className="mt-2 text-lg text-muted-foreground">
+					<p className="mt-2 text-lg text-muted">
 						{section.description}
 					</p>
 				) : null}

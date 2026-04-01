@@ -40,7 +40,7 @@
           "fix": "safe",
           "options": {
             "attributes": ["className"],
-            "functions": ["cn", "cva"]
+            "functions": ["cn"]
           }
         },
         "noFloatingPromises": {

@@ -20,7 +20,7 @@ export function SocialProof() {
 	return (
 		<section className="relative overflow-hidden bg-background py-20 lg:py-28">
 			<div
-				className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,hsl(var(--primary)/0.12),transparent_45%),radial-gradient(circle_at_80%_80%,hsl(var(--accent)/0.1),transparent_40%)]"
+				className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,color-mix(in_oklab,var(--accent)_12%,transparent),transparent_45%),radial-gradient(circle_at_80%_80%,color-mix(in_oklab,var(--accent)_10%,transparent),transparent_40%)]"
 				aria-hidden
 			/>
 			<div className="container mx-auto max-w-7xl px-6">
@@ -49,7 +49,7 @@ export function SocialProof() {
 						whileInView={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.5 }}
 						viewport={{ once: true }}
-						className="rounded-2xl border border-white/40 bg-card/90 p-6 shadow-lg backdrop-blur-sm dark:border-stone-700/80"
+						className="rounded-2xl border border-white/40 bg-surface/90 p-6 shadow-lg backdrop-blur-sm dark:border-stone-700/80"
 					>
 						<h3 className="font-semibold text-gray-900 text-xl dark:text-white">
 							Jak wyglada wspolpraca
@@ -57,7 +57,7 @@ export function SocialProof() {
 						<ul className="mt-5 space-y-4">
 							{processSteps.map((step, index) => (
 								<li key={step} className="flex items-start gap-3">
-									<div className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/15 font-bold text-primary text-xs">
+									<div className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-accent/15 font-bold text-accent text-xs">
 										{index + 1}
 									</div>
 									<span className="text-gray-600 text-sm leading-relaxed dark:text-gray-300">
@@ -73,7 +73,7 @@ export function SocialProof() {
 						whileInView={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.5, delay: 0.08 }}
 						viewport={{ once: true }}
-						className="rounded-2xl border border-white/40 bg-card/90 p-6 shadow-lg backdrop-blur-sm dark:border-stone-700/80"
+						className="rounded-2xl border border-white/40 bg-surface/90 p-6 shadow-lg backdrop-blur-sm dark:border-stone-700/80"
 					>
 						<h3 className="font-semibold text-gray-900 text-xl dark:text-white">
 							Co obslugujemy
@@ -82,7 +82,7 @@ export function SocialProof() {
 							{serviceTypes.map((service) => (
 								<span
 									key={service}
-									className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3 py-1.5 text-primary text-sm"
+									className="inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent/10 px-3 py-1.5 text-accent text-sm"
 								>
 									<CheckCircle2 className="h-3.5 w-3.5" aria-hidden />
 									{service}

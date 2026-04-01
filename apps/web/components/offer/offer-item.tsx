@@ -23,17 +23,17 @@ export function OfferItemClient({ item }: { item: OfferItem }) {
 			: description;
 
 	return (
-		<li className="flex flex-wrap items-baseline justify-between gap-2 border-b border-border/60 py-3 last:border-0 transition-colors hover:bg-muted/30 -mx-2 px-2 rounded-lg">
+		<li className="flex flex-wrap items-baseline justify-between gap-2 border-b border-border/60 py-3 last:border-0 transition-colors hover:bg-default/30 -mx-2 px-2 rounded-lg">
 			<div className="min-w-0 flex-1">
 				<span className="font-medium text-foreground">{item.name}</span>
 				{description ? (
-					<p className="mt-0.5 text-sm text-muted-foreground">
+					<p className="mt-0.5 text-sm text-muted">
 						{clamped}
 						{showToggle && (
 							<button
 								type="button"
 								onClick={() => setExpanded((e) => !e)}
-								className="ml-1 text-accent font-medium hover:underline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-ring rounded"
+								className="ml-1 text-accent font-medium hover:underline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-focus rounded"
 							>
 								{expanded ? "Zwiń" : "Pokaż więcej"}
 							</button>
@@ -42,7 +42,7 @@ export function OfferItemClient({ item }: { item: OfferItem }) {
 				) : null}
 			</div>
 			{item.price != null ? (
-				<span className="shrink-0 tabular-nums text-sm font-medium rounded-md bg-muted px-2.5 py-1 text-foreground">
+				<span className="shrink-0 tabular-nums text-sm font-medium rounded-md bg-default px-2.5 py-1 text-foreground">
 					{formatPrice(item.price)}
 					{item.unit ? ` zł/${item.unit}` : " zł"}
 				</span>

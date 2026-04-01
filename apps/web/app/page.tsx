@@ -1,6 +1,5 @@
-import { Button } from '@workspace/ui/components/button';
 import { Mail, MapPin, Phone } from 'lucide-react';
-import Link from 'next/link';
+import { ButtonAnchor, ButtonLink } from '@/components/button-link';
 import { About } from '@/components/landing-section/about';
 import { Hero } from '@/components/landing-section/hero';
 import { Services } from '@/components/landing-section/services';
@@ -44,42 +43,42 @@ export default function Page() {
 						<div className="mt-6 space-y-4">
 							<a
 								href={`tel:${contact.phone.replace(/\s/g, '')}`}
-								className="group flex items-center gap-3 text-gray-700 transition-colors hover:text-primary dark:text-gray-200"
+								className="group flex items-center gap-3 text-gray-700 transition-colors hover:text-accent dark:text-gray-200"
 							>
 								<Phone
-									className="h-5 w-5 text-primary transition-transform duration-300 group-hover:scale-110"
+									className="h-5 w-5 text-accent transition-transform duration-300 group-hover:scale-110"
 									aria-hidden
 								/>
 								<span>{contact.phone}</span>
 							</a>
 							<a
 								href={`mailto:${contact.email}`}
-								className="group flex items-center gap-3 text-gray-700 transition-colors hover:text-primary dark:text-gray-200"
+								className="group flex items-center gap-3 text-gray-700 transition-colors hover:text-accent dark:text-gray-200"
 							>
 								<Mail
-									className="h-5 w-5 text-primary transition-transform duration-300 group-hover:scale-110"
+									className="h-5 w-5 text-accent transition-transform duration-300 group-hover:scale-110"
 									aria-hidden
 								/>
 								<span>{contact.email}</span>
 							</a>
 							<p className="flex items-start gap-3 text-gray-700 dark:text-gray-200">
-								<MapPin className="mt-0.5 h-5 w-5 text-primary" aria-hidden />
+								<MapPin className="mt-0.5 h-5 w-5 text-accent" aria-hidden />
 								<span>{contact.address}</span>
 							</p>
 						</div>
 						<div className="mt-6 flex flex-wrap gap-3">
-							<Button size="sm" asChild>
-								<Link href="/kontakt">Pelna strona kontaktu</Link>
-							</Button>
-							<Button size="sm" variant="outline" asChild>
-								<a
-									href={contact.directionsUrl}
-									target="_blank"
-									rel="noopener noreferrer"
-								>
-									Jak dojechac
-								</a>
-							</Button>
+							<ButtonLink href="/kontakt" size="sm">
+								Pelna strona kontaktu
+							</ButtonLink>
+							<ButtonAnchor
+								href={contact.directionsUrl}
+								target="_blank"
+								rel="noopener noreferrer"
+								size="sm"
+								variant="outline"
+							>
+								Jak dojechać
+							</ButtonAnchor>
 						</div>
 					</div>
 				</div>

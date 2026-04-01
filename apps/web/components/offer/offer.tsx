@@ -46,7 +46,7 @@ function CategoryContent({
 				{category.title}
 			</h3>
 			{category.note ? (
-				<p className="mt-1 text-sm text-muted-foreground">{category.note}</p>
+				<p className="mt-1 text-sm text-muted">{category.note}</p>
 			) : null}
 			<ul className="mt-4 space-y-0">{children}</ul>
 		</div>

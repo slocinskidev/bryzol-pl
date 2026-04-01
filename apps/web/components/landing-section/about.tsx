@@ -11,7 +11,7 @@ export function About() {
 	return (
 		<section
 			id="about"
-			className="relative min-h-screen overflow-hidden bg-gradient-to-b from-primary/[0.06] via-background to-accent/[0.04] py-24 lg:py-36 dark:from-primary/10 dark:via-stone-900 dark:to-accent/5"
+			className="relative min-h-screen overflow-hidden bg-gradient-to-b from-accent/[0.06] via-background to-accent/[0.04] py-24 lg:py-36 dark:from-accent/10 dark:via-background dark:to-accent/5"
 		>
 			{/* Warm grain overlay — gastronomy atmosphere */}
 			<div
@@ -46,11 +46,12 @@ export function About() {
 						className="mx-auto mt-4 h-0.5 w-16 rounded-full bg-accent"
 						aria-hidden
 					/>
-					<p className="mx-auto mt-8 max-w-2xl text-gray-600 text-lg leading-relaxed md:text-xl md:leading-[1.65] dark:text-gray-300">
-						Domowy smak na każdą okazję — od obiadów na dowóz po małe przyjęcia
-						i imprezy firmowe. Rodzinna gościnność i dopasowane menu. Dobre
-						jedzenie łączy ludzi.
-					</p>
+					<div className="mx-auto mt-8 max-w-2xl space-y-2 text-gray-600 text-lg leading-relaxed md:text-xl md:leading-[1.65] dark:text-gray-300">
+						<p>Nie budujemy historii o wielkiej firmie.</p>
+						<p className="font-semibold text-gray-900 dark:text-white">
+							Budujemy ją na talerzu.
+						</p>
+					</div>
 				</motion.header>
 
 				{/* Story block: image + pull-quote — magazine / restaurant editorial */}
@@ -76,7 +77,7 @@ export function About() {
 						/>
 						{/* Warm gradient overlay (green/gold tint) */}
 						<div
-							className="absolute inset-0 rounded-2xl bg-gradient-to-t from-primary/40 via-transparent to-accent/10"
+							className="absolute inset-0 rounded-2xl bg-gradient-to-t from-accent/40 via-transparent to-accent/10"
 							aria-hidden
 						/>
 					</motion.div>
@@ -90,7 +91,7 @@ export function About() {
 						className="relative"
 					>
 						<p className="mb-4 font-semibold text-accent text-xs uppercase tracking-[0.2em]">
-							Słowo od założyciela
+							Kim jesteśmy
 						</p>
 						<div className="border-accent border-l-4 pl-6 md:pl-8">
 							<blockquote>
@@ -99,14 +100,40 @@ export function About() {
 										className="font-bold font-display text-2xl italic md:text-3xl lg:text-4xl"
 										speed={0.6}
 									>
-										Smak to część naszego życia
+										Smak, który naprawdę robi różnicę
 									</AuroraText>
 								</p>
-								<p className="mt-6 max-w-[65ch] text-base text-gray-600 leading-[1.7] md:text-lg dark:text-gray-300">
-									Zaczęliśmy od kuchni, w której liczy się każdy detal. Dziś
-									łączymy polskie tradycje z inspiracjami z całego świata.
-									Cieszcie się chwilą — my zajmiemy się resztą.
-								</p>
+								<div className="mt-6 max-w-[65ch] space-y-4 text-base text-gray-600 leading-[1.7] md:text-lg dark:text-gray-300">
+									<p>
+										Bryzol Catering to pasja do gotowania, która z czasem
+										przerodziła się w coś większego. Dziś za każdą potrawą stoi
+										doświadczenie, zaangażowanie i dbałość o smak, który
+										naprawdę robi różnicę.
+									</p>
+									<p>
+										Tworzymy zarówno domowe obiady, jak i catering na różne
+										okazje — od kameralnych spotkań po większe wydarzenia. Każde
+										menu dopasowujemy do potrzeb, gustu i budżetu naszych
+										klientów.
+									</p>
+									<p>
+										W naszej ofercie znajdziesz klasyczną kuchnię polską, ale
+										też dania inspirowane smakami świata. Od prostych,
+										codziennych obiadów po finger food, zimne płyty i
+										rozbudowane stoły cateringowe.
+									</p>
+									<p>
+										Obsługujemy klientów indywidualnych i firmy, oferując
+										również regularne dostawy obiadów oraz kompleksową
+										organizację wydarzeń.
+									</p>
+									<p className="border-border border-t pt-4 text-foreground dark:text-white">
+										<span className="font-semibold">
+											Nie lubimy zbędnych słów.
+										</span>{' '}
+										Wolimy, żeby nasze jedzenie mówiło samo za siebie.
+									</p>
+								</div>
 							</blockquote>
 						</div>
 
@@ -118,8 +145,8 @@ export function About() {
 							viewport={{ once: true }}
 							className="mt-10 flex items-center gap-4 rounded-2xl border border-accent/20 bg-accent/5 px-6 py-5 dark:border-accent/15 dark:bg-accent/10"
 						>
-							<div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border-2 border-accent/30 bg-primary/10 dark:bg-primary/20">
-								<ChefHat className="h-7 w-7 text-primary" aria-hidden />
+							<div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border-2 border-accent/30 bg-accent/10 dark:bg-accent/20">
+								<ChefHat className="h-7 w-7 text-accent" aria-hidden />
 							</div>
 							<div>
 								<p className="font-semibold text-gray-900 dark:text-white">
@@ -155,30 +182,30 @@ export function About() {
 						{[
 							{
 								icon: Heart,
-								title: 'Z pasją',
+								title: 'Pasja',
 								description:
-									'Każde danie traktujemy jak dzieło — od składników po ostatni detal na talerzu.',
+									'Gotowanie, które z czasem stało się czymś większym — i które widać w każdym daniu.',
 								delay: 0.05,
 							},
 							{
 								icon: Award,
-								title: 'Doświadczenie',
+								title: 'Doświadczenie i smak',
 								description:
-									'Dopracowane menu, punktualna dostawa i obsługa na najwyższym poziomie. Spokój dla Was.',
+									'Za każdą potrawą stoi praca ludzi, którym zależy na smaku naprawdę robiącym różnicę.',
 								delay: 0.15,
 							},
 							{
 								icon: Users,
-								title: 'Rodzinna atmosfera',
+								title: 'Dopasowanie do Was',
 								description:
-									'Tworzymy klimat, w którym goście czują się jak u siebie — ciepło i wyjątkowo.',
+									'Menu pod potrzeby, gust i budżet — od domowych obiadów po większe wydarzenia.',
 								delay: 0.25,
 							},
 							{
 								icon: ChefHat,
-								title: 'Tradycja i nowoczesność',
+								title: 'Polska baza, światowe inspiracje',
 								description:
-									'Sprawdzone receptury i nowoczesne podejście — smak, na który można liczyć.',
+									'Klasyczna kuchnia polska obok dań inspirowanych smakami świata — zawsze pod Ciebie.',
 								delay: 0.35,
 							},
 						].map(({ icon: Icon, title, description, delay }) => (
@@ -190,7 +217,7 @@ export function About() {
 								viewport={{ once: true }}
 								className="group flex flex-col text-center"
 							>
-								<div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border border-primary/20 bg-primary/5 text-primary transition-colors duration-300 group-hover:border-accent/40 group-hover:bg-accent/10 dark:border-stone-600 dark:bg-stone-800/80 dark:group-hover:border-accent/30 dark:group-hover:bg-accent/10">
+								<div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border border-accent/20 bg-accent/5 text-accent transition-colors duration-300 group-hover:border-accent/40 group-hover:bg-accent/10 dark:border-stone-600 dark:bg-stone-800/80 dark:group-hover:border-accent/30 dark:group-hover:bg-accent/10">
 									<Icon className="h-8 w-8" aria-hidden />
 								</div>
 								<h4 className="mt-5 font-display font-semibold text-gray-900 text-lg dark:text-white">

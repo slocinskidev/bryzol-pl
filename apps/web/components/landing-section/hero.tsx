@@ -1,13 +1,12 @@
 'use client';
 
 import { AuroraText } from '@workspace/ui/components/aurora-text';
-import { Button } from '@workspace/ui/components/button';
 import { WordRotate } from '@workspace/ui/components/word-rotate';
 import { Mail, Phone } from 'lucide-react';
 import { motion } from 'motion/react';
 import Image from 'next/image';
-import Link from 'next/link';
 import heroImage from '@/assets/hero.jpeg';
+import { ButtonAnchor, ButtonLink } from '@/components/button-link';
 
 export function Hero() {
 	return (
@@ -21,7 +20,7 @@ export function Hero() {
 					priority
 				/>
 				<div className="absolute inset-0 bg-black/50" />
-				<div className="absolute inset-0 bg-primary/10" aria-hidden />
+				<div className="absolute inset-0 bg-accent/10" aria-hidden />
 			</div>
 
 			<div className="relative z-10 flex min-h-[calc(100vh-8rem)] items-center justify-center px-6 pb-20">
@@ -83,17 +82,17 @@ export function Hero() {
 						transition={{ duration: 0.8, delay: 0.6 }}
 						className="mb-12 flex flex-col items-center justify-center gap-4 sm:flex-row"
 					>
-						<Button size="lg" asChild>
-							<Link href="/oferta">Zobacz menu</Link>
-						</Button>
-						<Button
+						<ButtonLink href="/oferta" size="lg">
+							Zobacz menu
+						</ButtonLink>
+						<ButtonLink
+							href="/kontakt"
 							size="lg"
-							variant="accent"
-							className="border-accent text-accent hover:bg-accent hover:text-accent-foreground"
-							asChild
+							variant="outline"
+							className="border-2 border-accent bg-transparent text-accent hover:bg-accent hover:text-accent-foreground"
 						>
-							<Link href="/kontakt">Skontaktuj się</Link>
-						</Button>
+							Skontaktuj się
+						</ButtonLink>
 					</motion.div>
 
 					<motion.div
@@ -103,30 +102,26 @@ export function Hero() {
 						className="hidden flex-col items-center justify-center gap-4 sm:flex-row md:flex"
 					>
 						<motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-							<Button
+							<ButtonAnchor
+								href="tel:+48533363153"
 								variant="ghost"
 								size="sm"
 								className="text-white/80 hover:bg-white/10 hover:text-white"
-								asChild
 							>
-								<a href="tel:+48533363153">
-									<Phone className="mr-2 h-4 w-4" />
-									+48 533 363 153
-								</a>
-							</Button>
+								<Phone className="mr-2 h-4 w-4" />
+								+48 533 363 153
+							</ButtonAnchor>
 						</motion.div>
 						<motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-							<Button
+							<ButtonAnchor
+								href="mailto:kontakt@bryzol.pl"
 								variant="ghost"
 								size="sm"
 								className="text-white/80 hover:bg-white/10 hover:text-white"
-								asChild
 							>
-								<a href="mailto:kontakt@bryzol.pl">
-									<Mail className="mr-2 h-4 w-4" />
-									kontakt@bryzol.pl
-								</a>
-							</Button>
+								<Mail className="mr-2 h-4 w-4" />
+								kontakt@bryzol.pl
+							</ButtonAnchor>
 						</motion.div>
 					</motion.div>
 				</div>

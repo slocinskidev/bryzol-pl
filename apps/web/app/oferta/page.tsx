@@ -15,11 +15,11 @@ export default async function OfertaPage() {
 	return (
 		<main className="min-h-screen bg-background pb-20">
 			<ScrollProgress variant="brand" />
-			<div className="border-b border-border bg-muted/30 py-12 text-center">
+			<div className="border-b border-border bg-default/30 py-12 text-center">
 				<h1 className="font-display text-4xl font-bold tracking-tight text-foreground md:text-5xl">
 					Nasza oferta
 				</h1>
-				<p className="mx-auto mt-3 max-w-2xl text-lg text-muted-foreground">
+				<p className="mx-auto mt-3 max-w-2xl text-lg text-muted">
 					Catering na dowóz, blachy biesiadne i dania dnia. Zamów pod drzwi lub
 					odbierz w Żorach.
 				</p>
