@@ -1,16 +1,17 @@
-"use client";
+'use client';
 
-import { AuroraText } from "@workspace/ui/components/aurora-text";
-import { Button } from "@workspace/ui/components/button";
-import { WordRotate } from "@workspace/ui/components/word-rotate";
-import { Mail, Phone } from "lucide-react";
-import { motion } from "motion/react";
-import Image from "next/image";
-import heroImage from "@/assets/hero.jpeg";
+import { AuroraText } from '@workspace/ui/components/aurora-text';
+import { Button } from '@workspace/ui/components/button';
+import { WordRotate } from '@workspace/ui/components/word-rotate';
+import { Mail, Phone } from 'lucide-react';
+import { motion } from 'motion/react';
+import Image from 'next/image';
+import Link from 'next/link';
+import heroImage from '@/assets/hero.jpeg';
 
 export function Hero() {
 	return (
-		<div id="home" className="relative min-h-screen font-sans pt-32 lg:pt-40">
+		<div id="home" className="relative min-h-screen pt-32 font-sans lg:pt-40">
 			<div className="absolute inset-0 z-0">
 				<Image
 					src={heroImage}
@@ -24,7 +25,7 @@ export function Hero() {
 			</div>
 
 			<div className="relative z-10 flex min-h-[calc(100vh-8rem)] items-center justify-center px-6 pb-20">
-				<div className="text-center max-w-4xl relative">
+				<div className="relative max-w-4xl text-center">
 					<motion.div
 						initial={{ opacity: 0, y: 20 }}
 						animate={{ opacity: 1, y: 0 }}
@@ -33,11 +34,11 @@ export function Hero() {
 					>
 						<WordRotate
 							words={[
-								"Domowe obiady",
-								"Imprezy okolicznościowe",
-								"Dania na dowóz",
+								'Domowe obiady',
+								'Imprezy okolicznościowe',
+								'Dania na dowóz',
 							]}
-							className="text-lg md:text-xl text-white/70 font-medium tracking-wide"
+							className="font-medium text-lg text-white/70 tracking-wide md:text-xl"
 						/>
 					</motion.div>
 
@@ -47,10 +48,10 @@ export function Hero() {
 						transition={{ duration: 0.8, delay: 0.3 }}
 						className="mb-6"
 					>
-						<h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 tracking-tight">
-							Catering, który{" "}
+						<h1 className="mb-4 font-bold font-display text-4xl text-white tracking-tight md:text-6xl lg:text-7xl">
+							Catering, który{' '}
 							<AuroraText
-								className="text-4xl md:text-6xl lg:text-7xl font-bold text-accent"
+								className="font-bold text-4xl text-accent md:text-6xl lg:text-7xl"
 								speed={0.8}
 							>
 								robi wrażenie
@@ -64,11 +65,11 @@ export function Hero() {
 						transition={{ duration: 0.8, delay: 0.4 }}
 						className="mb-12"
 					>
-						<p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-3xl mx-auto">
+						<p className="mx-auto max-w-3xl text-lg text-white/80 leading-relaxed md:text-xl">
 							Domowy smak na każdą okazję — obiady na dowóz, małe przyjęcia,
-							imprezy firmowe. Dopasowane menu i punktualna dostawa.{" "}
+							imprezy firmowe. Dopasowane menu i punktualna dostawa.{' '}
 							<AuroraText
-								className="text-lg md:text-xl font-semibold text-accent"
+								className="font-semibold text-accent text-lg md:text-xl"
 								speed={0.9}
 							>
 								Ty się cieszysz. My dbamy o resztę.
@@ -80,10 +81,10 @@ export function Hero() {
 						initial={{ opacity: 0, y: 20 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.8, delay: 0.6 }}
-						className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
+						className="mb-12 flex flex-col items-center justify-center gap-4 sm:flex-row"
 					>
 						<Button size="lg" asChild>
-							<a href="#menu">Zobacz menu</a>
+							<Link href="/oferta">Zobacz menu</Link>
 						</Button>
 						<Button
 							size="lg"
@@ -91,7 +92,7 @@ export function Hero() {
 							className="border-accent text-accent hover:bg-accent hover:text-accent-foreground"
 							asChild
 						>
-							<a href="#contact">Skontaktuj się</a>
+							<Link href="/kontakt">Skontaktuj się</Link>
 						</Button>
 					</motion.div>
 
@@ -99,17 +100,17 @@ export function Hero() {
 						initial={{ opacity: 0, y: 20 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.8, delay: 0.8 }}
-						className="flex-col sm:flex-row items-center justify-center gap-4 hidden md:flex"
+						className="hidden flex-col items-center justify-center gap-4 sm:flex-row md:flex"
 					>
 						<motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
 							<Button
 								variant="ghost"
 								size="sm"
-								className="text-white/80 hover:text-white hover:bg-white/10"
+								className="text-white/80 hover:bg-white/10 hover:text-white"
 								asChild
 							>
 								<a href="tel:+48533363153">
-									<Phone className="w-4 h-4 mr-2" />
+									<Phone className="mr-2 h-4 w-4" />
 									+48 533 363 153
 								</a>
 							</Button>
@@ -118,11 +119,11 @@ export function Hero() {
 							<Button
 								variant="ghost"
 								size="sm"
-								className="text-white/80 hover:text-white hover:bg-white/10"
+								className="text-white/80 hover:bg-white/10 hover:text-white"
 								asChild
 							>
 								<a href="mailto:kontakt@bryzol.pl">
-									<Mail className="w-4 h-4 mr-2" />
+									<Mail className="mr-2 h-4 w-4" />
 									kontakt@bryzol.pl
 								</a>
 							</Button>
@@ -135,14 +136,14 @@ export function Hero() {
 				initial={{ opacity: 0, y: 20 }}
 				animate={{ opacity: 1, y: 0 }}
 				transition={{ duration: 0.8, delay: 1.2 }}
-				className="absolute bottom-2 left-1/2 transform -translate-x-1/2 z-20 pb-4 hidden md:block"
+				className="absolute bottom-2 left-1/2 z-20 hidden -translate-x-1/2 transform pb-4 md:block"
 			>
 				<div className="flex flex-col items-center gap-4">
 					<motion.span
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
 						transition={{ duration: 0.8, delay: 1.4 }}
-						className="text-xs text-white/70 uppercase tracking-widest font-medium"
+						className="font-medium text-white/70 text-xs uppercase tracking-widest"
 					>
 						Przewiń w dół
 					</motion.span>
@@ -152,11 +153,11 @@ export function Hero() {
 						transition={{
 							duration: 2,
 							repeat: Infinity,
-							ease: "easeInOut",
+							ease: 'easeInOut',
 						}}
 						className="relative"
 					>
-						<div className="w-6 h-10 border-2 border-white/40 rounded-full flex justify-center">
+						<div className="flex h-10 w-6 justify-center rounded-full border-2 border-white/40">
 							<motion.div
 								animate={{
 									y: [0, 12, 0],
@@ -165,10 +166,10 @@ export function Hero() {
 								transition={{
 									duration: 2,
 									repeat: Infinity,
-									ease: "easeInOut",
+									ease: 'easeInOut',
 									delay: 0.2,
 								}}
-								className="w-1 h-3 bg-white/60 rounded-full mt-2"
+								className="mt-2 h-3 w-1 rounded-full bg-white/60"
 							/>
 						</div>
 					</motion.div>
@@ -184,30 +185,30 @@ export function Hero() {
 							transition={{
 								duration: 1.5,
 								repeat: Infinity,
-								ease: "easeInOut",
+								ease: 'easeInOut',
 								delay: 0,
 							}}
-							className="w-1 h-1 bg-white/50 rounded-full"
+							className="h-1 w-1 rounded-full bg-white/50"
 						/>
 						<motion.div
 							animate={{ opacity: [0.3, 1, 0.3] }}
 							transition={{
 								duration: 1.5,
 								repeat: Infinity,
-								ease: "easeInOut",
+								ease: 'easeInOut',
 								delay: 0.2,
 							}}
-							className="w-1 h-1 bg-white/50 rounded-full"
+							className="h-1 w-1 rounded-full bg-white/50"
 						/>
 						<motion.div
 							animate={{ opacity: [0.3, 1, 0.3] }}
 							transition={{
 								duration: 1.5,
 								repeat: Infinity,
-								ease: "easeInOut",
+								ease: 'easeInOut',
 								delay: 0.4,
 							}}
-							className="w-1 h-1 bg-white/50 rounded-full"
+							className="h-1 w-1 rounded-full bg-white/50"
 						/>
 					</motion.div>
 				</div>

@@ -1,56 +1,32 @@
-"use client";
+'use client';
 
-import { Button } from "@workspace/ui/components/button";
-import { ThemeToggle } from "@workspace/ui/components/theme-toggle";
-import { cn } from "@workspace/ui/lib/utils";
-import { motion } from "motion/react";
-import Image from "next/image";
-import { usePathname, useRouter } from "next/navigation";
-import { useRef, useState } from "react";
-import logo from "@/assets/logo-simple.png";
-import { type NavigationItem, navigationItems } from "./constants";
-import { useActiveItemRect } from "./hooks/use-active-item-rect";
-import { useActiveSection } from "./hooks/use-active-section";
-import { NavigationDrawer } from "./navigation-drawer";
+import { Button } from '@workspace/ui/components/button';
+import { ThemeToggle } from '@workspace/ui/components/theme-toggle';
+import { cn } from '@workspace/ui/lib/utils';
+import { motion } from 'motion/react';
+import Image from 'next/image';
+import { useRouter } from 'next/navigation';
+import { useRef, useState } from 'react';
+import logo from '@/assets/logo-simple.png';
+import { type NavigationItem, navigationItems } from './constants';
+import { useActiveItemRect } from './hooks/use-active-item-rect';
+import { useActiveSection } from './hooks/use-active-section';
+import { NavigationDrawer } from './navigation-drawer';
 
 export function Navigation() {
 	const [mobileNavOpen, setMobileNavOpen] = useState(false);
 	const navRefs = useRef<{ [key: string]: HTMLButtonElement | null }>({});
 	const router = useRouter();
-	const pathname = usePathname();
 
 	const activeSection = useActiveSection();
 	const activeItemRect = useActiveItemRect(activeSection, navRefs);
 
-	const scrollToSection = (href: string) => {
-		try {
-			const element = document.querySelector(href);
-			if (element) {
-				const elementTop = element.getBoundingClientRect().top + window.scrollY;
-				window.scrollTo({
-					top: elementTop,
-					behavior: "smooth",
-				});
-			}
-		} catch (error) {
-			console.warn(`Failed to scroll to section ${href}:`, error);
-		}
-	};
-
 	const handleItemClick = (href: string) => {
-		if (href.startsWith("/")) {
-			router.push(href);
-		} else {
-			scrollToSection(href);
-		}
+		router.push(href);
 	};
 
 	const handleLogoClick = () => {
-		if (pathname === "/") {
-			scrollToSection("#home");
-		} else {
-			router.push("/");
-		}
+		router.push('/');
 	};
 
 	return (
@@ -58,11 +34,11 @@ export function Navigation() {
 			initial={{ y: -100 }}
 			animate={{ y: 0 }}
 			transition={{ duration: 0.6 }}
-			className="fixed top-6 left-6 right-6 z-50"
+			className="fixed top-6 right-6 left-6 z-50"
 			aria-label="Main navigation"
 		>
-			<div className="max-w-7xl mx-auto">
-				<div className="flex items-center justify-between px-6 py-3 rounded-2xl transition-all duration-500 shadow-xl bg-gray-50/95 border dark:bg-black/90">
+			<div className="mx-auto max-w-7xl">
+				<div className="flex items-center justify-between rounded-2xl border bg-gray-50/95 px-6 py-3 shadow-xl transition-all duration-500 dark:bg-black/90">
 					<NavigationLogo onClick={handleLogoClick} />
 					<DesktopNavigation
 						items={navigationItems}
@@ -90,13 +66,13 @@ function NavigationLogo({ onClick }: { onClick: () => void }) {
 			initial={{ opacity: 0, x: -20 }}
 			animate={{ opacity: 1, x: 0 }}
 			transition={{ duration: 0.8, delay: 0.2 }}
-			className="flex items-center gap-3 cursor-pointer"
+			className="flex cursor-pointer items-center gap-3"
 			onClick={onClick}
 		>
 			<motion.div
 				whileHover={{ scale: 1.05 }}
 				whileTap={{ scale: 0.95 }}
-				className="bg-primary size-10 rounded-md flex items-center justify-center shadow-lg"
+				className="flex size-10 items-center justify-center rounded-md bg-primary shadow-lg"
 			>
 				<Image
 					src={logo}
@@ -106,7 +82,7 @@ function NavigationLogo({ onClick }: { onClick: () => void }) {
 					className="size-8 object-contain"
 				/>
 			</motion.div>
-			<span className="font-bold text-xl text-gray-900 dark:text-white">
+			<span className="font-bold text-gray-900 text-xl dark:text-white">
 				Bryzol
 			</span>
 		</motion.div>
@@ -131,17 +107,17 @@ function DesktopNavigation({
 			initial={{ opacity: 0, y: -20 }}
 			animate={{ opacity: 1, y: 0 }}
 			transition={{ duration: 0.8, delay: 0.4 }}
-			className="hidden lg:flex items-center gap-8 nav-container relative"
+			className="nav-container relative hidden items-center gap-8 lg:flex"
 		>
 			<motion.div
-				className="absolute bottom-0 h-0.5 bg-primary rounded-full"
+				className="absolute bottom-0 h-0.5 rounded-full bg-primary"
 				initial={{ width: 0, left: 0 }}
 				animate={{
 					width: activeItemRect.width,
 					left: activeItemRect.left,
 				}}
 				transition={{
-					type: "spring",
+					type: 'spring',
 					stiffness: 300,
 					damping: 30,
 				}}
@@ -188,15 +164,15 @@ function NavigationItemComponent({
 				type="button"
 				onClick={onClick}
 				onKeyDown={(event) => {
-					if (event.key === "Enter" || event.key === " ") {
+					if (event.key === 'Enter' || event.key === ' ') {
 						event.preventDefault();
 						onClick();
 					}
 				}}
 				className={cn(
-					"text-sm font-bold transition-all duration-300 flex items-center gap-1 px-3 py-2 rounded-lg relative overflow-hidden",
-					"text-gray-900 dark:text-white hover:text-primary",
-					isActive && "text-primary",
+					'relative flex items-center gap-1 overflow-hidden rounded-lg px-3 py-2 font-bold text-sm transition-all duration-300',
+					'text-gray-900 hover:text-primary dark:text-white',
+					isActive && 'text-primary',
 				)}
 				whileHover={{
 					scale: 1.05,
@@ -205,7 +181,7 @@ function NavigationItemComponent({
 				whileTap={{ scale: 0.95 }}
 			>
 				<motion.div
-					className="absolute inset-0 bg-primary/10 rounded-lg"
+					className="absolute inset-0 rounded-lg bg-primary/10"
 					initial={{ scale: 0, opacity: 0 }}
 					whileHover={{ scale: 1, opacity: 1 }}
 					transition={{ duration: 0.2 }}
@@ -238,7 +214,7 @@ function NavigationActions({
 		>
 			<ThemeToggle className="hidden lg:flex" />
 			<Button size="sm" className="hidden md:flex" asChild>
-				<a href="#contact">Zapytaj o ofertę</a>
+				<a href="/kontakt">Zapytaj o ofertę</a>
 			</Button>
 
 			<NavigationDrawer

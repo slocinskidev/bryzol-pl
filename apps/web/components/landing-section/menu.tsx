@@ -1,36 +1,41 @@
-"use client";
+'use client';
 
-import { Button } from "@workspace/ui/components/button";
-import { motion } from "motion/react";
-import Link from "next/link";
+import { Button } from '@workspace/ui/components/button';
+import { motion } from 'motion/react';
+import Link from 'next/link';
 
 export function Menu() {
 	return (
 		<section
 			id="menu"
-			className="relative min-h-screen bg-gradient-to-b from-primary/5 to-background dark:from-primary/10 dark:to-stone-900 py-20 lg:py-32 flex items-center justify-center"
+			className="relative flex min-h-screen items-center justify-center bg-gradient-to-b from-primary/5 to-background py-20 lg:py-32 dark:from-primary/10 dark:to-stone-900"
 		>
 			<motion.div
 				initial={{ opacity: 0, y: 20 }}
 				whileInView={{ opacity: 1, y: 0 }}
 				transition={{ duration: 0.8 }}
 				viewport={{ once: true }}
-				className="text-center max-w-3xl mx-auto px-6"
+				className="mx-auto max-w-3xl px-6 text-center"
 			>
-				<h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-4 tracking-tight">
+				<h2 className="mb-4 font-bold font-display text-4xl text-gray-900 tracking-tight md:text-5xl lg:text-6xl dark:text-white">
 					Menu
 				</h2>
 				<div
-					className="mx-auto h-1 w-24 rounded-full bg-accent mb-10"
+					className="mx-auto mb-10 h-1 w-24 rounded-full bg-accent"
 					aria-hidden
 				/>
-				<p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed mb-10">
+				<p className="mb-10 text-gray-600 text-lg leading-relaxed md:text-xl dark:text-gray-300">
 					Domowe obiady, dania dnia, blachy i zestawy na przyjęcie. Zobacz pełną
 					ofertę i wybierz coś na dziś lub na Waszą imprezę.
 				</p>
-				<Button size="lg" asChild>
-					<Link href="/oferta">Zobacz pełne menu</Link>
-				</Button>
+				<div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
+					<Button size="lg" asChild>
+						<Link href="/oferta">Zobacz pełne menu</Link>
+					</Button>
+					<Button size="lg" variant="outline" asChild>
+						<Link href="/kontakt">Zapytaj o wycenę</Link>
+					</Button>
+				</div>
 			</motion.div>
 		</section>
 	);

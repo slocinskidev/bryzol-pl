@@ -1,20 +1,20 @@
-"use client";
+'use client';
 
-import { Button } from "@workspace/ui/components/button";
+import { Button } from '@workspace/ui/components/button';
 import {
 	Drawer,
 	DrawerContent,
 	DrawerHeader,
 	DrawerTitle,
 	DrawerTrigger,
-} from "@workspace/ui/components/drawer";
-import { ThemeToggle } from "@workspace/ui/components/theme-toggle";
-import { cn } from "@workspace/ui/lib/utils";
-import { Menu } from "lucide-react";
-import Image from "next/image";
+} from '@workspace/ui/components/drawer';
+import { ThemeToggle } from '@workspace/ui/components/theme-toggle';
+import { cn } from '@workspace/ui/lib/utils';
+import { Menu } from 'lucide-react';
+import Image from 'next/image';
 
-import logo from "@/assets/logo-simple.png";
-import type { NavigationItem } from "./constants";
+import logo from '@/assets/logo-simple.png';
+import type { NavigationItem } from './constants';
 
 interface NavigationDrawerProps {
 	navigationItems: readonly NavigationItem[];
@@ -44,7 +44,7 @@ export function NavigationDrawer({
 					<DrawerTitle className="sr-only">Nawigacja</DrawerTitle>
 					<div className="flex items-center justify-between">
 						<div className="flex items-center gap-2">
-							<div className="bg-primary size-12 rounded-md flex items-center justify-center shadow-lg">
+							<div className="flex size-12 items-center justify-center rounded-md bg-primary shadow-lg">
 								<Image
 									src={logo}
 									alt="Bryzol Catering"
@@ -60,7 +60,7 @@ export function NavigationDrawer({
 					</div>
 				</DrawerHeader>
 
-				<div className="px-6 pb-6 flex flex-col gap-4">
+				<div className="flex flex-col gap-4 px-6 pb-6">
 					<div className="flex flex-col gap-1 overflow-y-auto">
 						{navigationItems.map((item) => (
 							<Button
@@ -69,14 +69,13 @@ export function NavigationDrawer({
 								key={item.id}
 								onClick={() => {
 									onOpenChange(false);
-									// Wait for drawer to close before scrolling
 									setTimeout(() => {
 										onItemClick(item.href);
 									}, 300);
 								}}
 								className={cn(
-									"justify-start h-12",
-									activeSection === item.id && "text-primary",
+									'h-12 justify-start',
+									activeSection === item.id && 'text-primary',
 								)}
 							>
 								{item.label}
@@ -89,7 +88,7 @@ export function NavigationDrawer({
 						onClick={() => {
 							onOpenChange(false);
 							setTimeout(() => {
-								onItemClick("#contact");
+								onItemClick('/kontakt');
 							}, 300);
 						}}
 					>
