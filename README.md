@@ -21,7 +21,7 @@ pnpm lint         # Biome
 ## Packages
 
 - `apps/web` — marketing site
-- `packages/ui` — `@workspace/ui`: global CSS, small primitives (e.g. `ThemeToggle`, `ScrollProgress`, re-exports of `Drawer`)
+- `packages/ui` — `@workspace/ui`: global CSS, small primitives (e.g. `ThemeToggle`, re-exports of `Drawer`)
 
 Link buttons that need Next.js routing use `apps/web/components/button-link.tsx` (`ButtonLink` / `ButtonAnchor`) so HeroUI `buttonVariants` apply without `Button` + `render` typing issues.
 

@@ -52,7 +52,8 @@
 	--warning-foreground: oklch(21.03% 0.0059 57.99);
 
 	--radius: 0.5rem;
-	--field-radius: 0.125rem;
+	/* Match HeroUI default field rounding (SearchField, Input, etc.); 0.125rem reads almost square */
+	--field-radius: calc(var(--radius) * 1.5);
 	--font-sans: var(--font-geist);
 }
 
@@ -159,6 +160,12 @@
 
 body {
 	letter-spacing: var(--tracking-normal);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	html {
+		scroll-behavior: smooth;
+	}
 }
 
 @layer base {

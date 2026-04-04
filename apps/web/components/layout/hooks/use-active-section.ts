@@ -21,7 +21,7 @@ export function useActiveSection() {
 			return 'oferta-obiady';
 		}
 		if (pathname === '/oferta' || pathname === '/oferta/') {
-			return 'oferta-hub';
+			return 'oferta-catering';
 		}
 		if (pathname.startsWith('/oferta')) {
 			return 'oferta-catering';

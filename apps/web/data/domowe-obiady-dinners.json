@@ -1,0 +1,47 @@
+[
+  {
+    "day": "Poniedziałek",
+    "description": null,
+    "soup": "Gulaszowa.",
+    "set1": "Łazanki (kapusta, pieczarki, kiełbasa).",
+    "set2": "Łazanki z warzywami."
+  },
+  {
+    "day": "Wtorek",
+    "description": null,
+    "soup": "Serowa z grzankami.",
+    "set1": "Schab zapiekany w sosie pomidorowym, ziemniaki, surówka.",
+    "set2": "Cukinia zapiekana w sosie pomidorowym, ziemniaki, surówka."
+  },
+  {
+    "day": "Środa",
+    "description": null,
+    "soup": "Barszcz zabielany z ziemniakami.",
+    "set1": "Klopsiki w sosie ogórkowym, kasza, surówka.",
+    "set2": "Boczniaki duszone, kasza, surówka."
+  },
+  {
+    "day": "Czwartek",
+    "description": null,
+    "soup": "Kapuśniak.",
+    "set1": "Roladka wieprzowa, ziemniaki, surówka.",
+    "set2": "Roladka z bakłażana z warzywami i serem, ziemniaki, surówka."
+  },
+  {
+    "day": "Piątek",
+    "description": null,
+    "soup": "Dyniowa.",
+    "set1": "Pierogi z mięsem.",
+    "set2": "Pierogi ruskie."
+  },
+  {
+    "day": "Sobota",
+    "description": null,
+    "soup": "Rybna.",
+    "set1": "Bitki wieprzowe, kopytka, surówka."
+  },
+  {
+    "day": "Niedziela",
+    "description": "Nieczynne."
+  }
+]

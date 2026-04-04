@@ -2,11 +2,10 @@
 
 import { AuroraText } from '@workspace/ui/components/aurora-text';
 import { WordRotate } from '@workspace/ui/components/word-rotate';
-import { Mail, Phone } from 'lucide-react';
 import { motion } from 'motion/react';
 import Image from 'next/image';
 import heroImage from '@/assets/hero.jpeg';
-import { ButtonAnchor, ButtonLink } from '@/components/button-link';
+import { ButtonLink } from '@/components/button-link';
 
 export function Hero() {
 	return (
@@ -82,42 +81,12 @@ export function Hero() {
 						transition={{ duration: 0.8, delay: 0.6 }}
 						className="mb-12 flex flex-col items-center justify-center gap-4 sm:flex-row"
 					>
-						<ButtonLink href="/oferta/cateringowa" size="lg">
-							Zobacz menu
+						<ButtonLink href="#oferta" size="lg">
+							Zobacz ofertę
 						</ButtonLink>
 						<ButtonLink href="/kontakt" size="lg" variant="secondary">
 							Skontaktuj się
 						</ButtonLink>
-					</motion.div>
-
-					<motion.div
-						initial={{ opacity: 0, y: 20 }}
-						animate={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.8, delay: 0.8 }}
-						className="hidden flex-col items-center justify-center gap-4 sm:flex-row md:flex"
-					>
-						<motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-							<ButtonAnchor
-								href="tel:+48533363153"
-								variant="ghost"
-								size="sm"
-								className="text-white/80 hover:bg-white/10 hover:text-white"
-							>
-								<Phone className="mr-2 h-4 w-4" />
-								+48 533 363 153
-							</ButtonAnchor>
-						</motion.div>
-						<motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-							<ButtonAnchor
-								href="mailto:kontakt@bryzol.pl"
-								variant="ghost"
-								size="sm"
-								className="text-white/80 hover:bg-white/10 hover:text-white"
-							>
-								<Mail className="mr-2 h-4 w-4" />
-								kontakt@bryzol.pl
-							</ButtonAnchor>
-						</motion.div>
 					</motion.div>
 				</div>
 			</div>

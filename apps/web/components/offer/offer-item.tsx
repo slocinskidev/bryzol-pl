@@ -1,10 +1,6 @@
-'use client';
-
 import { Chip } from '@heroui/react/chip';
-import { useState } from 'react';
 import type { OfferItem } from '@/lib/offer';
-
-const DESCRIPTION_CLAMP_LENGTH = 120;
+import { splitNonEmptyLines } from './render-multiline';
 
 function formatPrice(price: number): string {
 	return new Intl.NumberFormat('pl-PL', {
@@ -14,32 +10,48 @@ function formatPrice(price: number): string {
 }
 
 export function OfferItemClient({ item }: { item: OfferItem }) {
-	const [expanded, setExpanded] = useState(false);
 	const description = item.description ?? '';
-	const isLong = description.length > DESCRIPTION_CLAMP_LENGTH;
-	const showToggle = isLong;
-	const clamped =
-		showToggle && !expanded
-			? `${description.slice(0, DESCRIPTION_CLAMP_LENGTH).trim()}…`
-			: description;
+	const hasNewLines = description.includes('\n') || description.includes('\r');
+
+	const descriptionLines = hasNewLines ? splitNonEmptyLines(description) : [];
+
+	const renderDescriptionRow = (line: string) => {
+		// Friendly formatting for lines like: "Zupa: Gulaszowa."
+		const match = /^([^:]+):\s*(.*)$/.exec(line);
+		if (!match) {
+			return <div>{line}</div>;
+		}
+		const [, label, value] = match;
+		return (
+			<div>
+				<span className="font-medium text-foreground/90">{label}:</span> {value}
+			</div>
+		);
+	};
 
 	return (
-		<li className="-mx-2 flex flex-wrap items-baseline justify-between gap-2 rounded-lg border-border/60 border-b px-2 py-3 transition-colors last:border-0 hover:bg-default/30">
+		<li className="-mx-2 flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1 rounded-md border-border/50 border-b px-2 py-3.5 last:border-0 hover:bg-default/25 motion-safe:transition-colors sm:py-3">
 			<div className="min-w-0 flex-1">
-				<span className="font-medium text-foreground">{item.name}</span>
+				<div className="font-medium text-foreground">{item.name}</div>
 				{description ? (
-					<p className="mt-0.5 text-muted text-sm">
-						{clamped}
-						{showToggle && (
-							<button
-								type="button"
-								onClick={() => setExpanded((e) => !e)}
-								className="ml-1 rounded font-medium text-accent hover:underline focus-visible:outline-2 focus-visible:outline-focus focus-visible:outline-offset-1"
-							>
-								{expanded ? 'Zwiń' : 'Pokaż więcej'}
-							</button>
-						)}
-					</p>
+					hasNewLines ? (
+						<div className="mt-1 text-muted text-sm leading-relaxed md:text-base">
+							{descriptionLines.map((line, idx) => (
+								<div key={`${line}-${idx}`}>{renderDescriptionRow(line)}</div>
+							))}
+						</div>
+					) : (
+						<p className="mt-1 text-muted text-sm leading-relaxed md:text-base">
+							{description}
+						</p>
+					)
+				) : null}
+				{item.includedDishes?.length ? (
+					<ul className="mt-1.5 list-inside list-disc text-muted text-sm leading-relaxed md:text-base">
+						{item.includedDishes.map((dish, idx) => (
+							<li key={`${dish}-${idx}`}>{dish}</li>
+						))}
+					</ul>
 				) : null}
 			</div>
 			{item.price != null ? (

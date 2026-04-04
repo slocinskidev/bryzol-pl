@@ -4,6 +4,7 @@ import { Card } from '@heroui/react/card';
 import { Separator } from '@heroui/react/separator';
 import { motion, useReducedMotion } from 'motion/react';
 import type { OfferSection } from '@/lib/offer';
+import { MultilineTextBlock } from './render-multiline';
 
 export function OfferSectionWrapper({
 	section,
@@ -31,13 +32,13 @@ export function OfferSectionWrapper({
 						{section.title}
 					</Card.Title>
 					{section.description ? (
-						<Card.Description className="mt-2 text-lg text-muted">
-							{section.description}
+						<Card.Description className="mt-2 max-w-prose text-lg text-muted leading-relaxed">
+							<MultilineTextBlock text={section.description} />
 						</Card.Description>
 					) : null}
 					{section.meta?.priceNote ? (
 						<p className="mt-2 font-medium text-accent text-sm">
-							{section.meta.priceNote}
+							<MultilineTextBlock text={section.meta.priceNote} />
 						</p>
 					) : null}
 					<div className="mt-4 h-0.5 w-12 rounded-full bg-accent" aria-hidden />

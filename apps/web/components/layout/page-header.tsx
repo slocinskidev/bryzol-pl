@@ -1,7 +1,7 @@
 'use client';
 
 import { cn } from '@workspace/ui/lib/utils';
-import { motion } from 'motion/react';
+import { motion, useReducedMotion } from 'motion/react';
 
 const shellVariants = {
 	band: 'border-border border-b bg-default/30 py-12 text-center',
@@ -31,11 +31,14 @@ function HeaderInner({
 	'title' | 'description' | 'eyebrow' | 'as' | 'innerClassName'
 >) {
 	const Heading = as ?? 'h1';
+	const reduceMotion = useReducedMotion();
+	const visible = { opacity: 1, y: 0 };
+	const hidden = { opacity: 0, y: 20 };
 	return (
 		<motion.div
-			initial={{ opacity: 0, y: 20 }}
-			whileInView={{ opacity: 1, y: 0 }}
-			transition={{ duration: 0.8 }}
+			initial={reduceMotion ? visible : hidden}
+			whileInView={visible}
+			transition={{ duration: reduceMotion ? 0 : 0.45 }}
 			viewport={{ once: true }}
 			className={cn('mx-auto max-w-4xl px-6 text-center', innerClassName)}
 		>
@@ -46,18 +49,13 @@ function HeaderInner({
 			) : null}
 			<Heading
 				className={cn(
-					'mb-4 font-bold font-display text-4xl tracking-tight md:text-5xl',
-					as === 'h1'
-						? 'text-foreground'
-						: 'text-gray-900 lg:text-6xl dark:text-white',
+					'mb-4 font-bold font-display text-4xl text-foreground tracking-tight md:text-5xl',
+					as === 'h2' && 'lg:text-6xl',
 				)}
 			>
 				{title}
 			</Heading>
-			<div
-				className="mx-auto h-1 w-24 rounded-full bg-accent"
-				aria-hidden
-			/>
+			<div className="mx-auto h-1 w-24 rounded-full bg-accent" aria-hidden />
 			{description ? (
 				<p className="mx-auto mt-4 max-w-2xl text-lg text-muted leading-relaxed">
 					{description}

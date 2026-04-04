@@ -11,9 +11,9 @@ Source: <https://github.com/vercel-labs/agent-skills/tree/main/skills/react-best
 ## Applied in this project
 
 - **server-cache-react**: `getOffer` wrapped in `React.cache()` in `apps/web/lib/offer.ts` for per-request deduplication.
-- **Server-side only**: Offer data is fetched in the Server Component (`app/oferta/page.tsx`) via `await getOffer()`; no Route Handler, no client fetch for initial data.
-- **No barrel imports**: Offer types and getter are in a single module; UI imports from `@/lib/offer` and `@/components/offer/offer` directly.
-- **Compound components**: Offer UI uses `Offer.Root`, `Offer.Section`, `Offer.Category`, `Offer.Item` (Vercel composition patterns).
+- **Server-side only**: Offer data is fetched in Server Components (e.g. `app/oferta/[slug]/page.tsx`) via `getOfferSectionsBySlugs` / `getOffer()`; no Route Handler for initial data.
+- **No barrel imports**: Offer types and getters live in `@/lib/offer`; UI imports named components from `@/components/offer/*`.
+- **Declarative offer UI**: `OfferRoot`, `OfferSectionTabs`, `OfferSectionBody` — section presentation from `section.layout`, not slug checks.
 
 ## Rule categories (57 rules)
 

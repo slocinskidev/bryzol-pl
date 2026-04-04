@@ -6,6 +6,7 @@ export type OfferItem = {
 	price?: number;
 	unit?: string;
 	description?: string;
+	includedDishes?: string[];
 };
 
 export type OfferCategory = {
@@ -19,33 +20,24 @@ export type OfferSection = {
 	id: string;
 	slug: string;
 	title: string;
+	/** Short label for section switchers (e.g. tabs). Falls back to `title`. */
+	shortTitle?: string;
 	description?: string;
 	categories: OfferCategory[];
 	meta?: { validFrom?: string; validTo?: string; priceNote?: string };
 };
 
-export type OfferData = {
-	sections: OfferSection[];
-};
-
-async function getOfferUncached(): Promise<OfferData> {
-	const data = await import('@/data/offer.json');
-	return data.default as OfferData;
+/** Tab / compact labels; CMS can set `shortTitle`. */
+export function getOfferSectionTabLabel(section: OfferSection): string {
+	return section.shortTitle ?? section.title;
 }
 
-export const getOffer = cache(getOfferUncached);
+export const getCateringowa = cache(async (): Promise<OfferSection[]> => {
+	const data = await import('@/data/cateringowa.json');
+	return (data.default as { sections: OfferSection[] }).sections;
+});
 
-export async function getOfferSection(
-	slug: string,
-): Promise<OfferSection | null> {
-	const { sections } = await getOffer();
-	return sections.find((s) => s.slug === slug) ?? null;
-}
-
-export async function getOfferSectionsBySlugs(
-	slugs: readonly string[],
-): Promise<OfferSection[]> {
-	const { sections } = await getOffer();
-	const map = new Map(sections.map((s) => [s.slug, s]));
-	return slugs.map((slug) => map.get(slug)).filter(Boolean) as OfferSection[];
-}
+export const getDaniaNaDowoz = cache(async (): Promise<OfferSection[]> => {
+	const data = await import('@/data/dania-na-dowoz.json');
+	return (data.default as { sections: OfferSection[] }).sections;
+});

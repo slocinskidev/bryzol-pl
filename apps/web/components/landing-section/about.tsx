@@ -9,11 +9,13 @@ import bgTexture from '@/assets/bg-texture.png';
 import heroImage from '@/assets/hero.jpeg';
 import { cn } from '@workspace/ui/lib/utils';
 
-export function About({ hideSectionHeader = false }: { hideSectionHeader?: boolean }) {
+type AboutStoryProps = { hideSectionHeader?: boolean };
+
+export function AboutStory({ hideSectionHeader = false }: AboutStoryProps) {
 	return (
 		<section
 			id="about"
-			className="relative min-h-screen overflow-hidden bg-gradient-to-b from-accent/[0.06] via-background to-accent/[0.04] py-24 lg:py-36 dark:from-accent/10 dark:via-background dark:to-accent/5"
+			className="relative overflow-hidden bg-gradient-to-b from-accent/[0.06] via-background to-accent/[0.04] py-24 lg:py-36 dark:from-accent/10 dark:via-background dark:to-accent/5"
 		>
 			{/* Warm grain overlay — gastronomy atmosphere */}
 			<div
@@ -172,85 +174,106 @@ export function About({ hideSectionHeader = false }: { hideSectionHeader?: boole
 						</motion.div>
 					</motion.div>
 				</div>
+			</div>
+		</section>
+	);
+}
 
-				{/* Values — clean grid, intentional hierarchy (Drizzl-style: flow, clarity) */}
-				<div className="mt-24 lg:mt-32">
-					<motion.div
-						initial={{ opacity: 0, y: 20 }}
-						whileInView={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.6 }}
-						viewport={{ once: true }}
-						className="mb-14 text-center"
-					>
-						<h3 className="font-display font-semibold text-2xl text-gray-900 md:text-3xl dark:text-white">
-							Nasze wartości
-						</h3>
-						<div
-							className="mx-auto mt-3 h-0.5 w-12 rounded-full bg-accent"
-							aria-hidden
-						/>
-					</motion.div>
+export function AboutValues() {
+	const values = [
+		{
+			icon: Heart,
+			title: 'Pasja',
+			description:
+				'Gotowanie, które z czasem stało się czymś większym — i które widać w każdym daniu.',
+			delay: 0.05,
+		},
+		{
+			icon: Award,
+			title: 'Doświadczenie i smak',
+			description:
+				'Za każdą potrawą stoi praca ludzi, którym zależy na smaku naprawdę robiącym różnicę.',
+			delay: 0.15,
+		},
+		{
+			icon: Users,
+			title: 'Dopasowanie do Was',
+			description:
+				'Menu pod potrzeby, gust i budżet — od domowych obiadów po większe wydarzenia.',
+			delay: 0.25,
+		},
+		{
+			icon: ChefHat,
+			title: 'Polska baza, światowe inspiracje',
+			description:
+				'Klasyczna kuchnia polska obok dań inspirowanych smakami świata — zawsze pod Ciebie.',
+			delay: 0.35,
+		},
+	] as const;
 
-					<div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-10">
-						{[
-							{
-								icon: Heart,
-								title: 'Pasja',
-								description:
-									'Gotowanie, które z czasem stało się czymś większym — i które widać w każdym daniu.',
-								delay: 0.05,
-							},
-							{
-								icon: Award,
-								title: 'Doświadczenie i smak',
-								description:
-									'Za każdą potrawą stoi praca ludzi, którym zależy na smaku naprawdę robiącym różnicę.',
-								delay: 0.15,
-							},
-							{
-								icon: Users,
-								title: 'Dopasowanie do Was',
-								description:
-									'Menu pod potrzeby, gust i budżet — od domowych obiadów po większe wydarzenia.',
-								delay: 0.25,
-							},
-							{
-								icon: ChefHat,
-								title: 'Polska baza, światowe inspiracje',
-								description:
-									'Klasyczna kuchnia polska obok dań inspirowanych smakami świata — zawsze pod Ciebie.',
-								delay: 0.35,
-							},
-						].map(({ icon: Icon, title, description, delay }) => (
-							<motion.article
-								key={title}
-								initial={{ opacity: 0, y: 20 }}
-								whileInView={{ opacity: 1, y: 0 }}
-								transition={{ duration: 0.5, delay }}
-								viewport={{ once: true }}
-								className="group h-full text-center"
+	return (
+		<section className="relative overflow-hidden bg-gradient-to-b from-accent/[0.06] via-background to-accent/[0.04] py-14 lg:py-18 dark:from-accent/10 dark:via-background dark:to-accent/5">
+			{/* Warm grain overlay — keeps the same “editorial” feel as the story section */}
+			<div
+				className="pointer-events-none absolute inset-0 z-0 opacity-[0.035] mix-blend-multiply dark:opacity-[0.06] dark:mix-blend-overlay"
+				aria-hidden
+			>
+				<Image
+					src={bgTexture}
+					alt=""
+					fill
+					className="object-cover"
+					sizes="100vw"
+				/>
+			</div>
+
+			<div className="container relative z-10 mx-auto max-w-7xl px-6">
+				<motion.div
+					initial={{ opacity: 0, y: 20 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.6 }}
+					viewport={{ once: true }}
+					className="mb-14 text-center"
+				>
+					<h3 className="font-display font-semibold text-2xl text-gray-900 md:text-3xl dark:text-white">
+						Nasze wartości
+					</h3>
+					<div
+						className="mx-auto mt-3 h-0.5 w-12 rounded-full bg-accent"
+						aria-hidden
+					/>
+				</motion.div>
+
+				<div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-10">
+					{values.map(({ icon: Icon, title, description, delay }) => (
+						<motion.article
+							key={title}
+							initial={{ opacity: 0, y: 20 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							transition={{ duration: 0.5, delay }}
+							viewport={{ once: true }}
+							className="group h-full text-center"
+						>
+							<Card
+								variant="transparent"
+								className="group flex h-full flex-col border border-accent/20 bg-accent/5 transition-colors duration-300 hover:border-accent/40 hover:bg-accent/10 dark:border-stone-600 dark:bg-stone-800/80 dark:hover:border-accent/30 dark:hover:bg-accent/10"
 							>
-								<Card
-									variant="transparent"
-									className="group flex h-full flex-col border border-accent/20 bg-accent/5 transition-colors duration-300 hover:border-accent/40 hover:bg-accent/10 dark:border-stone-600 dark:bg-stone-800/80 dark:hover:border-accent/30 dark:hover:bg-accent/10"
-								>
-									<Card.Header className="flex flex-col items-center gap-0 p-6 pb-0">
-										<div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border border-accent/20 bg-accent/5 text-accent transition-colors duration-300 group-hover:border-accent/40 group-hover:bg-accent/10 dark:border-stone-600 dark:bg-stone-800/80 dark:group-hover:border-accent/30 dark:group-hover:bg-accent/10">
-											<Icon className="h-8 w-8" aria-hidden />
-										</div>
-										<Card.Title className="mt-5 font-display font-semibold text-gray-900 text-lg dark:text-white">
-											{title}
-										</Card.Title>
-									</Card.Header>
-									<Card.Content className="flex flex-1 flex-col p-6 pt-3">
-										<Card.Description className="flex-1 text-gray-600 text-sm leading-[1.7] dark:text-gray-300">
-											{description}
-										</Card.Description>
-									</Card.Content>
-								</Card>
-							</motion.article>
-						))}
-					</div>
+								<Card.Header className="flex flex-col items-center gap-0 p-6 pb-0">
+									<div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border border-accent/20 bg-accent/5 text-accent transition-colors duration-300 group-hover:border-accent/40 group-hover:bg-accent/10 dark:border-stone-600 dark:bg-stone-800/80 dark:group-hover:border-accent/30 dark:group-hover:bg-accent/10">
+										<Icon className="h-8 w-8" aria-hidden />
+									</div>
+									<Card.Title className="mt-5 font-display font-semibold text-gray-900 text-lg dark:text-white">
+										{title}
+									</Card.Title>
+								</Card.Header>
+								<Card.Content className="flex flex-1 flex-col p-6 pt-3">
+									<Card.Description className="flex-1 text-gray-600 text-sm leading-[1.7] dark:text-gray-300">
+										{description}
+									</Card.Description>
+								</Card.Content>
+							</Card>
+						</motion.article>
+					))}
 				</div>
 			</div>
 		</section>

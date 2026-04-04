@@ -5,8 +5,10 @@
 const defaultAddress = "ul. Bramkowa 3, 44-240 Żory";
 
 export const contact = {
-  phone: "+48 533 363 153",
+  phone: "+48 533 363 155",
   email: "kontakt@bryzol.pl",
+  facebookUrl: "https://www.facebook.com/bryzolcatering",
+  facebookName: "Bryzol Catering",
   get address(): string {
     if (
       typeof process !== "undefined" &&

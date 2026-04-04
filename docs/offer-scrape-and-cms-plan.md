@@ -20,9 +20,7 @@ Optional (seasonal): [oferta-wielkanocna-2](https://bryzol.pl/oferta-wielkanocna
 
 **Approach:**
 
-- **Data access layer:** One module (e.g. `apps/web/lib/offer.ts`) that exports `getOffer()` (and optionally `getOfferSection(slug)`). Inside:
-  - **Now:** Read from `apps/web/data/offer.json` (or fetch from `/api/offer` that serves that file).
-  - **Later:** Replace implementation with `fetch(process.env.NEXT_PUBLIC_CMS_API_URL + '/offer')` (or use CMS SDK). Same return type.
+- **Data access layer:** One module (`apps/web/lib/offer.ts`) that exports `getOffer()` (and helpers). Implement `OfferDataSource` with `getOffer()`; the default uses static JSON. **Later:** swap the implementation object (or branch inside it) to `fetch(CMS_URL)` — same `OfferData` return type.
 - **JSON shape = API shape:** Design the static JSON so it matches what you’d expect from a CMS: stable `id`, optional `slug` for routing, same nesting (sections → categories → items). Then swapping to CMS is just changing the fetcher, not the UI types.
 
 **Suggested TypeScript contract (CMS-friendly):**
@@ -45,12 +43,17 @@ export type OfferCategory = {
   note?: string;      // e.g. "Minimalne zamówienie 5szt./porcji"
 };
 
+export type OfferSectionLayout = 'categoryTabs' | 'categoryGrid';
+
 export type OfferSection = {
   id: string;
   slug: string;        // for URLs: /oferta#pelna-oferta, /oferta/blachy
   title: string;
+  shortTitle?: string; // optional: short label for section tabs (falls back to title)
   description?: string;
   categories: OfferCategory[];
+  /** How to render categories. Default `categoryGrid` when omitted. Do not branch UI on slug — use this. */
+  layout?: OfferSectionLayout;
   meta?: { validFrom?: string; validTo?: string; priceNote?: string };
 };
 
@@ -84,16 +87,16 @@ Apply [Next.js App Router data-fetching patterns](https://nextjs.org/docs/app/bu
 
 ### Component architecture (Vercel composition patterns)
 
-- **Compound components for the offer UI:** Structure the offers page as a small compound component set (e.g. `Offer.Root`, `Offer.Section`, `Offer.Category`, `Offer.Item`) so the page composes pieces explicitly. If there is shared UI state (e.g. expanded section), use a context provider; subcomponents read via context, not props ([architecture-compound-components](file:///Users/erq/.claude/skills/vercel-composition-patterns/rules/architecture-compound-components.md)).
-- **Avoid boolean props:** Do not add flags like `isCompact`, `showDescription`, `isBlacha` to one big component. Use composition: e.g. `Offer.Section` vs `Offer.SectionPackage` (for blachy/zestawy with description list), or different children composition ([avoid-boolean-props](file:///Users/erq/.claude/skills/vercel-composition-patterns/rules/architecture-avoid-boolean-props.md)).
-- **Explicit variants over modes:** If the same list needs different layouts (e.g. grid vs accordion), create explicit components (`OfferSectionGrid`, `OfferSectionAccordion`) or compose with different children rather than a single component with `layout="grid" | "accordion"`.
-- **Children over render props:** Prefer `<Offer.Section>{children}</Offer.Section>` over `renderSection={...}` or `renderItem={...}` ([patterns-children-over-render-props](file:///Users/erq/.claude/skills/vercel-composition-patterns/rules/patterns-children-over-render-props.md)).
+- **Declarative section rendering:** `OfferSectionBody` reads `section.layout` (`categoryTabs` | `categoryGrid`; default grid). Do not key layout off `section.slug` in React — CMS can add new sections without code changes.
+- **Named exports:** Pages use `OfferRoot`, `OfferSectionTabs`, `OfferSectionView`, and presentational pieces (`OfferCategoryTabs`, `OfferItemClient`, etc.) instead of a single opaque `Offer.*` object.
+- **Avoid boolean props:** Do not add flags like `isCompact`, `isBlacha` to one big component; use data-driven `layout` and composition ([avoid-boolean-props](file:///Users/erq/.claude/skills/vercel-composition-patterns/rules/architecture-avoid-boolean-props.md)).
+- **Children over render props:** Prefer composing small components over `renderSection={...}` ([patterns-children-over-render-props](file:///Users/erq/.claude/skills/vercel-composition-patterns/rules/patterns-children-over-render-props.md)).
 - **React 19:** Use `use(Context)` instead of `useContext` where context is used; avoid `forwardRef` — use ref as a normal prop ([react19-no-forwardref](file:///Users/erq/.claude/skills/vercel-composition-patterns/rules/react19-no-forwardref.md)). The repo already uses React 19.
 
 ### Summary
 
-- Page: async Server Component; `const data = await getOffer()` (or `cache(getOffer)()`).
-- UI: compound `Offer.*` components; no boolean prop proliferation; compose with children; React 19 `use()` for any context.
+- Page: async Server Component; `await getOffer()` (wrapped in `React.cache`).
+- UI: `OfferRoot` + `OfferSectionTabs` / `OfferSectionBody`; layout from `section.layout`; React 19 `use()` for any context if needed.
 
 ---
 
@@ -121,7 +124,7 @@ No change to the app in this step — only script + JSON.
 
 - **Route:** e.g. `apps/web/app/oferta/page.tsx`. Optionally `app/oferta/[slug]/page.tsx` later for one section per page.
 - **Data:** Page is an **async Server Component** that calls `await getOffer()` (no Route Handler). No direct import of `offer.json` in components.
-- **UI (Vercel composition):** Build the list with compound components, e.g. `Offer.Root` → `Offer.Section` → `Offer.Category` → `Offer.Item`. Use explicit variants for “package” sections (blachy, zestawy) if layout differs (e.g. `Offer.SectionPackage` with description list). No boolean props; compose with children. Simple first version; design polish later.
+- **UI:** `OfferRoot` and section renderers driven by `OfferSection.layout` and content; no slug-based branching in components.
 - **Nav:** Add “Oferta” with `href: "/oferta"` in [constants.ts](apps/web/components/layout/constants.ts). Point “Zobacz pełne menu” (or “Zobacz ofertę”) to `/oferta`.
 
 ---
@@ -142,5 +145,5 @@ Design (catering vs restaurant menu trends, frontend-design skill) stays a separ
 |------|--------|
 | 1 | Scrape 5 URLs into one `offer.json` with CMS-friendly shape (id, slug, sections → categories → items). |
 | 2 | Add types and `getOffer()` in `lib/offer.ts` (optional `React.cache`); UI consumes only this API. |
-| 3 | Add async `app/oferta/page.tsx` that `await getOffer()` and renders with compound `Offer.*` components (Vercel composition patterns); add “Oferta” to nav and link “Zobacz pełne menu” to `/oferta`. |
+| 3 | Add async offer routes that `await getOffer()` and render with `OfferRoot` / section components; add “Oferta” to nav and link to `/oferta`. |
 | 4 | Later: add CMS env and branch in `getOffer()`; model same structure in headless CMS. |

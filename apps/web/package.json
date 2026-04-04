@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@heroui/react": "^3.0.1",
+    "@heroui/styles": "^3.0.1",
+    "@tanstack/react-pacer": "^0.21.1",
     "@workspace/ui": "workspace:*",
     "lucide-react": "^0.574.0",
     "motion": "^12.34.1",

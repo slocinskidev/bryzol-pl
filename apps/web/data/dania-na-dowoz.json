@@ -1,0 +1,231 @@
+{
+  "sections": [
+    {
+      "id": "dania-na-dowoz",
+      "slug": "dania-na-dowoz",
+      "title": "Dania na dowóz",
+      "description": "Śniadania do godz. 12:00, ciasto ogniowe, pierogi, sałatki i dania główne pod wskazany adres.",
+      "categories": [
+        {
+          "id": "ciasto-ogniowe",
+          "title": "Ciasto ogniowe / Podpłomyk",
+          "items": [
+            {
+              "id": "ciasto-boczek",
+              "name": "Ciasto ogniowe BOCZEK",
+              "price": 29,
+              "unit": "szt",
+              "description": "podpłomyk, sos czosnkowy, cebula biała, boczek, ser mozzarella"
+            },
+            {
+              "id": "ciasto-kurczak",
+              "name": "Ciasto ogniowe KURCZAK",
+              "price": 29,
+              "unit": "szt",
+              "description": "podpłomyk, sos czosnkowy, kurczak, brokuł, papryka, ser mozzarella"
+            },
+            {
+              "id": "ciasto-wegetarianskie",
+              "name": "Ciasto ogniowe WEGETARIAŃSKIE",
+              "price": 29,
+              "unit": "szt",
+              "description": "podpłomyk, sos czosnkowy, cebula, brokuł, papryka, ser mozzarella"
+            },
+            {
+              "id": "ciasto-tunczyk",
+              "name": "Ciasto ogniowe TUŃCZYK",
+              "price": 37,
+              "unit": "szt",
+              "description": "podpłomyk, sos czosnkowy, cebula, tuńczyk, ser mozzarella"
+            },
+            {
+              "id": "ciasto-krewetki",
+              "name": "Ciasto ogniowe KREWETKI",
+              "price": 37,
+              "unit": "szt",
+              "description": "podpłomyk, sos czosnkowy, cebula biała, krewetki, ser mozzarella"
+            },
+            {
+              "id": "ciasto-wloskie",
+              "name": "Ciasto ogniowe WŁOSKIE",
+              "price": 32,
+              "unit": "szt",
+              "description": "podpłomyk, sos czosnkowy, cebula, rukola, szynka dojrzewająca, ser grana padano"
+            },
+            {
+              "id": "ciasto-serowe",
+              "name": "Ciasto ogniowe SEROWE",
+              "price": 32,
+              "unit": "szt",
+              "description": "podpłomyk, sos czosnkowy, rokpol, mozzarella, grana padano"
+            },
+            {
+              "id": "ciasto-ogniste",
+              "name": "Ciasto ogniowe OGNISTE",
+              "price": 37,
+              "unit": "szt",
+              "description": "podpłomyk, sos pomidorowy, salami, kurczak, jalapeño, ogórek konserwowy, ser typu feta, ser mozzarella"
+            }
+          ]
+        },
+        {
+          "id": "pierogi-dowoz",
+          "title": "Pierogi",
+          "items": [
+            {
+              "id": "pierogi-ser-ziemniaki",
+              "name": "Pierogi z serem i ziemniakami okraszone cebulką",
+              "price": 29,
+              "unit": "porcja"
+            },
+            {
+              "id": "pierogi-mieso",
+              "name": "Pierogi z mięsem okraszone cebulką",
+              "price": 31,
+              "unit": "porcja"
+            }
+          ],
+          "note": "1 porcja = ok. 10 pierogów"
+        },
+        {
+          "id": "salatki-dowoz",
+          "title": "Sałatki",
+          "items": [
+            {
+              "id": "salatka-grecka-dowoz",
+              "name": "Sałatka grecka",
+              "price": 24,
+              "unit": "szt",
+              "description": "sałata lodowa, rukola, pomidor świeży, ogórek zielony, oliwki, papryka świeża, cebula czerwona, ser feta, sos winegret"
+            },
+            {
+              "id": "salatka-kurczak-dowoz",
+              "name": "Sałatka z kurczakiem",
+              "price": 29,
+              "unit": "szt",
+              "description": "kurczak, sałata lodowa, rukola, pomidor świeży, ogórek zielony, pestki słonecznika, cebula czerwona, grzanki, sos czosnkowy"
+            },
+            {
+              "id": "salatka-tunczyk-dowoz",
+              "name": "Sałatka z tuńczykiem",
+              "price": 29,
+              "unit": "szt",
+              "description": "sałata lodowa, rukola, papryka świeża, kukurydza konserwowa, ogórek zielony, cebula czerwona, oliwki, tuńczyk, sos jogurtowy"
+            },
+            {
+              "id": "salatka-krewetki-dowoz",
+              "name": "Sałatka z krewetkami",
+              "price": 29,
+              "unit": "szt",
+              "description": "sałata lodowa, rukola, papryka świeża, orzech włoski, pomidor świeży, ser grana padano, awokado świeże, krewetki, sos winegret"
+            }
+          ]
+        },
+        {
+          "id": "sniadania-dowoz",
+          "title": "Śniadania",
+          "items": [
+            {
+              "id": "jajecznica",
+              "name": "Jajecznica z 5 jajek z boczkiem",
+              "price": 20,
+              "unit": "szt",
+              "description": "+ pieczywo"
+            },
+            {
+              "id": "omlet-boczek",
+              "name": "Omlet z 4 jajek z boczkiem, cebulą i serem",
+              "price": 20,
+              "unit": "szt",
+              "description": "+ pieczywo"
+            },
+            {
+              "id": "kielbasa-smazona",
+              "name": "Kiełbasa smażona z cebulą i musztardą",
+              "price": 20,
+              "unit": "szt",
+              "description": "+ pieczywo"
+            },
+            {
+              "id": "club-sandwich",
+              "name": "Club Sandwich z kurczakiem, boczkiem, pomidorem i serem",
+              "price": 20,
+              "unit": "szt"
+            }
+          ]
+        },
+        {
+          "id": "dania-glowne-dowoz",
+          "title": "Dania główne",
+          "items": [
+            {
+              "id": "kotlet-schabowy-dowoz",
+              "name": "Kotlet schabowy smażony na smalcu",
+              "price": 35,
+              "unit": "szt",
+              "description": "z ćwiartkami ziemniaczanymi i mizerią"
+            },
+            {
+              "id": "kotlet-drobiowy-dowoz",
+              "name": "Kotlet drobiowy",
+              "price": 34,
+              "unit": "szt",
+              "description": "z kulkami ziemniaczanymi i mizerią"
+            },
+            {
+              "id": "rolada-wolowa-dowoz",
+              "name": "Rolada wołowa",
+              "price": 48,
+              "unit": "szt",
+              "description": "z kluskami śląskimi, czerwoną kapustą i sezamem"
+            },
+            {
+              "id": "golonko-dowoz",
+              "name": "Golonko pieczone bez kości",
+              "price": 39,
+              "unit": "szt",
+              "description": "z ćwiartkami ziemniaczanymi i kapustą zasmażaną"
+            },
+            {
+              "id": "filet-mintaj-dowoz",
+              "name": "Filet panierowany z mintaja",
+              "price": 38,
+              "unit": "szt",
+              "description": "z kulkami ziemniaczanymi i mizerią"
+            }
+          ]
+        },
+        {
+          "id": "sosy-dowoz",
+          "title": "Sosy",
+          "items": [
+            {
+              "id": "sos-czosnkowy",
+              "name": "Sos czosnkowy 80 ml",
+              "price": 4,
+              "unit": "szt"
+            },
+            {
+              "id": "sos-pomidorowy",
+              "name": "Sos pomidorowy 80 ml",
+              "price": 4,
+              "unit": "szt"
+            },
+            {
+              "id": "sos-jogurtowy",
+              "name": "Sos jogurtowy 80 ml",
+              "price": 4,
+              "unit": "szt"
+            },
+            {
+              "id": "sos-winegret",
+              "name": "Sos winegret 80 ml",
+              "price": 4,
+              "unit": "szt"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

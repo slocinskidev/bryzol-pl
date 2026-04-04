@@ -3,8 +3,9 @@
     {
       "id": "pelna-oferta",
       "slug": "pelna-oferta",
+      "shortTitle": "Pełna oferta",
       "title": "Pełna oferta cateringowa",
-      "description": "Catering na wszelkie okazje. Żory i okolice do 30 km.",
+      "description": "Pełna oferta cateringowa: dania na ciepło, blachy biesiadne i zestawy.",
       "categories": [
         {
           "id": "dania-cieple",
@@ -445,7 +446,12 @@
               "price": 11,
               "unit": "porcja"
             },
-            { "id": "zurek", "name": "Żurek", "price": 12, "unit": "porcja" },
+            {
+              "id": "zurek",
+              "name": "Żurek",
+              "price": 12,
+              "unit": "porcja"
+            },
             {
               "id": "zupa-meksykanska",
               "name": "Zupa meksykańska (mięso mielone, mięso z kurczaka, fasola, kukurydza, papryka, pomidory)",
@@ -988,8 +994,9 @@
     {
       "id": "blachy",
       "slug": "blachy-biesiadne-koryta",
+      "shortTitle": "Blachy i koryta",
       "title": "Blachy biesiadne / Koryta",
-      "description": "Autorskie zestawy na blachach, korytach lub paterach. 8–10 osób.",
+      "description": "Autorskie zestawy na blachach, korytach lub paterach (8–10 osób). Zawartość możesz zmienić — przygotujemy wariant pod Twoją prośbę i budżet.",
       "categories": [
         {
           "id": "blachy-sezonowe",
@@ -1000,28 +1007,68 @@
               "name": "Wiosenna (8–10 osób)",
               "price": 690,
               "unit": "szt",
-              "description": "Udko b/k z rozmarynem 6 szt., kotleciki drobiowe 10 szt., skrzydełka słodko-ostre 10 szt., schab z serem wędzonym 6 szt., pieczeń wieprzowa 1 kg, paluszki serowe 6 szt., fasolka szparagowa 700 g, makaron rurki z sosem czosnkowym 1,5 kg"
+              "includedDishes": [
+                "Udko b/k z rozmarynem 6 szt.",
+                "kotleciki drobiowe 10 szt.",
+                "skrzydełka słodko-ostre 10 szt.",
+                "schab z serem wędzonym 6 szt.",
+                "pieczeń wieprzowa 1 kg",
+                "paluszki serowe 6 szt.",
+                "fasolka szparagowa 700 g",
+                "makaron rurki z sosem czosnkowym 1,5 kg"
+              ]
             },
             {
               "id": "letnia",
               "name": "Letnia (8–10 osób)",
               "price": 739,
               "unit": "szt",
-              "description": "Udko b/k z rozmarynem 5 szt., pierogi ruskie opiekane 10 szt., karkówka z grilla 5 szt., filet z kurczaka z grilla 5 szt., ziemniaki faszerowane z boczkiem 10 szt., kotlet schabowy 5 szt., schab z serem wędzonym 5 szt., brokuły z sosem serowym 800 g, ziemniaki z koperkiem 1,5 kg"
+              "includedDishes": [
+                "Udko b/k z rozmarynem 5 szt.",
+                "pierogi ruskie opiekane 10 szt.",
+                "karkówka z grilla 5 szt.",
+                "filet z kurczaka z grilla 5 szt.",
+                "ziemniaki faszerowane z boczkiem 10 szt.",
+                "kotlet schabowy 5 szt.",
+                "schab z serem wędzonym 5 szt.",
+                "brokuły z sosem serowym 800 g",
+                "ziemniaki z koperkiem 1,5 kg"
+              ]
             },
             {
               "id": "jesienna",
               "name": "Jesienna (8–10 osób)",
               "price": 580,
               "unit": "szt",
-              "description": "Pieczeń wieprzowa 0,5 kg, udko z kurczaka z/k z czosnkiem 4 szt., skrzydełka pikantne w miodzie 10 szt., roladka wieprzowa 4 szt., szwajcar 4 szt., pieczarki panierowane 10 szt., kaszanka z cebulą 5 szt., kapusta zasmażana 1,5 kg, ziemniaki pieczone 1,5 kg"
+              "includedDishes": [
+                "Pieczeń wieprzowa 0,5 kg",
+                "udko z kurczaka z/k z czosnkiem 4 szt.",
+                "skrzydełka pikantne w miodzie 10 szt.",
+                "roladka wieprzowa 4 szt.",
+                "szwajcar 4 szt.",
+                "pieczarki panierowane 10 szt.",
+                "kaszanka z cebulą 5 szt.",
+                "kapusta zasmażana 1,5 kg",
+                "ziemniaki pieczone 1,5 kg"
+              ]
             },
             {
               "id": "zimowa",
               "name": "Zimowa (8–10 osób)",
               "price": 849,
               "unit": "szt",
-              "description": "Pieczeń wieprzowa 1 kg, golonki po bawarsku 1 kg, kaszanka 5 szt., schab z serem wędzonym 5 szt., śliwki w boczku 20 szt., kiełbaski pieczone 6 szt., kotleciki drobiowe 10 szt., kapusta zasmażana 1,5 kg, ziemniaki pieczone 1,5 kg, pieczarki faszerowane 10 szt."
+              "includedDishes": [
+                "Pieczeń wieprzowa 1 kg",
+                "golonki po bawarsku 1 kg",
+                "kaszanka 5 szt.",
+                "schab z serem wędzonym 5 szt.",
+                "śliwki w boczku 20 szt.",
+                "kiełbaski pieczone 6 szt.",
+                "kotleciki drobiowe 10 szt.",
+                "kapusta zasmażana 1,5 kg",
+                "ziemniaki pieczone 1,5 kg",
+                "pieczarki faszerowane 10 szt."
+              ]
             }
           ]
         },
@@ -1034,28 +1081,63 @@
               "name": "Śląska (8–10 osób)",
               "price": 845,
               "unit": "szt",
-              "description": "Rolada wołowa 5 szt., udko z kaczki 5 szt., kotlet schabowy 5 szt., kotlet de volaille 5 szt., pieczeń 500 g, kluski śląskie 10 porcji, kapusta czerwona 1 kg, colesław 1 kg, sos pieczeniowy 1 l"
+              "includedDishes": [
+                "Rolada wołowa 5 szt.",
+                "udko z kaczki 5 szt.",
+                "kotlet schabowy 5 szt.",
+                "kotlet de volaille 5 szt.",
+                "pieczeń 500 g",
+                "kluski śląskie 10 porcji",
+                "kapusta czerwona 1 kg",
+                "colesław 1 kg",
+                "sos pieczeniowy 1 l"
+              ]
             },
             {
               "id": "miesna",
               "name": "Mięsna (8–10 osób)",
               "price": 690,
               "unit": "szt",
-              "description": "Schab z serem wędzonym 5 szt., polędwiczki wieprzowe z sosem pieprzowym 5 porcji, kotleciki drobiowe 5 szt., roladka drobiowa ze szpinakiem 5 szt., rolada wołowa 5 szt., udko z kaczki 5 szt."
+              "includedDishes": [
+                "Schab z serem wędzonym 5 szt.",
+                "polędwiczki wieprzowe z sosem pieprzowym 5 porcji",
+                "kotleciki drobiowe 5 szt.",
+                "roladka drobiowa ze szpinakiem 5 szt.",
+                "rolada wołowa 5 szt.",
+                "udko z kaczki 5 szt."
+              ]
             },
             {
               "id": "keto",
               "name": "Keto blacha (10 osób)",
               "price": 729,
               "unit": "szt",
-              "description": "Udko z kurczaka b/k, schab z serem wędzonym, karkówka grill 5 szt., pierś z kurczaka z masłem ziołowym i camembertem 5 szt., golonka b/k 3 szt., serki wędzone (oscypki), warzywa grillowane 1,5 kg, brokuł z sosem serowym 1 kg"
+              "includedDishes": [
+                "Udko z kurczaka b/k",
+                "schab z serem wędzonym",
+                "karkówka grill 5 szt.",
+                "pierś z kurczaka z masłem ziołowym i camembertem 5 szt.",
+                "golonka b/k 3 szt.",
+                "serki wędzone (oscypki)",
+                "warzywa grillowane 1,5 kg",
+                "brokuł z sosem serowym 1 kg"
+              ]
             },
             {
               "id": "wegetarianska",
               "name": "Wegetariańska (8–10 osób)",
               "price": 450,
               "unit": "szt",
-              "description": "Ziemniaki faszerowane z serem i ziołami 10 szt., cukinia z suszonymi pomidorami i mozzarellą 10 szt., pieczarki panierowane 10 szt., szaszłyki warzywne 10 szt., pierogi z serem opiekane 10 szt., paluszki serowe 10 szt., krążki cebulowe 15 szt., makaron rurki z sosem serowym 1,5 kg"
+              "includedDishes": [
+                "Ziemniaki faszerowane z serem i ziołami 10 szt.",
+                "cukinia z suszonymi pomidorami i mozzarellą 10 szt.",
+                "pieczarki panierowane 10 szt.",
+                "szaszłyki warzywne 10 szt.",
+                "pierogi z serem opiekane 10 szt.",
+                "paluszki serowe 10 szt.",
+                "krążki cebulowe 15 szt.",
+                "makaron rurki z sosem serowym 1,5 kg"
+              ]
             }
           ]
         }
@@ -1064,8 +1146,9 @@
     {
       "id": "przykladowe-zestawy",
       "slug": "przykladowe-zestawy",
+      "shortTitle": "Zestawy",
       "title": "Przykładowe zestawy",
-      "description": "Zestawy dla 10 osób. Podanie na blachach, korytach lub paterach.",
+      "description": "Zestawy dla 10 osób podane na blachach, korytach lub paterach. Potrzebujesz innej liczby gości? Przygotujemy zestaw i wycenę.",
       "categories": [
         {
           "id": "zestawy-10",
@@ -1076,290 +1159,34 @@
               "name": "Zestaw dla 10 osób",
               "price": 770,
               "unit": "szt",
-              "description": "Polędwiczki wieprzowe z sosem pieprzowym lub grzybowym 6 porcji, udko z kurczaka b/k lub z/k 6 szt., schab z serem wędzonym lub pieczeń 6 szt., kotleciki drobiowe lub de volaille 6 szt., pierś z kaczki lub udko 6 porcji, ziemniaki pieczone lub purée z boczkiem 10 porcji, pęczotto lub risotto 1 kg, kapusta lekka lub zasmażana 1,5 kg"
+              "includedDishes": [
+                "Polędwiczki wieprzowe z sosem pieprzowym lub grzybowym 6 porcji",
+                "udko z kurczaka b/k lub z/k 6 szt.",
+                "schab z serem wędzonym lub pieczeń 6 szt.",
+                "kotleciki drobiowe lub de volaille 6 szt.",
+                "pierś z kaczki lub udko 6 porcji",
+                "ziemniaki pieczone lub purée z boczkiem 10 porcji",
+                "pęczotto lub risotto 1 kg",
+                "kapusta lekka lub zasmażana 1,5 kg"
+              ]
             },
             {
               "id": "przekaski-10-osob",
               "name": "Przekąski dla 10 osób",
               "price": 525,
               "unit": "szt",
-              "description": "Sakiewki z szynki 16 szt., polędwiczki z suszonymi pomidorami 10 szt., galantynki drobiowe 10 szt., śledź korzenny na jajku 8 szt., łosoś z ajwarem 10 szt., pomidorki koktajlowe z mozzarellą 16 szt., tatar wołowy (60 g) 8 szt., sałatka lekka 1 miska, brokuły z sosem czosnkowym 1 miska"
+              "includedDishes": [
+                "Sakiewki z szynki 16 szt.",
+                "polędwiczki z suszonymi pomidorami 10 szt.",
+                "galantynki drobiowe 10 szt.",
+                "śledź korzenny na jajku 8 szt.",
+                "łosoś z ajwarem 10 szt.",
+                "pomidorki koktajlowe z mozzarellą 16 szt.",
+                "tatar wołowy (60 g) 8 szt.",
+                "sałatka lekka 1 miska",
+                "brokuły z sosem czosnkowym 1 miska"
+              ]
             }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "dania-na-dowoz",
-      "slug": "dania-na-dowoz",
-      "title": "Dania na dowóz",
-      "description": "Ciasto ogniowe, pierogi, sałatki, śniadania i dania główne pod drzwi.",
-      "categories": [
-        {
-          "id": "ciasto-ogniowe",
-          "title": "Ciasto ogniowe / Podpłomyk",
-          "items": [
-            {
-              "id": "ciasto-boczek",
-              "name": "Ciasto ogniowe BOCZEK",
-              "price": 29,
-              "unit": "szt",
-              "description": "podpłomyk, sos czosnkowy, cebula biała, boczek, ser mozzarella"
-            },
-            {
-              "id": "ciasto-kurczak",
-              "name": "Ciasto ogniowe KURCZAK",
-              "price": 29,
-              "unit": "szt",
-              "description": "podpłomyk, sos czosnkowy, kurczak, brokuł, papryka, ser mozzarella"
-            },
-            {
-              "id": "ciasto-wegetarianskie",
-              "name": "Ciasto ogniowe WEGETARIAŃSKIE",
-              "price": 29,
-              "unit": "szt",
-              "description": "podpłomyk, sos czosnkowy, cebula, brokuł, papryka, ser mozzarella"
-            },
-            {
-              "id": "ciasto-tunczyk",
-              "name": "Ciasto ogniowe TUŃCZYK",
-              "price": 37,
-              "unit": "szt",
-              "description": "podpłomyk, sos czosnkowy, cebula, tuńczyk, ser mozzarella"
-            },
-            {
-              "id": "ciasto-krewetki",
-              "name": "Ciasto ogniowe KREWETKI",
-              "price": 37,
-              "unit": "szt",
-              "description": "podpłomyk, sos czosnkowy, cebula biała, krewetki, ser mozzarella"
-            },
-            {
-              "id": "ciasto-wloskie",
-              "name": "Ciasto ogniowe WŁOSKIE",
-              "price": 32,
-              "unit": "szt",
-              "description": "podpłomyk, sos czosnkowy, cebula, rukola, szynka dojrzewająca, ser grana padano"
-            },
-            {
-              "id": "ciasto-serowe",
-              "name": "Ciasto ogniowe SEROWE",
-              "price": 32,
-              "unit": "szt",
-              "description": "podpłomyk, sos czosnkowy, rokpol, mozzarella, grana padano"
-            },
-            {
-              "id": "ciasto-ogniste",
-              "name": "Ciasto ogniowe OGNISTE",
-              "price": 37,
-              "unit": "szt",
-              "description": "podpłomyk, sos pomidorowy, salami, kurczak, jalapeño, ogórek konserwowy, ser typu feta, ser mozzarella"
-            }
-          ]
-        },
-        {
-          "id": "pierogi-dowoz",
-          "title": "Pierogi",
-          "items": [
-            {
-              "id": "pierogi-ser-ziemniaki",
-              "name": "Pierogi z serem i ziemniakami okraszone cebulką",
-              "price": 29,
-              "unit": "szt"
-            },
-            {
-              "id": "pierogi-mieso",
-              "name": "Pierogi z mięsem okraszone cebulką",
-              "price": 31,
-              "unit": "szt"
-            }
-          ]
-        },
-        {
-          "id": "salatki-dowoz",
-          "title": "Sałatki",
-          "items": [
-            {
-              "id": "salatka-grecka-dowoz",
-              "name": "Sałatka grecka",
-              "price": 24,
-              "unit": "szt",
-              "description": "sałata lodowa, rukola, pomidor świeży, ogórek zielony, oliwki, papryka świeża, cebula czerwona, ser feta, sos winegret"
-            },
-            {
-              "id": "salatka-kurczak-dowoz",
-              "name": "Sałatka z kurczakiem",
-              "price": 29,
-              "unit": "szt",
-              "description": "kurczak, sałata lodowa, rukola, pomidor świeży, ogórek zielony, pestki słonecznika, cebula czerwona, grzanki, sos czosnkowy"
-            },
-            {
-              "id": "salatka-tunczyk-dowoz",
-              "name": "Sałatka z tuńczykiem",
-              "price": 29,
-              "unit": "szt",
-              "description": "sałata lodowa, rukola, papryka świeża, kukurydza konserwowa, ogórek zielony, cebula czerwona, oliwki, tuńczyk, sos jogurtowy"
-            },
-            {
-              "id": "salatka-krewetki-dowoz",
-              "name": "Sałatka z krewetkami",
-              "price": 29,
-              "unit": "szt",
-              "description": "sałata lodowa, rukola, papryka świeża, orzech włoski, pomidor świeży, ser grana padano, awokado świeże, krewetki, sos winegret"
-            }
-          ]
-        },
-        {
-          "id": "sniadania-dowoz",
-          "title": "Śniadania – do godz. 12:00",
-          "items": [
-            {
-              "id": "jajecznica",
-              "name": "Jajecznica z 5 jajek z boczkiem",
-              "price": 20,
-              "unit": "szt",
-              "description": "+ pieczywo"
-            },
-            {
-              "id": "omlet-boczek",
-              "name": "Omlet z 4 jajek z boczkiem, cebulą i serem",
-              "price": 20,
-              "unit": "szt",
-              "description": "+ pieczywo"
-            },
-            {
-              "id": "kielbasa-smazona",
-              "name": "Kiełbasa smażona z cebulą i musztardą",
-              "price": 20,
-              "unit": "szt",
-              "description": "+ pieczywo"
-            },
-            {
-              "id": "club-sandwich",
-              "name": "Club Sandwich z kurczakiem, boczkiem, pomidorem i serem",
-              "price": 20,
-              "unit": "szt"
-            }
-          ]
-        },
-        {
-          "id": "dania-glowne-dowoz",
-          "title": "Dania główne",
-          "items": [
-            {
-              "id": "kotlet-schabowy-dowoz",
-              "name": "Kotlet schabowy smażony na smalcu",
-              "price": 35,
-              "unit": "szt",
-              "description": "z ćwiartkami ziemniaczanymi i mizerią"
-            },
-            {
-              "id": "kotlet-drobiowy-dowoz",
-              "name": "Kotlet drobiowy",
-              "price": 34,
-              "unit": "szt",
-              "description": "z kulkami ziemniaczanymi i mizerią"
-            },
-            {
-              "id": "rolada-wolowa-dowoz",
-              "name": "Rolada wołowa",
-              "price": 48,
-              "unit": "szt",
-              "description": "z kluskami śląskimi, czerwoną kapustą i sezamem"
-            },
-            {
-              "id": "golonko-dowoz",
-              "name": "Golonko pieczone bez kości",
-              "price": 39,
-              "unit": "szt",
-              "description": "z ćwiartkami ziemniaczanymi i kapustą zasmażaną"
-            },
-            {
-              "id": "filet-mintaj-dowoz",
-              "name": "Filet panierowany z mintaja",
-              "price": 38,
-              "unit": "szt",
-              "description": "z kulkami ziemniaczanymi i mizerią"
-            }
-          ]
-        },
-        {
-          "id": "sosy-dowoz",
-          "title": "Sosy",
-          "items": [
-            {
-              "id": "sos-czosnkowy",
-              "name": "Sos czosnkowy 80 ml",
-              "price": 4,
-              "unit": "szt"
-            },
-            {
-              "id": "sos-pomidorowy",
-              "name": "Sos pomidorowy 80 ml",
-              "price": 4,
-              "unit": "szt"
-            },
-            {
-              "id": "sos-jogurtowy",
-              "name": "Sos jogurtowy 80 ml",
-              "price": 4,
-              "unit": "szt"
-            },
-            {
-              "id": "sos-winegret",
-              "name": "Sos winegret 80 ml",
-              "price": 4,
-              "unit": "szt"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "domowe-obiady",
-      "slug": "domowe-obiady",
-      "title": "Domowe obiady / Dania dnia",
-      "description": "Zestaw obiadowy: zupa + drugie danie. Odbiór od 13:00 lub dowóz. Transport w Żorach gratis.",
-      "meta": {
-        "priceNote": "Poniedziałek – Sobota 33,00 zł (zupa + drugie danie). Zamówienia na kolejny dzień do 9:00."
-      },
-      "categories": [
-        {
-          "id": "dania-dnia",
-          "title": "Dania dnia",
-          "note": "Menu tygodniowe na Facebooku: facebook.com/bryzolcatering. Przykład tygodnia poniżej.",
-          "items": [
-            {
-              "id": "pn",
-              "name": "Poniedziałek",
-              "description": "Zupa: Gulaszowa. Zestaw 1: Łazanki (kapusta, pieczarki, kiełbasa). Zestaw 2: Łazanki z warzywami"
-            },
-            {
-              "id": "wt",
-              "name": "Wtorek",
-              "description": "Zupa: Serowa z grzankami. Zestaw 1: Schab zapiekany w sosie pomidorowym, ziemniaki, surówka. Zestaw 2: Cukinia zapiekana w sosie pomidorowym, ziemniaki, surówka"
-            },
-            {
-              "id": "sr",
-              "name": "Środa",
-              "description": "Zupa: Barszcz zabielany z ziemniakami. Zestaw 1: Klopsiki w sosie ogórkowym, kasza, surówka. Zestaw 2: Boczniaki duszone, kasza, surówka"
-            },
-            {
-              "id": "cz",
-              "name": "Czwartek",
-              "description": "Zupa: Kapuśniak. Zestaw 1: Roladka wieprzowa, ziemniaki, surówka. Zestaw 2: Roladka z bakłażana z warzywami i serem, ziemniaki, surówka"
-            },
-            {
-              "id": "pt",
-              "name": "Piątek",
-              "description": "Zupa: Dyniowa. Zestaw 1: Pierogi z mięsem. Zestaw 2: Pierogi ruskie"
-            },
-            {
-              "id": "sb",
-              "name": "Sobota",
-              "description": "Zupa: Rybna. Zestaw 1: Bitki wieprzowe, kopytka, surówka"
-            },
-            { "id": "nd", "name": "Niedziela", "description": "Nieczynne" }
           ]
         }
       ]

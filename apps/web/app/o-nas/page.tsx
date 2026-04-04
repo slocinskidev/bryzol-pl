@@ -1,5 +1,5 @@
 import { PageHeader } from '@/components/layout/page-header';
-import { About } from '@/components/landing-section/about';
+import { AboutStory, AboutValues } from '@/components/landing-section/about';
 
 export default function AboutPage() {
 	return (
@@ -10,7 +10,8 @@ export default function AboutPage() {
 				title="O nas"
 				description="Nie budujemy historii o wielkiej firmie. Budujemy ją na talerzu."
 			/>
-			<About hideSectionHeader />
+			<AboutStory hideSectionHeader />
+			<AboutValues />
 			<section className="pb-20 lg:pb-28">
 				<div className="container mx-auto max-w-7xl px-6">
 					<div className="mx-auto max-w-3xl text-center">
@@ -37,6 +38,40 @@ export default function AboutPage() {
 								dostosowany do konkretnych potrzeb i budżetu.
 							</p>
 						</div>
+
+						<h3 className="mt-14 font-display font-semibold text-foreground text-xl">
+							Jak wygląda współpraca
+						</h3>
+						<div
+							className="mx-auto mt-3 h-0.5 w-12 rounded-full bg-accent"
+							aria-hidden
+						/>
+						<ol className="mt-8 space-y-4 text-left">
+							<li className="flex items-start gap-3">
+								<div className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-accent-soft font-bold text-accent text-xs">
+									1
+								</div>
+								<span className="text-muted leading-relaxed">
+									Rozmowa i poznanie potrzeb
+								</span>
+							</li>
+							<li className="flex items-start gap-3">
+								<div className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-accent-soft font-bold text-accent text-xs">
+									2
+								</div>
+								<span className="text-muted leading-relaxed">
+									Propozycja menu i wycena dopasowana do budżetu
+								</span>
+							</li>
+							<li className="flex items-start gap-3">
+								<div className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-accent-soft font-bold text-accent text-xs">
+									3
+								</div>
+								<span className="text-muted leading-relaxed">
+									Przygotowanie i dostawa na ustalony termin
+								</span>
+							</li>
+						</ol>
 					</div>
 				</div>
 			</section>
