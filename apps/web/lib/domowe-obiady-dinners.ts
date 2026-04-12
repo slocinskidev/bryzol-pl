@@ -70,4 +70,3 @@ async function loadDomoweObiadyDinners(): Promise<DomoweObiadyDinner[]> {
 }
 
 export const getDomoweObiadyDinners = cache(loadDomoweObiadyDinners);
-

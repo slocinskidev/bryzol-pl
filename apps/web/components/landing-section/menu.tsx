@@ -1,7 +1,7 @@
 'use client';
 
-import { ButtonLink } from '@/components/button-link';
 import { motion } from 'motion/react';
+import { ButtonLink } from '@/components/button-link';
 
 export function Menu() {
 	return (
@@ -16,14 +16,14 @@ export function Menu() {
 				viewport={{ once: true }}
 				className="mx-auto max-w-3xl px-6 text-center"
 			>
-				<h2 className="mb-4 font-bold font-display text-4xl text-gray-900 tracking-tight md:text-5xl lg:text-6xl dark:text-white">
+				<h2 className="mb-4 font-bold font-display text-4xl text-foreground tracking-tight md:text-5xl lg:text-6xl">
 					Menu
 				</h2>
 				<div
 					className="mx-auto mb-10 h-1 w-24 rounded-full bg-accent"
 					aria-hidden
 				/>
-				<p className="mb-10 text-gray-600 text-lg leading-relaxed md:text-xl dark:text-gray-300">
+				<p className="mb-10 text-lg text-muted leading-relaxed md:text-xl">
 					Domowe obiady, dania dnia, blachy i zestawy na przyjęcie. Zobacz pełną
 					ofertę i wybierz coś na dziś lub na Waszą imprezę.
 				</p>

@@ -3,7 +3,7 @@ import { ChefHat, Truck, UtensilsCrossed } from 'lucide-react';
 /** Offer page metadata used by navigation and offer cards. */
 export const OFFER_PAGES = [
 	{
-		slug: 'cateringowa',
+		slug: 'catering',
 		title: 'Oferta cateringowa',
 		description:
 			'Catering na przyjęcia i dla firm: dania na ciepło, blachy biesiadne i zestawy.',

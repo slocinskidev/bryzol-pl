@@ -9,7 +9,10 @@ import { ButtonLink } from '@/components/button-link';
 
 export function Hero() {
 	return (
-		<div id="home" className="relative flex min-h-dvh flex-col pt-32 font-sans lg:pt-40">
+		<div
+			id="home"
+			className="relative flex min-h-dvh flex-col pt-32 font-sans lg:pt-40"
+		>
 			<div className="absolute inset-0 z-0">
 				<Image
 					src={heroImage}

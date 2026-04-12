@@ -35,10 +35,10 @@ export function SocialProof() {
 					<p className="mb-3 text-accent text-sm uppercase tracking-[0.24em]">
 						Dlaczego Bryzol
 					</p>
-					<h2 className="font-bold font-display text-3xl text-gray-900 tracking-tight md:text-4xl dark:text-white">
+					<h2 className="font-bold font-display text-3xl text-foreground tracking-tight md:text-4xl">
 						Proces, ktory daje spokoj organizacyjny
 					</h2>
-					<p className="mt-5 text-gray-600 text-lg leading-relaxed dark:text-gray-300">
+					<p className="mt-5 text-lg text-muted leading-relaxed">
 						Dzialamy wedlug prostego procesu i jasno pokazujemy zakres uslug.
 						Dzieki temu od poczatku wiesz, czego sie spodziewac.
 					</p>
@@ -57,7 +57,7 @@ export function SocialProof() {
 							className="h-full border-white/40 bg-surface/90 shadow-lg backdrop-blur-sm dark:border-stone-700/80"
 						>
 							<Card.Header className="gap-0 p-6 pb-0">
-								<Card.Title className="font-semibold text-gray-900 text-xl dark:text-white">
+								<Card.Title className="font-semibold text-foreground text-xl">
 									Jak wygląda współpraca
 								</Card.Title>
 							</Card.Header>
@@ -68,7 +68,7 @@ export function SocialProof() {
 											<div className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-accent/15 font-bold text-accent text-xs">
 												{index + 1}
 											</div>
-											<span className="text-gray-600 text-sm leading-relaxed dark:text-gray-300">
+											<span className="text-muted text-sm leading-relaxed">
 												{step}
 											</span>
 										</li>
@@ -90,7 +90,7 @@ export function SocialProof() {
 							className="h-full border-white/40 bg-surface/90 shadow-lg backdrop-blur-sm dark:border-stone-700/80"
 						>
 							<Card.Header className="gap-0 p-6 pb-0">
-								<Card.Title className="font-semibold text-gray-900 text-xl dark:text-white">
+								<Card.Title className="font-semibold text-foreground text-xl">
 									Co obsługujemy
 								</Card.Title>
 							</Card.Header>

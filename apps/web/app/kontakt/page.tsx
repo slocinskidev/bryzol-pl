@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import { ContactInfoPanel } from '@/components/contact/contact-info-panel';
+
+export const metadata: Metadata = {
+	title: 'Kontakt',
+	description:
+		'Skontaktuj się z Bryzol Catering — telefon, e-mail, adres w Żorach. Przygotujemy propozycję menu i wycenę.',
+};
+
 import { ContactMap } from '@/components/contact/contact-map';
 
 export default function ContactPage() {

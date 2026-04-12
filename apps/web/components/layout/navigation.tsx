@@ -86,9 +86,7 @@ function NavigationLogo({ onClick }: { onClick: () => void }) {
 					className="size-8 object-contain"
 				/>
 			</motion.div>
-			<span className="font-bold text-gray-900 text-xl dark:text-white">
-				Bryzol
-			</span>
+			<span className="font-bold text-foreground text-xl">Bryzol</span>
 		</motion.div>
 	);
 }
@@ -175,7 +173,7 @@ function NavigationItemComponent({
 				}}
 				className={cn(
 					'relative flex items-center gap-1.5 overflow-hidden rounded-lg px-2 py-2 font-bold text-xs transition-all duration-300 lg:px-3 lg:text-sm',
-					'text-gray-900 hover:text-accent dark:text-white',
+					'text-foreground hover:text-accent',
 					isActive && 'text-accent',
 				)}
 				whileHover={{

@@ -1,9 +1,18 @@
-import type { DomoweObiadyDinner } from '@/lib/domowe-obiady-dinners';
 import { Chip } from '@heroui/react/chip';
-import { ClipboardList, Clock, Wallet, MapPin, Truck, Phone, Mail, Facebook } from 'lucide-react';
+import {
+	ClipboardList,
+	Clock,
+	Facebook,
+	Mail,
+	MapPin,
+	Phone,
+	Truck,
+	Wallet,
+} from 'lucide-react';
+import type { ReactNode } from 'react';
 import { ButtonAnchor } from '@/components/button-link';
 import { contact } from '@/lib/contact';
-import type { ReactNode } from 'react';
+import type { DomoweObiadyDinner } from '@/lib/domowe-obiady-dinners';
 
 function SoupRow({ soup }: { soup: string }) {
 	return (
@@ -68,7 +77,11 @@ function InfoCard({
 	);
 }
 
-export function DomoweObiadyDinners({ dinners }: { dinners: readonly DomoweObiadyDinner[] }) {
+export function DomoweObiadyDinners({
+	dinners,
+}: {
+	dinners: readonly DomoweObiadyDinner[];
+}) {
 	return (
 		<div>
 			{/* 3-step flow */}
@@ -147,7 +160,10 @@ export function DomoweObiadyDinners({ dinners }: { dinners: readonly DomoweObiad
 			</section>
 
 			{/* Weekly menu */}
-			<ul className="mt-6 space-y-0 md:mt-7" aria-label="Pozycje: Menu tygodniowe">
+			<ul
+				className="mt-6 space-y-0 md:mt-7"
+				aria-label="Pozycje: Menu tygodniowe"
+			>
 				{dinners.map((dinner) => {
 					const isClosed = dinner.description != null;
 					const hasSoup = dinner.soup != null;
@@ -161,7 +177,9 @@ export function DomoweObiadyDinners({ dinners }: { dinners: readonly DomoweObiad
 						>
 							<div className="min-w-0 flex-1">
 								<div className="flex flex-wrap items-center gap-2">
-									<div className="font-medium text-foreground">{dinner.day}</div>
+									<div className="font-medium text-foreground">
+										{dinner.day}
+									</div>
 									{isClosed ? (
 										<Chip size="sm" color="danger" variant="soft">
 											Nieczynne
@@ -173,9 +191,21 @@ export function DomoweObiadyDinners({ dinners }: { dinners: readonly DomoweObiad
 										<div>{dinner.description}</div>
 									) : (
 										<>
-											{hasSoup ? <SoupRow soup={dinner.soup as string} /> : null}
-											{hasSet1 ? <LabeledRow label="Zestaw 1" value={dinner.set1 as string} /> : null}
-											{hasSet2 ? <LabeledRow label="Zestaw 2" value={dinner.set2 as string} /> : null}
+											{hasSoup ? (
+												<SoupRow soup={dinner.soup as string} />
+											) : null}
+											{hasSet1 ? (
+												<LabeledRow
+													label="Zestaw 1"
+													value={dinner.set1 as string}
+												/>
+											) : null}
+											{hasSet2 ? (
+												<LabeledRow
+													label="Zestaw 2"
+													value={dinner.set2 as string}
+												/>
+											) : null}
 										</>
 									)}
 								</div>

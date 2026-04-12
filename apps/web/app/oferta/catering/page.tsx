@@ -1,10 +1,10 @@
-import { Phone, Mail } from 'lucide-react';
+import { Mail, Phone } from 'lucide-react';
+import { ButtonAnchor } from '@/components/button-link';
 import { PageHeader } from '@/components/layout/page-header';
 import { OfferRoot } from '@/components/offer/offer';
 import { OfferSectionTabs } from '@/components/offer/offer-section-tabs';
-import { ButtonAnchor } from '@/components/button-link';
-import { getCateringowa } from '@/lib/offer';
 import { contact } from '@/lib/contact';
+import { getCateringowa } from '@/lib/offer';
 
 export const metadata = {
 	title: 'Oferta cateringowa | Bryzol Catering Żory',
@@ -38,7 +38,7 @@ export default async function CateringowaOfferPage() {
 							href={`tel:${contact.phone.replace(/\s/g, '')}`}
 							size="sm"
 						>
-							<Phone className="mr-2 h-4 w-4" />
+							<Phone className="mr-2 size-4" />
 							{contact.phone}
 						</ButtonAnchor>
 						<ButtonAnchor
@@ -46,7 +46,7 @@ export default async function CateringowaOfferPage() {
 							size="sm"
 							variant="secondary"
 						>
-							<Mail className="mr-2 h-4 w-4" />
+							<Mail className="mr-2 size-4" />
 							{contact.email}
 						</ButtonAnchor>
 					</div>

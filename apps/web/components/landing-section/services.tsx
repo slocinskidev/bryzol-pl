@@ -44,14 +44,14 @@ export function Services() {
 					viewport={{ once: true }}
 					className="mx-auto mb-16 max-w-4xl text-center"
 				>
-					<h2 className="mb-4 font-bold font-display text-4xl text-gray-900 tracking-tight md:text-5xl lg:text-6xl dark:text-white">
+					<h2 className="mb-4 font-bold font-display text-4xl text-foreground tracking-tight md:text-5xl lg:text-6xl">
 						Usługi
 					</h2>
 					<div
 						className="mx-auto h-1 w-24 rounded-full bg-accent"
 						aria-hidden
 					/>
-					<p className="mt-6 text-gray-600 text-lg leading-relaxed dark:text-gray-300">
+					<p className="mt-6 text-lg text-muted leading-relaxed">
 						Dla firm, rodzin i organizatorów wydarzeń, którzy chcą mieć
 						smacznie, estetycznie i bezproblemowo.
 					</p>
@@ -68,16 +68,16 @@ export function Services() {
 						>
 							<Card
 								variant="default"
-								className="group h-full border-gray-200/90 bg-white/90 p-8 shadow-lg transition-all duration-300 hover:border-accent/40 hover:shadow-xl dark:border-stone-700 dark:bg-stone-800/90"
+								className="group h-full border-border bg-surface p-8 shadow-lg transition-all duration-300 hover:border-accent/40 hover:shadow-xl dark:bg-surface-secondary"
 							>
 								<Card.Header className="gap-0 p-0">
 									<div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl border border-accent/20 bg-accent/10 transition-colors duration-300 group-hover:bg-accent/20 dark:bg-accent/20">
 										<Icon className="h-7 w-7 text-accent" aria-hidden />
 									</div>
-									<Card.Title className="mb-3 font-semibold text-gray-900 text-xl dark:text-white">
+									<Card.Title className="mb-3 font-semibold text-foreground text-xl">
 										{title}
 									</Card.Title>
-									<Card.Description className="text-gray-600 leading-relaxed dark:text-gray-300">
+									<Card.Description className="text-muted leading-relaxed">
 										{description}
 									</Card.Description>
 								</Card.Header>

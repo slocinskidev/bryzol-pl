@@ -11,7 +11,7 @@ export function useActiveSection() {
 		if (pathname.startsWith('/o-nas')) {
 			return 'home';
 		}
-		if (pathname.startsWith('/oferta/cateringowa')) {
+		if (pathname.startsWith('/oferta/catering')) {
 			return 'oferta-catering';
 		}
 		if (pathname.startsWith('/oferta/dania-na-dowoz')) {

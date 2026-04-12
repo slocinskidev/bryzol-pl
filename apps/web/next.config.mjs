@@ -8,6 +8,16 @@ const nextConfig = {
 				destination: '/',
 				permanent: false,
 			},
+			{
+				source: '/oferta/cateringowa',
+				destination: '/oferta/catering',
+				permanent: true,
+			},
+			{
+				source: '/o-nas',
+				destination: '/#about',
+				permanent: true,
+			},
 		];
 	},
 };

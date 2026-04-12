@@ -1,7 +1,7 @@
+import { DomoweObiadyDinners } from '@/components/domowe-obiady/domowe-obiady-dinners';
 import { PageHeader } from '@/components/layout/page-header';
 import { OfferRoot } from '@/components/offer/offer';
 import { OfferSectionWrapper } from '@/components/offer/offer-section';
-import { DomoweObiadyDinners } from '@/components/domowe-obiady/domowe-obiady-dinners';
 import { getDomoweObiadyDinners } from '@/lib/domowe-obiady-dinners';
 
 export const metadata = {

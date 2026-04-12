@@ -17,7 +17,8 @@ export function filterOfferCategories(
 				(item) =>
 					item.name.toLowerCase().includes(q) ||
 					(item.description?.toLowerCase().includes(q) ?? false) ||
-					(item.includedDishes?.some((d) => d.toLowerCase().includes(q)) ?? false),
+					(item.includedDishes?.some((d) => d.toLowerCase().includes(q)) ??
+						false),
 			),
 		}))
 		.filter((category) => category.items.length > 0);

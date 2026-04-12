@@ -5,8 +5,8 @@ import type { Key } from 'react';
 import { useEffect, useState } from 'react';
 import type { OfferSection } from '@/lib/offer';
 import { getOfferSectionTabLabel } from '@/lib/offer';
-import { OfferSectionWrapper } from './offer-section';
 import { OfferCategoryTabs } from './offer-category-tabs';
+import { OfferSectionWrapper } from './offer-section';
 
 function SectionTree({ section }: { section: OfferSection }) {
 	return (

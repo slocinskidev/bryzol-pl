@@ -65,8 +65,8 @@ export function OfferCategoryTabs({
 					{hasNoMatches ? (
 						<div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
 							<p className="text-muted text-sm leading-relaxed">
-								Nie znaleźliśmy pasujących pozycji dla „{debouncedQuery.trim()}”.
-								Spróbuj krótszego hasła albo innego słowa.
+								Nie znaleźliśmy pasujących pozycji dla „{debouncedQuery.trim()}
+								”. Spróbuj krótszego hasła albo innego słowa.
 							</p>
 							<button
 								type="button"

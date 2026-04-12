@@ -1,10 +1,10 @@
-import { Clock, MapPin, Phone, Mail, Facebook } from 'lucide-react';
+import { Clock, Facebook, Mail, MapPin, Phone } from 'lucide-react';
+import { ButtonAnchor } from '@/components/button-link';
 import { PageHeader } from '@/components/layout/page-header';
 import { OfferRoot } from '@/components/offer/offer';
 import { OfferSectionTabs } from '@/components/offer/offer-section-tabs';
-import { ButtonAnchor } from '@/components/button-link';
-import { getDaniaNaDowoz } from '@/lib/offer';
 import { contact } from '@/lib/contact';
+import { getDaniaNaDowoz } from '@/lib/offer';
 
 export const metadata = {
 	title: 'Dania na dowóz | Bryzol Catering Żory',
@@ -30,7 +30,7 @@ export default async function DaniaNaDowozOfferPage() {
 					<p className="mb-3 font-medium text-foreground">Jak zamówić</p>
 					<div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
 						<div className="flex items-start gap-3 rounded-lg border border-border/70 bg-background/70 px-3 py-3">
-							<Phone className="mt-0.5 h-5 w-5 shrink-0 text-accent" />
+							<Phone className="mt-0.5 size-5 shrink-0 text-accent" />
 							<div>
 								<p className="font-medium text-foreground text-sm">
 									Zadzwoń lub napisz
@@ -41,19 +41,19 @@ export default async function DaniaNaDowozOfferPage() {
 							</div>
 						</div>
 						<div className="flex items-start gap-3 rounded-lg border border-border/70 bg-background/70 px-3 py-3">
-							<MapPin className="mt-0.5 h-5 w-5 shrink-0 text-accent" />
+							<MapPin className="mt-0.5 size-5 shrink-0 text-accent" />
 							<div>
 								<p className="font-medium text-foreground text-sm">
 									Dowozimy na terenie Żor
 								</p>
 								<p className="mt-0.5 text-muted text-xs">
-									Darmowa dostawa w Żorach. Dla innych miejscowości koszt ustalamy
-									indywidualnie.
+									Darmowa dostawa w Żorach. Dla innych miejscowości koszt
+									ustalamy indywidualnie.
 								</p>
 							</div>
 						</div>
 						<div className="flex items-start gap-3 rounded-lg border border-border/70 bg-background/70 px-3 py-3">
-							<Clock className="mt-0.5 h-5 w-5 shrink-0 text-accent" />
+							<Clock className="mt-0.5 size-5 shrink-0 text-accent" />
 							<div>
 								<p className="font-medium text-foreground text-sm">
 									Śniadania zamawiaj do 12:00
@@ -69,7 +69,7 @@ export default async function DaniaNaDowozOfferPage() {
 							href={`tel:${contact.phone.replace(/\s/g, '')}`}
 							size="sm"
 						>
-							<Phone className="mr-1.5 h-4 w-4" />
+							<Phone className="mr-1.5 size-4" />
 							{contact.phone}
 						</ButtonAnchor>
 						<ButtonAnchor
@@ -77,7 +77,7 @@ export default async function DaniaNaDowozOfferPage() {
 							size="sm"
 							variant="secondary"
 						>
-							<Mail className="mr-1.5 h-4 w-4" />
+							<Mail className="mr-1.5 size-4" />
 							{contact.email}
 						</ButtonAnchor>
 						<ButtonAnchor
@@ -87,7 +87,7 @@ export default async function DaniaNaDowozOfferPage() {
 							target="_blank"
 							rel="noreferrer noopener"
 						>
-							<Facebook className="mr-1.5 h-4 w-4" />
+							<Facebook className="mr-1.5 size-4" />
 							Facebook
 						</ButtonAnchor>
 					</div>

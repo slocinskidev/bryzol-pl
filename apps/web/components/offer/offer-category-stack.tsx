@@ -34,9 +34,7 @@ export function OfferCategoryStack({
 	categories: OfferCategory[];
 }) {
 	if (categories.length === 0) {
-		return (
-			<p className="text-muted text-sm">W tej chwili brak pozycji.</p>
-		);
+		return <p className="text-muted text-sm">W tej chwili brak pozycji.</p>;
 	}
 
 	return (

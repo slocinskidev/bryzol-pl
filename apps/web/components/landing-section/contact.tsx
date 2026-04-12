@@ -1,9 +1,9 @@
 'use client';
 
 import { Card } from '@heroui/react/card';
-import { PageHeader } from '@/components/layout/page-header';
 import { Mail, MapPin, Phone } from 'lucide-react';
 import { motion } from 'motion/react';
+import { PageHeader } from '@/components/layout/page-header';
 import { contact } from '@/lib/contact';
 
 export function Contact() {
@@ -28,20 +28,20 @@ export function Contact() {
 							transition={{ duration: 0.8, delay: 0.2 }}
 							viewport={{ once: true }}
 						>
-							<h3 className="mb-6 font-semibold text-gray-900 text-xl dark:text-white">
+							<h3 className="mb-6 font-semibold text-foreground text-xl">
 								Skontaktuj się z nami
 							</h3>
 							<div className="space-y-4">
 								<a
 									href={`tel:${contact.phone.replace(/\s/g, '')}`}
-									className="flex min-h-[44px] items-center gap-3 text-gray-600 transition-colors hover:text-accent dark:text-gray-300"
+									className="flex min-h-[44px] items-center gap-3 text-muted transition-colors hover:text-accent"
 								>
 									<Phone className="h-5 w-5 shrink-0 text-accent" aria-hidden />
 									<span>{contact.phone}</span>
 								</a>
 								<a
 									href={`mailto:${contact.email}`}
-									className="flex min-h-[44px] items-center gap-3 text-gray-600 transition-colors hover:text-accent dark:text-gray-300"
+									className="flex min-h-[44px] items-center gap-3 text-muted transition-colors hover:text-accent"
 								>
 									<Mail className="h-5 w-5 shrink-0 text-accent" aria-hidden />
 									<span>{contact.email}</span>
@@ -55,27 +55,25 @@ export function Contact() {
 							transition={{ duration: 0.8, delay: 0.3 }}
 							viewport={{ once: true }}
 						>
-							<h3 className="mb-6 font-semibold text-gray-900 text-xl dark:text-white">
+							<h3 className="mb-6 font-semibold text-foreground text-xl">
 								Godziny pracy
 							</h3>
-							<div className="space-y-2 text-gray-600 dark:text-gray-300">
+							<div className="space-y-2 text-muted">
 								<div className="flex justify-between gap-4">
 									<span>Poniedziałek – Piątek</span>
-									<span className="font-medium text-gray-900 dark:text-white">
+									<span className="font-medium text-foreground">
 										8:00 – 18:00
 									</span>
 								</div>
 								<div className="flex justify-between gap-4">
 									<span>Sobota</span>
-									<span className="font-medium text-gray-900 dark:text-white">
+									<span className="font-medium text-foreground">
 										9:00 – 16:00
 									</span>
 								</div>
 								<div className="flex justify-between gap-4">
 									<span>Niedziela</span>
-									<span className="font-medium text-gray-900 dark:text-white">
-										Zamknięte
-									</span>
+									<span className="font-medium text-foreground">Zamknięte</span>
 								</div>
 							</div>
 						</motion.div>
@@ -89,17 +87,15 @@ export function Contact() {
 					>
 						<Card
 							variant="default"
-							className="overflow-hidden border-gray-200 bg-white shadow-lg dark:border-stone-700 dark:bg-stone-800"
+							className="overflow-hidden border-border bg-surface shadow-lg dark:bg-surface-secondary"
 						>
 							<Card.Content className="flex flex-col gap-6 p-6 lg:p-8">
 								<div>
-									<h3 className="mb-4 flex items-center gap-2 font-semibold text-gray-900 text-xl dark:text-white">
+									<h3 className="mb-4 flex items-center gap-2 font-semibold text-foreground text-xl">
 										<MapPin className="h-5 w-5 text-accent" aria-hidden />
 										Lokalizacja
 									</h3>
-									<p className="mb-6 text-gray-600 dark:text-gray-300">
-										{contact.address}
-									</p>
+									<p className="mb-6 text-muted">{contact.address}</p>
 								</div>
 								<div className="flex flex-col gap-3 sm:flex-row">
 									<a

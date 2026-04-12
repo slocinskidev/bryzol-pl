@@ -30,12 +30,12 @@ export function OfferMenuSearch({
 				variant="secondary"
 				onChange={onChange}
 			>
-					<Label className="sr-only">Szukaj w ofercie</Label>
+				<Label className="sr-only">Szukaj w ofercie</Label>
 				<SearchField.Group>
 					<SearchField.SearchIcon />
 					<SearchField.Input
 						autoComplete="off"
-							placeholder="Szukaj w ofercie…"
+						placeholder="Szukaj w ofercie…"
 					/>
 					<SearchField.ClearButton />
 				</SearchField.Group>
