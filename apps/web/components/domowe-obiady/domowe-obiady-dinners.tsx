@@ -107,13 +107,13 @@ function DinnerCard({
 
 					{/* Menu items */}
 					{!isClosed && (
-						<div className="space-y-0 border-border/30 border-t px-5 pt-3 pb-5">
+						<div className="border-border/30 border-t px-5 pt-3 pb-5">
 							{dinner.soup && (
-								<div className="flex gap-3 py-2">
+								<div className="flex gap-3 py-2.5">
 									<Soup className="mt-0.5 size-4 shrink-0 text-accent/70" />
 									<div className="min-w-0">
 										<p className="font-medium text-[11px] text-accent uppercase tracking-widest">
-											Zupa
+											Zupa dnia
 										</p>
 										<p className="text-foreground leading-snug">
 											{dinner.soup}
@@ -122,27 +122,37 @@ function DinnerCard({
 								</div>
 							)}
 							{dinner.set1 && (
-								<div className="flex gap-3 border-border/20 border-t py-2">
-									<UtensilsCrossed className="mt-0.5 size-4 shrink-0 text-accent/70" />
-									<div className="min-w-0">
-										<p className="font-medium text-[11px] text-accent uppercase tracking-widest">
+								<div className="mt-2 rounded-lg border border-border/20 bg-background/50 p-3">
+									<p className="font-medium text-[11px] text-accent uppercase tracking-widest">
+										Drugie danie
+									</p>
+									<div className="mt-1">
+										<p className="mb-1 font-medium text-foreground text-xs">
 											Zestaw 1
 										</p>
 										<p className="text-foreground leading-snug">
 											{dinner.set1}
 										</p>
 									</div>
-								</div>
-							)}
-							{dinner.set2 && (
-								<div className="flex gap-3 border-border/20 border-t py-2">
-									<UtensilsCrossed className="mt-0.5 size-4 shrink-0 text-muted/50" />
-									<div className="min-w-0">
-										<p className="font-medium text-[11px] text-muted uppercase tracking-widest">
-											Zestaw 2
-										</p>
-										<p className="text-muted leading-snug">{dinner.set2}</p>
-									</div>
+									{dinner.set2 && (
+										<>
+											<div className="my-3 flex items-center gap-3">
+												<div className="h-px flex-1 bg-border/30" />
+												<span className="font-display text-muted text-xs italic">
+													lub
+												</span>
+												<div className="h-px flex-1 bg-border/30" />
+											</div>
+											<div>
+												<p className="mb-1 font-medium text-foreground text-xs">
+													Zestaw 2
+												</p>
+												<p className="text-foreground leading-snug">
+													{dinner.set2}
+												</p>
+											</div>
+										</>
+									)}
 								</div>
 							)}
 						</div>
@@ -172,17 +182,22 @@ export function DomoweObiadyDinners({ menu }: { menu: DomoweObiadyMenu }) {
 				<p className="mt-3 font-bold font-display text-3xl text-foreground tracking-tight md:text-4xl">
 					{formatDateRange(menu.weekStart, menu.weekEnd)}
 				</p>
+				<p className="mt-2 text-muted text-sm">
+					Codziennie inne menu — zupa i drugie danie za 33 zł
+				</p>
 				<div
 					className="mx-auto mt-3 h-0.5 w-12 rounded-full bg-accent"
 					aria-hidden
 				/>
 			</motion.div>
 
-			{/* Weekly menu cards — the star of the page */}
+			{/* Weekly menu cards — masonry layout */}
 			<section aria-label="Menu tygodniowe">
-				<div className="grid gap-4 sm:grid-cols-2">
+				<div className="columns-1 gap-4 sm:columns-2">
 					{menu.dinners.map((dinner, index) => (
-						<DinnerCard key={dinner.date} dinner={dinner} index={index} />
+						<div key={dinner.date} className="mb-4 break-inside-avoid">
+							<DinnerCard dinner={dinner} index={index} />
+						</div>
 					))}
 				</div>
 			</section>
@@ -197,7 +212,7 @@ export function DomoweObiadyDinners({ menu }: { menu: DomoweObiadyMenu }) {
 				className="rounded-2xl border border-border/50 bg-surface/50 p-6 dark:bg-surface-secondary/30"
 			>
 				<h3 className="mb-5 font-display font-semibold text-foreground text-lg">
-					Jak zamówić
+					Smakuje? Zamów w 3 krokach
 				</h3>
 				<div className="grid gap-x-8 gap-y-4 sm:grid-cols-3">
 					<div className="flex items-start gap-3">
