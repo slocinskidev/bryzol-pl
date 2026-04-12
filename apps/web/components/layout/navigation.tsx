@@ -174,7 +174,7 @@ function NavigationItemComponent({
 					}
 				}}
 				className={cn(
-					'relative flex items-center gap-1 overflow-hidden rounded-lg px-2 py-2 font-bold text-xs transition-all duration-300 lg:px-3 lg:text-sm',
+					'relative flex items-center gap-1.5 overflow-hidden rounded-lg px-2 py-2 font-bold text-xs transition-all duration-300 lg:px-3 lg:text-sm',
 					'text-gray-900 hover:text-accent dark:text-white',
 					isActive && 'text-accent',
 				)}
@@ -190,6 +190,7 @@ function NavigationItemComponent({
 					whileHover={{ scale: 1, opacity: 1 }}
 					transition={{ duration: 0.2 }}
 				/>
+				<item.icon className="relative z-10 size-4" />
 				<span className="relative z-10">{item.label}</span>
 			</motion.button>
 		</motion.div>
@@ -209,6 +210,8 @@ function NavigationActions({
 	activeSection: string;
 	onItemClick: (href: string) => void;
 }) {
+	const isContactActive = activeSection === 'kontakt';
+
 	return (
 		<motion.div
 			initial={{ opacity: 0, x: 20 }}
@@ -217,7 +220,12 @@ function NavigationActions({
 			className="flex items-center gap-4"
 		>
 			<ThemeToggle className="hidden lg:flex" />
-			<ButtonLink href="/kontakt" size="sm" className="flex shrink-0">
+			<ButtonLink
+				href="/kontakt"
+				size="sm"
+				variant={isContactActive ? 'secondary' : 'primary'}
+				className="hidden shrink-0 lg:flex"
+			>
 				Kontakt
 			</ButtonLink>
 

@@ -26,6 +26,9 @@ export function useActiveSection() {
 		if (pathname.startsWith('/oferta')) {
 			return 'oferta-catering';
 		}
-		return 'home';
+		if (pathname.startsWith('/kontakt')) {
+			return 'kontakt';
+		}
+		return '';
 	}, [pathname]);
 }

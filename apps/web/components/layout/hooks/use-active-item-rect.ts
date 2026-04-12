@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from 'react';
 
 export function useActiveItemRect(
 	activeSection: string,
@@ -10,7 +10,7 @@ export function useActiveItemRect(
 		const activeRef = navRefs.current[activeSection];
 		if (activeRef) {
 			const rect = activeRef.getBoundingClientRect();
-			const navContainer = activeRef.closest(".nav-container");
+			const navContainer = activeRef.closest('.nav-container');
 			if (navContainer) {
 				const containerRect = navContainer.getBoundingClientRect();
 				setActiveItemRect({
@@ -18,6 +18,8 @@ export function useActiveItemRect(
 					width: rect.width,
 				});
 			}
+		} else {
+			setActiveItemRect({ left: 0, width: 0 });
 		}
 	}, [activeSection, navRefs]);
 

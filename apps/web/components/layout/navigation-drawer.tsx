@@ -4,10 +4,11 @@ import { Button } from '@heroui/react/button';
 import { Drawer } from '@heroui/react/drawer';
 import { ThemeToggle } from '@workspace/ui/components/theme-toggle';
 import { cn } from '@workspace/ui/lib/utils';
-import { Menu } from 'lucide-react';
+import { Facebook, Instagram, Menu, Phone } from 'lucide-react';
 import Image from 'next/image';
 
 import logo from '@/assets/logo-simple.png';
+import { contact } from '@/lib/contact';
 import type { NavigationItem } from './constants';
 
 interface NavigationDrawerProps {
@@ -25,6 +26,13 @@ export function NavigationDrawer({
 	open,
 	onOpenChange,
 }: NavigationDrawerProps) {
+	const navigate = (href: string) => {
+		onOpenChange(false);
+		setTimeout(() => {
+			onItemClick(href);
+		}, 300);
+	};
+
 	return (
 		<>
 			<Button
@@ -61,40 +69,79 @@ export function NavigationDrawer({
 							</div>
 						</Drawer.Header>
 
-						<Drawer.Body className="flex flex-col gap-4 px-6 pb-6">
-							<div className="flex flex-col gap-1 overflow-y-auto">
-								{navigationItems.map((item) => (
-									<Button
-										variant="ghost"
-										size="lg"
-										key={item.id}
-										onPress={() => {
-											onOpenChange(false);
-											setTimeout(() => {
-												onItemClick(item.href);
-											}, 300);
-										}}
-										className={cn(
-											'h-12 justify-start',
-											activeSection === item.id && 'text-accent',
-										)}
-									>
-										{item.label}
-									</Button>
-								))}
-							</div>
+						<Drawer.Body className="flex flex-col gap-3 px-4 pt-4 pb-8">
+							<nav className="flex flex-col gap-1.5">
+								{navigationItems.map((item) => {
+									const Icon = item.icon;
+									const isActive = activeSection === item.id;
 
-							<Button
-								size="lg"
-								onPress={() => {
-									onOpenChange(false);
-									setTimeout(() => {
-										onItemClick('/kontakt');
-									}, 300);
-								}}
+									return (
+										<button
+											type="button"
+											key={item.id}
+											onClick={() => navigate(item.href)}
+											className={cn(
+												'flex items-center gap-3 rounded-xl px-4 py-3.5 text-left font-medium text-base transition-colors',
+												isActive
+													? 'bg-accent/10 text-accent'
+													: 'text-foreground hover:bg-muted/10',
+											)}
+										>
+											<Icon
+												className={cn(
+													'size-5 shrink-0',
+													isActive ? 'text-accent' : 'text-muted',
+												)}
+											/>
+											{item.label}
+										</button>
+									);
+								})}
+							</nav>
+
+							<hr className="border-border" />
+
+							<button
+								type="button"
+								onClick={() => navigate('/kontakt')}
+								className={cn(
+									'flex items-center gap-3 rounded-xl px-4 py-3.5 text-left font-medium text-base transition-colors',
+									activeSection === 'kontakt'
+										? 'bg-accent/10 text-accent'
+										: 'text-foreground hover:bg-muted/10',
+								)}
 							>
-								Zapytaj o ofertę
-							</Button>
+								<Phone
+									className={cn(
+										'size-5 shrink-0',
+										activeSection === 'kontakt' ? 'text-accent' : 'text-muted',
+									)}
+								/>
+								Kontakt
+							</button>
+
+							<hr className="border-border" />
+
+							<div className="flex items-center gap-3 px-4 pt-1">
+								<a
+									href={contact.facebookUrl}
+									target="_blank"
+									rel="noopener noreferrer"
+									className="flex size-10 items-center justify-center rounded-lg bg-accent/10 text-accent transition-colors hover:bg-accent hover:text-white"
+									aria-label="Facebook"
+								>
+									<Facebook className="size-5" />
+								</a>
+								<a
+									href={contact.instagramUrl}
+									target="_blank"
+									rel="noopener noreferrer"
+									className="flex size-10 items-center justify-center rounded-lg bg-accent/10 text-accent transition-colors hover:bg-accent hover:text-white"
+									aria-label="Instagram"
+								>
+									<Instagram className="size-5" />
+								</a>
+							</div>
 						</Drawer.Body>
 					</Drawer.Dialog>
 				</Drawer.Content>

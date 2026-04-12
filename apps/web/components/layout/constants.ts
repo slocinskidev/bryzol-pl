@@ -1,19 +1,24 @@
+import { ChefHat, Home, Truck, UtensilsCrossed } from 'lucide-react';
+
 export const navigationItems = [
-	{ href: '/', label: 'Strona główna', id: 'home' },
+	{ href: '/', label: 'Strona główna', id: 'home', icon: Home },
 	{
 		href: '/oferta/cateringowa',
 		label: 'Oferta cateringowa',
 		id: 'oferta-catering',
+		icon: ChefHat,
 	},
 	{
 		href: '/oferta/dania-na-dowoz',
 		label: 'Dania na dowóz',
 		id: 'oferta-dowoz',
+		icon: Truck,
 	},
 	{
 		href: '/oferta/domowe-obiady',
 		label: 'Domowe obiady',
 		id: 'oferta-obiady',
+		icon: UtensilsCrossed,
 	},
 ] as const;
 
