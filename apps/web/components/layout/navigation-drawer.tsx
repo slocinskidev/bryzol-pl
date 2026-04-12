@@ -1,6 +1,7 @@
 'use client';
 
 import { Button } from '@heroui/react/button';
+import { Chip } from '@heroui/react/chip';
 import { Drawer } from '@heroui/react/drawer';
 import { ThemeToggle } from '@workspace/ui/components/theme-toggle';
 import { cn } from '@workspace/ui/lib/utils';
@@ -9,10 +10,9 @@ import Image from 'next/image';
 
 import logo from '@/assets/logo-simple.png';
 import { contact } from '@/lib/contact';
-import type { NavigationItem } from './constants';
+import { type NavigationItem, navigationItems } from './constants';
 
 interface NavigationDrawerProps {
-	navigationItems: readonly NavigationItem[];
 	activeSection: string;
 	onItemClick: (href: string) => void;
 	open: boolean;
@@ -20,7 +20,6 @@ interface NavigationDrawerProps {
 }
 
 export function NavigationDrawer({
-	navigationItems,
 	activeSection,
 	onItemClick,
 	open,
@@ -38,7 +37,7 @@ export function NavigationDrawer({
 			<Button
 				variant="ghost"
 				size="sm"
-				className="lg:hidden"
+				className="xl:hidden"
 				onPress={() => onOpenChange(true)}
 			>
 				<Menu />
@@ -71,32 +70,14 @@ export function NavigationDrawer({
 
 						<Drawer.Body className="flex flex-col gap-3 px-4 pt-4 pb-8">
 							<nav className="flex flex-col gap-1.5">
-								{navigationItems.map((item) => {
-									const Icon = item.icon;
-									const isActive = activeSection === item.id;
-
-									return (
-										<button
-											type="button"
-											key={item.id}
-											onClick={() => navigate(item.href)}
-											className={cn(
-												'flex items-center gap-3 rounded-xl px-4 py-3.5 text-left font-medium text-base transition-colors',
-												isActive
-													? 'bg-accent/10 text-accent'
-													: 'text-foreground hover:bg-muted/10',
-											)}
-										>
-											<Icon
-												className={cn(
-													'size-5 shrink-0',
-													isActive ? 'text-accent' : 'text-muted',
-												)}
-											/>
-											{item.label}
-										</button>
-									);
-								})}
+								{navigationItems.map((item) => (
+									<DrawerNavItem
+										key={item.id}
+										item={item}
+										isActive={activeSection === item.id}
+										onNavigate={navigate}
+									/>
+								))}
 							</nav>
 
 							<hr className="border-border" />
@@ -147,5 +128,43 @@ export function NavigationDrawer({
 				</Drawer.Content>
 			</Drawer.Backdrop>
 		</>
+	);
+}
+
+function DrawerNavItem({
+	item,
+	isActive,
+	onNavigate,
+}: {
+	item: NavigationItem;
+	isActive: boolean;
+	onNavigate: (href: string) => void;
+}) {
+	const Icon = item.icon;
+
+	return (
+		<button
+			type="button"
+			onClick={() => onNavigate(item.href)}
+			className={cn(
+				'flex items-center gap-3 rounded-xl px-4 py-3.5 text-left font-medium text-base transition-colors',
+				isActive
+					? 'bg-accent/10 text-accent'
+					: 'text-foreground hover:bg-muted/10',
+			)}
+		>
+			<Icon
+				className={cn(
+					'size-5 shrink-0',
+					isActive ? 'text-accent' : 'text-muted',
+				)}
+			/>
+			<span className="flex-1">{item.label}</span>
+			{item.badge && (
+				<Chip size="sm" color="accent" variant="soft" className="scale-90">
+					{item.badge}
+				</Chip>
+			)}
+		</button>
 	);
 }

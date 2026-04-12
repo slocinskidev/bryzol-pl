@@ -1,7 +1,15 @@
-import { ChefHat, Truck, UtensilsCrossed } from 'lucide-react';
+import { ChefHat, PartyPopper, Truck, UtensilsCrossed } from 'lucide-react';
 
 /** Offer page metadata used by navigation and offer cards. */
 export const OFFER_PAGES = [
+	{
+		slug: 'komunijna',
+		title: 'Oferta komunijna',
+		description:
+			'Catering komunijny w Żorach i okolicach — Ty cieszysz się z rodziną, my zajmiemy się resztą.',
+		icon: PartyPopper,
+		temporary: true,
+	},
 	{
 		slug: 'catering',
 		title: 'Oferta cateringowa',

@@ -8,6 +8,9 @@ export function useActiveSection() {
 		if (pathname === '/') {
 			return 'home';
 		}
+		if (pathname.startsWith('/oferta/komunijna')) {
+			return 'oferta-komunijna';
+		}
 		if (pathname.startsWith('/oferta/catering')) {
 			return 'oferta-catering';
 		}
@@ -16,9 +19,6 @@ export function useActiveSection() {
 		}
 		if (pathname.startsWith('/oferta/domowe-obiady')) {
 			return 'oferta-obiady';
-		}
-		if (pathname === '/oferta' || pathname === '/oferta/') {
-			return 'oferta-catering';
 		}
 		if (pathname.startsWith('/oferta')) {
 			return 'oferta-catering';

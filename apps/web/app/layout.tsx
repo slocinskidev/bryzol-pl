@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Cormorant_Garamond, Geist, Geist_Mono } from 'next/font/google';
 
 import '@workspace/ui/globals.css';
+import { AnnouncementBanner } from '@/components/layout/announcement-banner';
 import { Navigation } from '@/components/layout/navigation';
 import { Providers } from '@/components/layout/providers';
 
@@ -55,6 +56,7 @@ export default function RootLayout({
 				}
 			>
 				<Providers>
+					<AnnouncementBanner />
 					<Navigation />
 					{children}
 				</Providers>

@@ -1,0 +1,264 @@
+{
+	"sections": [
+		{
+			"id": "obiad",
+			"slug": "obiad",
+			"title": "Obiad",
+			"shortTitle": "Obiad",
+			"description": "Kompletny obiad komunijny — rosół, 3 mięsa na osobę, dodatki i surówki.",
+			"meta": {
+				"priceNote": "123 zł / osoba — 3 mięsa na osobę"
+			},
+			"categories": [
+				{
+					"id": "obiad-zupy",
+					"title": "Zupa",
+					"items": [
+						{
+							"id": "rosol",
+							"name": "Rosół z makaronem lub lanym ciastem i wkładką",
+							"description": "300 ml"
+						}
+					]
+				},
+				{
+					"id": "obiad-miesa",
+					"title": "Mięsa",
+					"note": "3 mięsa na osobę do wyboru",
+					"items": [
+						{
+							"id": "poledwiczki",
+							"name": "Polędwiczki wieprzowe w sosie grzybowym lub po włosku",
+							"description": "90 g"
+						},
+						{
+							"id": "udko-kaczki",
+							"name": "Udko z kaczki w pomarańczach lub z rozmarynem",
+							"description": "1 szt."
+						},
+						{
+							"id": "rolada",
+							"name": "Rolada wołowa lub wieprzowa",
+							"description": "130 g"
+						},
+						{
+							"id": "roladka-kurczak",
+							"name": "Roladka z kurczaka z warzywami i serem lub dewolaj",
+							"description": "90 g"
+						},
+						{
+							"id": "kotleciki",
+							"name": "Kotleciki drobiowe lub pałka z kurczaka",
+							"description": "80 g"
+						}
+					]
+				},
+				{
+					"id": "obiad-dodatki",
+					"title": "Dodatki",
+					"items": [
+						{
+							"id": "kluski",
+							"name": "Kluski mix",
+							"description": "200 g / 10 szt. ugotowane lub do ugotowania"
+						},
+						{
+							"id": "ziemniaki",
+							"name": "Ziemniaki gotowane z koperkiem lub puree",
+							"description": "150 g"
+						}
+					]
+				},
+				{
+					"id": "obiad-surowki",
+					"title": "Surówki",
+					"items": [
+						{
+							"id": "kapusta-czerwona",
+							"name": "Kapusta czerwona z cebulą",
+							"description": "50 g"
+						},
+						{
+							"id": "coleslaw",
+							"name": "Surówka coleslaw",
+							"description": "50 g"
+						},
+						{
+							"id": "buraczki",
+							"name": "Buraczki tarte",
+							"description": "50 g"
+						},
+						{
+							"id": "marchewka",
+							"name": "Marchewka",
+							"description": "50 g"
+						},
+						{
+							"id": "sos-pieczeniowy",
+							"name": "Sos pieczeniowy",
+							"description": "70 ml"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "przekaski",
+			"slug": "przekaski",
+			"title": "Przekąski",
+			"shortTitle": "Przekąski",
+			"description": "Zimne przekąski — 8 sztuk na osobę do wyboru z naszej karty.",
+			"meta": {
+				"priceNote": "75 zł / osoba — 8 szt. na osobę"
+			},
+			"categories": [
+				{
+					"id": "przekaski-lista",
+					"title": "Karta przekąsek",
+					"note": "Wybierz 8 rodzajów na osobę",
+					"items": [
+						{
+							"id": "ruloniki",
+							"name": "Ruloniki z szynki z farszem chrzanowym"
+						},
+						{
+							"id": "pierozki-jarzynowa",
+							"name": "Pierożki na sałatce jarzynowej"
+						},
+						{ "id": "losos-ajwar", "name": "Łosoś z ajwarem" },
+						{
+							"id": "jajko-losos",
+							"name": "Jajko faszerowane z pastą łososiową"
+						},
+						{ "id": "mini-hamburger", "name": "Mini hamburger z wołowiną" },
+						{
+							"id": "sakiewka-szynka",
+							"name": "Sakiewka z szynki dojrzewającej"
+						},
+						{
+							"id": "crosant-jajeczna",
+							"name": "Mini croissant z pastą jajeczną"
+						},
+						{ "id": "galaretka", "name": "Galaretka drobiowa" },
+						{
+							"id": "piers-kaczki-konfitura",
+							"name": "Pierś z kaczki z konfiturą"
+						},
+						{ "id": "pasztet-zurawina", "name": "Pasztet pieczony z żurawiną" },
+						{
+							"id": "kuleczki-tzatzyki",
+							"name": "Kuleczki mięsne z tzatzykami"
+						},
+						{
+							"id": "cukinia-feta",
+							"name": "Cukinia grillowana z fetą i orzechami"
+						},
+						{ "id": "krewetka-melon", "name": "Krewetka z melonem i ogórkiem" }
+					]
+				}
+			]
+		},
+		{
+			"id": "salatki",
+			"slug": "salatki",
+			"title": "Sałatki",
+			"shortTitle": "Sałatki",
+			"description": "Sałatki w dużych miskach — 1 miska na 6 osób, 2 rodzaje do wybrania.",
+			"categories": [
+				{
+					"id": "salatki-lista",
+					"title": "Sałatki do wyboru",
+					"note": "1 miska na 6 osób, 2 rodzaje do wybrania",
+					"items": [
+						{
+							"id": "salatka-lekka",
+							"name": "Sałatka lekka",
+							"description": "Sałata, pomidor, ogórek, kiełki, pestki, mango, winegret"
+						},
+						{
+							"id": "brokuly",
+							"name": "Brokuły z sosem czosnkowym i prażonymi migdałami"
+						},
+						{
+							"id": "salatka-grecka",
+							"name": "Sałatka grecka",
+							"description": "Sałata, papryka, ogórek, oliwki, cebula, pomidor, ser, sos winegret"
+						},
+						{
+							"id": "salatka-kurczak",
+							"name": "Sałatka z kurczakiem",
+							"description": "Sałata, pomidor, ogórek, papryka, kukurydza, grzanki, kurczak, sos czosnkowy"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "kolacja-dania",
+			"slug": "kolacja-dania",
+			"title": "Kolacja — dania",
+			"shortTitle": "Kolacja",
+			"description": "Dania kolacyjne zamawiane osobno, w porcjach.",
+			"categories": [
+				{
+					"id": "kolacja-dania-lista",
+					"title": "Dania kolacyjne",
+					"items": [
+						{
+							"id": "bogracz",
+							"name": "Bogracz",
+							"price": 25,
+							"unit": "porcja",
+							"description": "400 ml"
+						},
+						{
+							"id": "barszcz-krokiet",
+							"name": "Barszcz z krokietem",
+							"price": 25,
+							"unit": "porcja",
+							"description": "250 ml"
+						},
+						{
+							"id": "losos-szpinak",
+							"name": "Łosoś ze szpinakiem, ryż z groszkiem i marchewką",
+							"price": 42,
+							"unit": "porcja"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "zestaw-kolacyjny",
+			"slug": "zestaw-kolacyjny",
+			"title": "Zestaw kolacyjny",
+			"shortTitle": "Zestaw",
+			"description": "Kompletny zestaw kolacyjny — 1,5 kawałka mięsa na osobę z dodatkami.",
+			"meta": {
+				"priceNote": "65 zł / osoba"
+			},
+			"categories": [
+				{
+					"id": "zestaw-kolacyjny-lista",
+					"title": "W zestawie",
+					"note": "1,5 kawałka mięsa na osobę",
+					"items": [
+						{ "id": "schab-pieczarki", "name": "Schab z pieczarkami" },
+						{ "id": "udko-rozmaryn", "name": "Udko z rozmarynem b/k" },
+						{ "id": "szaszlyk-indyk", "name": "Szaszłyk z indyka" },
+						{
+							"id": "ziemniaki-pieczone",
+							"name": "Ziemniaki pieczone",
+							"description": "100 g"
+						},
+						{
+							"id": "bukiet-warzyw",
+							"name": "Bukiet warzyw",
+							"description": "100 g"
+						}
+					]
+				}
+			]
+		}
+	]
+}

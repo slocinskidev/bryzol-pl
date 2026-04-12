@@ -41,3 +41,8 @@ export const getDaniaNaDowoz = cache(async (): Promise<OfferSection[]> => {
 	const data = await import('@/data/dania-na-dowoz.json');
 	return (data.default as { sections: OfferSection[] }).sections;
 });
+
+export const getKomunijna = cache(async (): Promise<OfferSection[]> => {
+	const data = await import('@/data/komunijna.json');
+	return (data.default as { sections: OfferSection[] }).sections;
+});

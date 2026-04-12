@@ -26,10 +26,6 @@ export function Navigation() {
 		router.push(href);
 	};
 
-	const handleLogoClick = () => {
-		router.push('/');
-	};
-
 	return (
 		<motion.nav
 			initial={{ y: -100 }}
@@ -43,7 +39,7 @@ export function Navigation() {
 					variant="transparent"
 					className="flex items-center justify-between rounded-2xl border border-border bg-surface/95 px-6 py-3 shadow-xl backdrop-blur-md dark:bg-surface-secondary/90"
 				>
-					<NavigationLogo onClick={handleLogoClick} />
+					<NavigationLogo onClick={() => router.push('/')} />
 					<DesktopNavigation
 						items={navigationItems}
 						activeSection={activeSection}
@@ -54,7 +50,6 @@ export function Navigation() {
 					<NavigationActions
 						mobileNavOpen={mobileNavOpen}
 						onMobileNavChange={setMobileNavOpen}
-						navigationItems={navigationItems}
 						activeSection={activeSection}
 						onItemClick={handleItemClick}
 					/>
@@ -98,7 +93,7 @@ function DesktopNavigation({
 	navRefs,
 	onItemClick,
 }: {
-	items: readonly NavigationItem[];
+	items: NavigationItem[];
 	activeSection: string;
 	activeItemRect: { left: number; width: number };
 	navRefs: React.MutableRefObject<{ [key: string]: HTMLButtonElement | null }>;
@@ -109,7 +104,7 @@ function DesktopNavigation({
 			initial={{ opacity: 0, y: -20 }}
 			animate={{ opacity: 1, y: 0 }}
 			transition={{ duration: 0.8, delay: 0.4 }}
-			className="nav-container relative hidden flex-wrap items-center justify-end gap-x-1 gap-y-1 lg:flex xl:gap-x-2"
+			className="nav-container relative hidden items-center gap-x-1 xl:flex"
 		>
 			<motion.div
 				className="absolute bottom-0 h-0.5 rounded-full bg-accent"
@@ -118,11 +113,7 @@ function DesktopNavigation({
 					width: activeItemRect.width,
 					left: activeItemRect.left,
 				}}
-				transition={{
-					type: 'spring',
-					stiffness: 300,
-					damping: 30,
-				}}
+				transition={{ type: 'spring', stiffness: 300, damping: 30 }}
 			/>
 
 			{items.map((item, index) => (
@@ -165,21 +156,12 @@ function NavigationItemComponent({
 				}}
 				type="button"
 				onClick={onClick}
-				onKeyDown={(event) => {
-					if (event.key === 'Enter' || event.key === ' ') {
-						event.preventDefault();
-						onClick();
-					}
-				}}
 				className={cn(
-					'relative flex items-center gap-1.5 overflow-hidden rounded-lg px-2 py-2 font-bold text-xs transition-all duration-300 lg:px-3 lg:text-sm',
+					'relative flex items-center overflow-hidden rounded-lg px-3 py-2 font-bold text-sm transition-all duration-300',
 					'text-foreground hover:text-accent',
 					isActive && 'text-accent',
 				)}
-				whileHover={{
-					scale: 1.05,
-					transition: { duration: 0.2 },
-				}}
+				whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
 				whileTap={{ scale: 0.95 }}
 			>
 				<motion.div
@@ -188,7 +170,6 @@ function NavigationItemComponent({
 					whileHover={{ scale: 1, opacity: 1 }}
 					transition={{ duration: 0.2 }}
 				/>
-				<item.icon className="relative z-10 size-4" />
 				<span className="relative z-10">{item.label}</span>
 			</motion.button>
 		</motion.div>
@@ -198,13 +179,11 @@ function NavigationItemComponent({
 function NavigationActions({
 	mobileNavOpen,
 	onMobileNavChange,
-	navigationItems,
 	activeSection,
 	onItemClick,
 }: {
 	mobileNavOpen: boolean;
 	onMobileNavChange: (open: boolean) => void;
-	navigationItems: readonly NavigationItem[];
 	activeSection: string;
 	onItemClick: (href: string) => void;
 }) {
@@ -217,12 +196,12 @@ function NavigationActions({
 			transition={{ duration: 0.8, delay: 0.6 }}
 			className="flex items-center gap-4"
 		>
-			<ThemeToggle className="hidden lg:flex" />
+			<ThemeToggle className="hidden xl:flex" />
 			<ButtonLink
 				href="/kontakt"
 				size="sm"
 				variant={isContactActive ? 'secondary' : 'primary'}
-				className="hidden shrink-0 lg:flex"
+				className="hidden shrink-0 xl:flex"
 			>
 				Kontakt
 			</ButtonLink>
@@ -230,7 +209,6 @@ function NavigationActions({
 			<NavigationDrawer
 				open={mobileNavOpen}
 				onOpenChange={onMobileNavChange}
-				navigationItems={navigationItems}
 				activeSection={activeSection}
 				onItemClick={onItemClick}
 			/>

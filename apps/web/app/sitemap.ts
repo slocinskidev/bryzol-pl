@@ -11,6 +11,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
 			priority: 1,
 		},
 		{
+			url: `${baseUrl}/oferta/komunijna`,
+			lastModified: new Date(),
+			changeFrequency: 'monthly',
+			priority: 0.9,
+		},
+		{
 			url: `${baseUrl}/kontakt`,
 			lastModified: new Date(),
 			changeFrequency: 'monthly',
