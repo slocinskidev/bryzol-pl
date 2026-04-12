@@ -2,12 +2,12 @@
 
 import { Card } from '@heroui/react/card';
 import { AuroraText } from '@workspace/ui/components/aurora-text';
+import { cn } from '@workspace/ui/lib/utils';
 import { Award, ChefHat, Heart, Users } from 'lucide-react';
 import { motion } from 'motion/react';
 import Image from 'next/image';
 import bgTexture from '@/assets/bg-texture.png';
 import heroImage from '@/assets/hero.jpeg';
-import { cn } from '@workspace/ui/lib/utils';
 
 type AboutStoryProps = { hideSectionHeader?: boolean };
 
@@ -186,6 +186,7 @@ export function AboutValues() {
 			title: 'Pasja',
 			description:
 				'Gotowanie, które z czasem stało się czymś większym — i które widać w każdym daniu.',
+			number: '01',
 			delay: 0.05,
 		},
 		{
@@ -193,6 +194,7 @@ export function AboutValues() {
 			title: 'Doświadczenie i smak',
 			description:
 				'Za każdą potrawą stoi praca ludzi, którym zależy na smaku naprawdę robiącym różnicę.',
+			number: '02',
 			delay: 0.15,
 		},
 		{
@@ -200,6 +202,7 @@ export function AboutValues() {
 			title: 'Dopasowanie do Was',
 			description:
 				'Menu pod potrzeby, gust i budżet — od domowych obiadów po większe wydarzenia.',
+			number: '03',
 			delay: 0.25,
 		},
 		{
@@ -207,12 +210,13 @@ export function AboutValues() {
 			title: 'Polska baza, światowe inspiracje',
 			description:
 				'Klasyczna kuchnia polska obok dań inspirowanych smakami świata — zawsze pod Ciebie.',
+			number: '04',
 			delay: 0.35,
 		},
 	] as const;
 
 	return (
-		<section className="relative overflow-hidden bg-gradient-to-b from-accent/[0.06] via-background to-accent/[0.04] py-14 lg:py-18 dark:from-accent/10 dark:via-background dark:to-accent/5">
+		<section className="relative overflow-hidden bg-gradient-to-b from-accent/[0.06] via-background to-accent/[0.04] py-20 lg:py-28 dark:from-accent/10 dark:via-background dark:to-accent/5">
 			{/* Warm grain overlay — keeps the same “editorial” feel as the story section */}
 			<div
 				className="pointer-events-none absolute inset-0 z-0 opacity-[0.035] mix-blend-multiply dark:opacity-[0.06] dark:mix-blend-overlay"
@@ -233,36 +237,45 @@ export function AboutValues() {
 					whileInView={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.6 }}
 					viewport={{ once: true }}
-					className="mb-14 text-center"
+					className="mb-16 text-center"
 				>
-					<h3 className="font-display font-semibold text-2xl text-gray-900 md:text-3xl dark:text-white">
+					<p className="mb-3 font-semibold text-accent text-sm uppercase tracking-[0.2em]">
+						Dlaczego my
+					</p>
+					<h3 className="font-display font-semibold text-3xl text-gray-900 md:text-4xl dark:text-white">
 						Nasze wartości
 					</h3>
 					<div
-						className="mx-auto mt-3 h-0.5 w-12 rounded-full bg-accent"
+						className="mx-auto mt-4 h-0.5 w-12 rounded-full bg-accent"
 						aria-hidden
 					/>
 				</motion.div>
 
-				<div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-10">
-					{values.map(({ icon: Icon, title, description, delay }) => (
+				<div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+					{values.map(({ icon: Icon, title, description, number, delay }) => (
 						<motion.article
 							key={title}
-							initial={{ opacity: 0, y: 20 }}
+							initial={{ opacity: 0, y: 24 }}
 							whileInView={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.5, delay }}
 							viewport={{ once: true }}
-							className="group h-full text-center"
+							className="group h-full"
 						>
 							<Card
 								variant="transparent"
-								className="group flex h-full flex-col border border-accent/20 bg-accent/5 transition-colors duration-300 hover:border-accent/40 hover:bg-accent/10 dark:border-stone-600 dark:bg-stone-800/80 dark:hover:border-accent/30 dark:hover:bg-accent/10"
+								className="group relative flex h-full flex-col overflow-hidden border border-accent/20 bg-accent/5 transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:bg-accent/10 hover:shadow-lg dark:border-stone-600 dark:bg-stone-800/80 dark:hover:border-accent/30 dark:hover:bg-accent/10"
 							>
-								<Card.Header className="flex flex-col items-center gap-0 p-6 pb-0">
-									<div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border border-accent/20 bg-accent/5 text-accent transition-colors duration-300 group-hover:border-accent/40 group-hover:bg-accent/10 dark:border-stone-600 dark:bg-stone-800/80 dark:group-hover:border-accent/30 dark:group-hover:bg-accent/10">
-										<Icon className="h-8 w-8" aria-hidden />
+								<span
+									className="pointer-events-none absolute top-4 right-4 font-bold font-display text-4xl text-accent/10 transition-colors duration-300 group-hover:text-accent/20"
+									aria-hidden
+								>
+									{number}
+								</span>
+								<Card.Header className="relative flex flex-col items-start gap-0 p-6 pb-0">
+									<div className="flex size-14 items-center justify-center rounded-xl border border-accent/20 bg-accent/5 text-accent transition-colors duration-300 group-hover:border-accent/40 group-hover:bg-accent/10 dark:border-stone-600 dark:bg-stone-800/80">
+										<Icon className="size-7" aria-hidden />
 									</div>
-									<Card.Title className="mt-5 font-display font-semibold text-gray-900 text-lg dark:text-white">
+									<Card.Title className="mt-4 font-display font-semibold text-gray-900 text-lg dark:text-white">
 										{title}
 									</Card.Title>
 								</Card.Header>

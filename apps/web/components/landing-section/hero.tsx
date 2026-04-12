@@ -9,7 +9,7 @@ import { ButtonLink } from '@/components/button-link';
 
 export function Hero() {
 	return (
-		<div id="home" className="relative min-h-screen pt-32 font-sans lg:pt-40">
+		<div id="home" className="relative flex min-h-dvh flex-col pt-32 font-sans lg:pt-40">
 			<div className="absolute inset-0 z-0">
 				<Image
 					src={heroImage}
@@ -22,7 +22,7 @@ export function Hero() {
 				<div className="absolute inset-0 bg-accent/10" aria-hidden />
 			</div>
 
-			<div className="relative z-10 flex min-h-[calc(100vh-8rem)] items-center justify-center px-6 pb-20">
+			<div className="relative z-10 flex flex-1 items-center justify-center px-6 pb-20">
 				<div className="relative max-w-4xl text-center">
 					<motion.div
 						initial={{ opacity: 0, y: 20 }}
