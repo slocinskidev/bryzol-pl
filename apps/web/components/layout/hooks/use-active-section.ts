@@ -8,9 +8,6 @@ export function useActiveSection() {
 		if (pathname === '/') {
 			return 'home';
 		}
-		if (pathname.startsWith('/o-nas')) {
-			return 'home';
-		}
 		if (pathname.startsWith('/oferta/catering')) {
 			return 'oferta-catering';
 		}

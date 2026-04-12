@@ -1,47 +1,52 @@
-[
-  {
-    "day": "Poniedziałek",
-    "description": null,
-    "soup": "Gulaszowa.",
-    "set1": "Łazanki (kapusta, pieczarki, kiełbasa).",
-    "set2": "Łazanki z warzywami."
-  },
-  {
-    "day": "Wtorek",
-    "description": null,
-    "soup": "Serowa z grzankami.",
-    "set1": "Schab zapiekany w sosie pomidorowym, ziemniaki, surówka.",
-    "set2": "Cukinia zapiekana w sosie pomidorowym, ziemniaki, surówka."
-  },
-  {
-    "day": "Środa",
-    "description": null,
-    "soup": "Barszcz zabielany z ziemniakami.",
-    "set1": "Klopsiki w sosie ogórkowym, kasza, surówka.",
-    "set2": "Boczniaki duszone, kasza, surówka."
-  },
-  {
-    "day": "Czwartek",
-    "description": null,
-    "soup": "Kapuśniak.",
-    "set1": "Roladka wieprzowa, ziemniaki, surówka.",
-    "set2": "Roladka z bakłażana z warzywami i serem, ziemniaki, surówka."
-  },
-  {
-    "day": "Piątek",
-    "description": null,
-    "soup": "Dyniowa.",
-    "set1": "Pierogi z mięsem.",
-    "set2": "Pierogi ruskie."
-  },
-  {
-    "day": "Sobota",
-    "description": null,
-    "soup": "Rybna.",
-    "set1": "Bitki wieprzowe, kopytka, surówka."
-  },
-  {
-    "day": "Niedziela",
-    "description": "Nieczynne."
-  }
-]
+{
+  "weekStart": "2026-04-13",
+  "weekEnd": "2026-04-18",
+  "dinners": [
+    {
+      "day": "Poniedziałek",
+      "date": "2026-04-13",
+      "soup": "Gulaszowa.",
+      "set1": "Łazanki (kapusta, pieczarki, kiełbasa).",
+      "set2": "Łazanki z warzywami."
+    },
+    {
+      "day": "Wtorek",
+      "date": "2026-04-14",
+      "soup": "Serowa z grzankami.",
+      "set1": "Schab zapiekany w sosie pomidorowym, ziemniaki, surówka.",
+      "set2": "Cukinia zapiekana w sosie pomidorowym, ziemniaki, surówka."
+    },
+    {
+      "day": "Środa",
+      "date": "2026-04-15",
+      "soup": "Barszcz zabielany z ziemniakami.",
+      "set1": "Klopsiki w sosie ogórkowym, kasza, surówka.",
+      "set2": "Boczniaki duszone, kasza, surówka."
+    },
+    {
+      "day": "Czwartek",
+      "date": "2026-04-16",
+      "soup": "Kapuśniak.",
+      "set1": "Roladka wieprzowa, ziemniaki, surówka.",
+      "set2": "Roladka z bakłażana z warzywami i serem, ziemniaki, surówka."
+    },
+    {
+      "day": "Piątek",
+      "date": "2026-04-17",
+      "soup": "Dyniowa.",
+      "set1": "Pierogi z mięsem.",
+      "set2": "Pierogi ruskie."
+    },
+    {
+      "day": "Sobota",
+      "date": "2026-04-18",
+      "soup": "Rybna.",
+      "set1": "Bitki wieprzowe, kopytka, surówka."
+    },
+    {
+      "day": "Niedziela",
+      "date": "2026-04-19",
+      "description": "Nieczynne."
+    }
+  ]
+}

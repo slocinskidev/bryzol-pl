@@ -1,141 +1,275 @@
+'use client';
+
+import { Card } from '@heroui/react/card';
 import { Chip } from '@heroui/react/chip';
 import {
-	ClipboardList,
+	Calendar,
 	Clock,
 	Facebook,
 	Mail,
 	MapPin,
 	Phone,
+	Soup,
 	Truck,
+	UtensilsCrossed,
 	Wallet,
 } from 'lucide-react';
-import type { ReactNode } from 'react';
+import { motion } from 'motion/react';
 import { ButtonAnchor } from '@/components/button-link';
 import { contact } from '@/lib/contact';
-import type { DomoweObiadyDinner } from '@/lib/domowe-obiady-dinners';
+import type {
+	DomoweObiadyDinner,
+	DomoweObiadyMenu,
+} from '@/lib/domowe-obiady-dinners';
 
-function SoupRow({ soup }: { soup: string }) {
+function formatDateShort(dateStr: string): string {
+	const date = new Date(dateStr);
+	return date.toLocaleDateString('pl-PL', {
+		day: 'numeric',
+		month: 'short',
+	});
+}
+
+function formatDateRange(start: string, end: string): string {
+	const s = new Date(start);
+	const e = new Date(end);
+	const sDay = s.toLocaleDateString('pl-PL', { day: 'numeric' });
+	const eDay = e.toLocaleDateString('pl-PL', {
+		day: 'numeric',
+		month: 'long',
+		year: 'numeric',
+	});
+	return `${sDay}–${eDay}`;
+}
+
+function isToday(dateStr: string): boolean {
+	const today = new Date();
+	const date = new Date(dateStr);
 	return (
-		<div>
-			<span className="font-medium text-foreground/90">Zupa:</span> {soup}
-		</div>
+		today.getFullYear() === date.getFullYear() &&
+		today.getMonth() === date.getMonth() &&
+		today.getDate() === date.getDate()
 	);
 }
 
-function LabeledRow({ label, value }: { label: string; value: string }) {
-	return (
-		<div>
-			<span className="font-medium text-foreground/90">{label}:</span> {value}
-		</div>
-	);
-}
-
-function StepCard({
-	icon,
-	step,
-	title,
-	description,
+function DinnerCard({
+	dinner,
+	index,
 }: {
-	icon: ReactNode;
-	step: number;
-	title: string;
-	description: string;
+	dinner: DomoweObiadyDinner;
+	index: number;
 }) {
-	return (
-		<div className="flex items-start gap-3 rounded-lg border border-border/70 bg-background/70 px-3 py-3">
-			<div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-accent/10 text-accent">
-				{icon}
-			</div>
-			<div>
-				<p className="text-foreground/60 text-xs uppercase tracking-wide">
-					Krok {step}
-				</p>
-				<p className="mt-0.5 font-semibold text-foreground text-sm">{title}</p>
-				<p className="mt-0.5 text-muted text-xs">{description}</p>
-			</div>
-		</div>
-	);
-}
+	const isClosed = dinner.description != null;
+	const today = isToday(dinner.date);
 
-function InfoCard({
-	icon,
-	title,
-	description,
-}: {
-	icon: ReactNode;
-	title: string;
-	description: string;
-}) {
 	return (
-		<div className="flex items-start gap-3 rounded-lg border border-border/70 bg-background/70 px-3 py-3">
-			<div className="mt-0.5 shrink-0 text-accent">{icon}</div>
-			<div>
-				<p className="font-medium text-foreground text-sm">{title}</p>
-				<p className="mt-0.5 text-muted text-xs">{description}</p>
-			</div>
-		</div>
-	);
-}
-
-export function DomoweObiadyDinners({
-	dinners,
-}: {
-	dinners: readonly DomoweObiadyDinner[];
-}) {
-	return (
-		<div>
-			{/* 3-step flow */}
-			<section
-				className="rounded-xl border border-border/70 bg-default/30 p-4 md:p-5"
-				aria-label="Jak zamówić"
+		<motion.div
+			initial={{ opacity: 0, y: 20 }}
+			whileInView={{ opacity: 1, y: 0 }}
+			transition={{ duration: 0.45, delay: index * 0.06 }}
+			viewport={{ once: true }}
+		>
+			<Card
+				className={`group relative overflow-hidden border transition-all duration-200 ${
+					today
+						? 'border-accent bg-accent/5 shadow-md ring-1 ring-accent/20 dark:bg-accent/10'
+						: isClosed
+							? 'border-border/30 bg-surface/20 opacity-50'
+							: 'border-border/50 bg-surface/60 hover:border-accent/30 hover:shadow-sm dark:bg-surface-secondary/40'
+				}`}
 			>
-				<p className="mb-3 font-medium text-foreground">Jak zamówić</p>
-				<div className="grid gap-2 sm:grid-cols-3">
-					<StepCard
-						icon={<ClipboardList className="h-5 w-5" />}
-						step={1}
-						title="Wybierz zestaw dnia"
-						description="Zupa + drugie danie — codziennie inne menu."
-					/>
-					<StepCard
-						icon={<Clock className="h-5 w-5" />}
-						step={2}
-						title="Zamów do 9:00"
-						description="Zamówienia przyjmujemy do godziny 9:00."
-					/>
-					<StepCard
-						icon={<Wallet className="h-5 w-5" />}
-						step={3}
-						title="33,00 zł za zestaw"
-						description="Zupa i drugie danie w cenie."
-					/>
+				{today && (
+					<div className="absolute top-0 right-0 left-0 h-0.5 bg-accent" />
+				)}
+
+				<Card.Content className="p-0">
+					{/* Day header */}
+					<div className="flex items-baseline justify-between gap-3 px-5 pt-5 pb-3">
+						<div className="flex items-center gap-2.5">
+							<h3 className="font-display font-semibold text-foreground text-xl tracking-tight">
+								{dinner.day}
+							</h3>
+							{today && (
+								<Chip size="sm" color="accent" variant="soft">
+									Dzisiaj
+								</Chip>
+							)}
+							{isClosed && (
+								<Chip size="sm" color="danger" variant="soft">
+									Nieczynne
+								</Chip>
+							)}
+						</div>
+						<time className="text-muted text-sm tabular-nums">
+							{formatDateShort(dinner.date)}
+						</time>
+					</div>
+
+					{/* Menu items */}
+					{!isClosed && (
+						<div className="space-y-0 border-border/30 border-t px-5 pt-3 pb-5">
+							{dinner.soup && (
+								<div className="flex gap-3 py-2">
+									<Soup className="mt-0.5 size-4 shrink-0 text-accent/70" />
+									<div className="min-w-0">
+										<p className="font-medium text-[11px] text-accent uppercase tracking-widest">
+											Zupa
+										</p>
+										<p className="text-foreground leading-snug">
+											{dinner.soup}
+										</p>
+									</div>
+								</div>
+							)}
+							{dinner.set1 && (
+								<div className="flex gap-3 border-border/20 border-t py-2">
+									<UtensilsCrossed className="mt-0.5 size-4 shrink-0 text-accent/70" />
+									<div className="min-w-0">
+										<p className="font-medium text-[11px] text-accent uppercase tracking-widest">
+											Zestaw 1
+										</p>
+										<p className="text-foreground leading-snug">
+											{dinner.set1}
+										</p>
+									</div>
+								</div>
+							)}
+							{dinner.set2 && (
+								<div className="flex gap-3 border-border/20 border-t py-2">
+									<UtensilsCrossed className="mt-0.5 size-4 shrink-0 text-muted/50" />
+									<div className="min-w-0">
+										<p className="font-medium text-[11px] text-muted uppercase tracking-widest">
+											Zestaw 2
+										</p>
+										<p className="text-muted leading-snug">{dinner.set2}</p>
+									</div>
+								</div>
+							)}
+						</div>
+					)}
+				</Card.Content>
+			</Card>
+		</motion.div>
+	);
+}
+
+export function DomoweObiadyDinners({ menu }: { menu: DomoweObiadyMenu }) {
+	return (
+		<div className="space-y-10">
+			{/* Week banner — editorial style */}
+			<motion.div
+				initial={{ opacity: 0, y: 16 }}
+				animate={{ opacity: 1, y: 0 }}
+				transition={{ duration: 0.6 }}
+				className="text-center"
+			>
+				<div className="inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent/5 px-4 py-1.5 text-accent">
+					<Calendar className="size-4" />
+					<span className="font-medium text-sm uppercase tracking-wide">
+						Menu na tydzień
+					</span>
+				</div>
+				<p className="mt-3 font-bold font-display text-3xl text-foreground tracking-tight md:text-4xl">
+					{formatDateRange(menu.weekStart, menu.weekEnd)}
+				</p>
+				<div
+					className="mx-auto mt-3 h-0.5 w-12 rounded-full bg-accent"
+					aria-hidden
+				/>
+			</motion.div>
+
+			{/* Weekly menu cards — the star of the page */}
+			<section aria-label="Menu tygodniowe">
+				<div className="grid gap-4 sm:grid-cols-2">
+					{menu.dinners.map((dinner, index) => (
+						<DinnerCard key={dinner.date} dinner={dinner} index={index} />
+					))}
 				</div>
 			</section>
 
-			{/* Logistics & contact */}
-			<section
-				className="mt-3 rounded-xl border border-border/70 bg-default/30 p-4 md:p-5"
-				aria-label="Odbiór i kontakt"
+			{/* Ordering info — compact supporting strip */}
+			<motion.section
+				initial={{ opacity: 0, y: 16 }}
+				whileInView={{ opacity: 1, y: 0 }}
+				transition={{ duration: 0.5 }}
+				viewport={{ once: true }}
+				aria-label="Jak zamówić"
+				className="rounded-2xl border border-border/50 bg-surface/50 p-6 dark:bg-surface-secondary/30"
 			>
-				<p className="mb-3 font-medium text-foreground">Odbiór i kontakt</p>
-				<div className="grid gap-2 sm:grid-cols-2">
-					<InfoCard
-						icon={<MapPin className="h-5 w-5" />}
-						title={`Odbiór osobisty — ${contact.address}`}
-						description="Zamówienia do odbioru od godziny 13:00."
-					/>
-					<InfoCard
-						icon={<Truck className="h-5 w-5" />}
-						title="Dowóz na terenie Żor — DARMOWY"
-						description="Dla innych miejscowości koszt ustalamy indywidualnie."
-					/>
+				<h3 className="mb-5 font-display font-semibold text-foreground text-lg">
+					Jak zamówić
+				</h3>
+				<div className="grid gap-x-8 gap-y-4 sm:grid-cols-3">
+					<div className="flex items-start gap-3">
+						<div className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-accent/10 text-accent">
+							<UtensilsCrossed className="size-4" />
+						</div>
+						<div>
+							<p className="font-medium text-foreground text-sm">
+								Wybierz zestaw dnia
+							</p>
+							<p className="text-muted text-xs">
+								Zupa + drugie danie, codziennie inne menu.
+							</p>
+						</div>
+					</div>
+					<div className="flex items-start gap-3">
+						<div className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-accent/10 text-accent">
+							<Clock className="size-4" />
+						</div>
+						<div>
+							<p className="font-medium text-foreground text-sm">
+								Zamów do 9:00
+							</p>
+							<p className="text-muted text-xs">
+								Zamówienia przyjmujemy do godziny 9:00.
+							</p>
+						</div>
+					</div>
+					<div className="flex items-start gap-3">
+						<div className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-accent/10 text-accent">
+							<Wallet className="size-4" />
+						</div>
+						<div>
+							<p className="font-medium text-foreground text-sm">
+								33,00 zł za zestaw
+							</p>
+							<p className="text-muted text-xs">Zupa i drugie danie w cenie.</p>
+						</div>
+					</div>
 				</div>
-				<div className="mt-3 flex flex-wrap gap-2">
+
+				<hr className="my-5 border-border/40" />
+
+				<div className="grid gap-4 sm:grid-cols-2">
+					<div className="flex items-start gap-3">
+						<MapPin className="mt-0.5 size-4 shrink-0 text-accent" />
+						<div>
+							<p className="font-medium text-foreground text-sm">
+								Odbiór osobisty — {contact.address}
+							</p>
+							<p className="text-muted text-xs">Do odbioru od godziny 13:00.</p>
+						</div>
+					</div>
+					<div className="flex items-start gap-3">
+						<Truck className="mt-0.5 size-4 shrink-0 text-accent" />
+						<div>
+							<p className="font-medium text-foreground text-sm">
+								Dowóz na terenie Żor — darmowy
+							</p>
+							<p className="text-muted text-xs">
+								Dla innych miejscowości koszt ustalamy indywidualnie.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div className="mt-5 flex flex-wrap gap-2">
 					<ButtonAnchor
 						href={`tel:${contact.phone.replace(/\s/g, '')}`}
 						size="sm"
 					>
-						<Phone className="mr-1.5 h-4 w-4" />
+						<Phone className="mr-1.5 size-4" />
 						{contact.phone}
 					</ButtonAnchor>
 					<ButtonAnchor
@@ -143,7 +277,7 @@ export function DomoweObiadyDinners({
 						size="sm"
 						variant="secondary"
 					>
-						<Mail className="mr-1.5 h-4 w-4" />
+						<Mail className="mr-1.5 size-4" />
 						{contact.email}
 					</ButtonAnchor>
 					<ButtonAnchor
@@ -153,67 +287,11 @@ export function DomoweObiadyDinners({
 						target="_blank"
 						rel="noreferrer noopener"
 					>
-						<Facebook className="mr-1.5 h-4 w-4" />
+						<Facebook className="mr-1.5 size-4" />
 						Facebook
 					</ButtonAnchor>
 				</div>
-			</section>
-
-			{/* Weekly menu */}
-			<ul
-				className="mt-6 space-y-0 md:mt-7"
-				aria-label="Pozycje: Menu tygodniowe"
-			>
-				{dinners.map((dinner) => {
-					const isClosed = dinner.description != null;
-					const hasSoup = dinner.soup != null;
-					const hasSet1 = dinner.set1 != null;
-					const hasSet2 = dinner.set2 != null;
-
-					return (
-						<li
-							key={dinner.day}
-							className="-mx-2 flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1 rounded-md border-border/50 border-b px-2 py-3.5 last:border-0 hover:bg-default/25 motion-safe:transition-colors sm:py-3"
-						>
-							<div className="min-w-0 flex-1">
-								<div className="flex flex-wrap items-center gap-2">
-									<div className="font-medium text-foreground">
-										{dinner.day}
-									</div>
-									{isClosed ? (
-										<Chip size="sm" color="danger" variant="soft">
-											Nieczynne
-										</Chip>
-									) : null}
-								</div>
-								<div className="mt-1 text-muted text-sm leading-relaxed md:text-base">
-									{isClosed ? (
-										<div>{dinner.description}</div>
-									) : (
-										<>
-											{hasSoup ? (
-												<SoupRow soup={dinner.soup as string} />
-											) : null}
-											{hasSet1 ? (
-												<LabeledRow
-													label="Zestaw 1"
-													value={dinner.set1 as string}
-												/>
-											) : null}
-											{hasSet2 ? (
-												<LabeledRow
-													label="Zestaw 2"
-													value={dinner.set2 as string}
-												/>
-											) : null}
-										</>
-									)}
-								</div>
-							</div>
-						</li>
-					);
-				})}
-			</ul>
+			</motion.section>
 		</div>
 	);
 }
