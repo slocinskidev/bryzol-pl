@@ -9,6 +9,7 @@ import { useRouter } from 'next/navigation';
 import { useRef, useState } from 'react';
 import logo from '@/assets/logo-simple.png';
 import { ButtonLink } from '@/components/button-link';
+import { useBanner } from './banner-context';
 import { type NavigationItem, navigationItems } from './constants';
 import { useActiveItemRect } from './hooks/use-active-item-rect';
 import { useActiveSection } from './hooks/use-active-section';
@@ -18,6 +19,7 @@ export function Navigation() {
 	const [mobileNavOpen, setMobileNavOpen] = useState(false);
 	const navRefs = useRef<{ [key: string]: HTMLButtonElement | null }>({});
 	const router = useRouter();
+	const { visible: bannerVisible } = useBanner();
 
 	const activeSection = useActiveSection();
 	const activeItemRect = useActiveItemRect(activeSection, navRefs);
@@ -31,7 +33,10 @@ export function Navigation() {
 			initial={{ y: -100 }}
 			animate={{ y: 0 }}
 			transition={{ duration: 0.6 }}
-			className="fixed top-6 right-6 left-6 z-50"
+			className={cn(
+				'fixed right-6 left-6 z-50 transition-[top] duration-300',
+				bannerVisible ? 'top-16 sm:top-18' : 'top-6',
+			)}
 			aria-label="Main navigation"
 		>
 			<div className="mx-auto max-w-7xl">

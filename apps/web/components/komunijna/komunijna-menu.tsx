@@ -15,7 +15,7 @@ import { motion } from 'motion/react';
 import type { ElementType } from 'react';
 import { ButtonAnchor } from '@/components/button-link';
 import { contact } from '@/lib/contact';
-import type { OfferSection } from '@/lib/offer';
+import type { OfferItem, OfferSection } from '@/lib/offer';
 
 const sectionMeta: Record<
 	string,
@@ -71,26 +71,68 @@ function PricingCard({
 	return (
 		<button type="button" onClick={scrollTo} className="text-left">
 			<Card
-				className={`cursor-pointer border p-0 text-center transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md ${
+				className={`h-full cursor-pointer border p-0 text-center transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md ${
 					featured
 						? 'border-accent/40 bg-accent/5 shadow-sm hover:border-accent/60 dark:bg-accent/10'
 						: 'border-border/50 bg-surface/60 hover:border-accent/30 dark:bg-surface-secondary/40'
 				}`}
 			>
-				<Card.Content className="flex flex-col items-center gap-2 px-4 py-5">
+				<Card.Content className="flex h-full flex-col items-center gap-2 px-3 py-4 sm:px-4 sm:py-5">
 					<div
-						className={`flex size-10 items-center justify-center rounded-lg ${featured ? 'bg-accent text-accent-foreground' : 'bg-accent/10 text-accent'}`}
+						className={`flex size-9 items-center justify-center rounded-lg sm:size-10 ${featured ? 'bg-accent text-accent-foreground' : 'bg-accent/10 text-accent'}`}
 					>
-						<Icon className="size-5" />
+						<Icon className="size-4 sm:size-5" />
 					</div>
-					<p className="font-medium text-foreground text-sm">{title}</p>
-					<p className="font-bold font-display text-2xl text-foreground">
+					<p className="font-medium text-foreground text-xs sm:text-sm">
+						{title}
+					</p>
+					<p className="font-bold font-display text-foreground text-xl sm:text-2xl">
 						{price}
 					</p>
-					{note && <p className="text-muted text-xs">{note}</p>}
+					{note && <p className="text-muted text-[11px] sm:text-xs">{note}</p>}
 				</Card.Content>
 			</Card>
 		</button>
+	);
+}
+
+function isShortDescription(description: string): boolean {
+	return !description.includes(',') && description.length <= 25;
+}
+
+function MenuItemRow({ item }: { item: OfferItem }) {
+	const hasPrice = item.price != null;
+	const priceText = hasPrice
+		? `${item.price} zł${item.unit ? `/${item.unit}` : ''}`
+		: null;
+	const description = item.description ?? '';
+	const showDescriptionInline =
+		!hasPrice && description && isShortDescription(description);
+	const showDescriptionBelow =
+		description && (hasPrice || !isShortDescription(description));
+
+	return (
+		<li className="rounded-md px-2 py-1.5 text-sm hover:bg-default/20 motion-safe:transition-colors">
+			<div className="flex items-baseline justify-between gap-3">
+				<span className="min-w-0 flex-1 break-words text-foreground">
+					{item.name}
+				</span>
+				{priceText ? (
+					<span className="shrink-0 text-muted text-xs tabular-nums">
+						{priceText}
+					</span>
+				) : showDescriptionInline ? (
+					<span className="shrink-0 text-muted text-xs tabular-nums">
+						{description}
+					</span>
+				) : null}
+			</div>
+			{showDescriptionBelow ? (
+				<p className="mt-0.5 text-muted text-xs leading-relaxed">
+					{description}
+				</p>
+			) : null}
+		</li>
 	);
 }
 
@@ -120,7 +162,7 @@ function MenuSection({
 				className="scroll-mt-28 rounded-xl border border-border/50 bg-surface/40 dark:bg-surface-secondary/20"
 			>
 				{/* Section header */}
-				<div className="flex items-center gap-3 border-border/30 border-b px-5 py-4">
+				<div className="flex flex-wrap items-center gap-3 border-border/30 border-b px-4 py-4 sm:px-5">
 					<div
 						className={`flex size-9 shrink-0 items-center justify-center rounded-lg ${meta.iconBg}`}
 					>
@@ -135,17 +177,22 @@ function MenuSection({
 						)}
 					</div>
 					{section.meta?.priceNote && (
-						<Chip size="sm" color="accent" variant="soft" className="shrink-0">
+						<Chip
+							size="sm"
+							color="accent"
+							variant="soft"
+							className="order-last w-full whitespace-normal text-center sm:order-none sm:w-auto sm:shrink-0"
+						>
 							{section.meta.priceNote}
 						</Chip>
 					)}
 				</div>
 
 				{/* Categories & items */}
-				<div className="p-5">
+				<div className="p-4 sm:p-5">
 					{section.categories.map((category) => (
 						<div key={category.id} className="mb-4 last:mb-0">
-							<div className="mb-2 flex items-baseline justify-between gap-2">
+							<div className="mb-2 flex flex-wrap items-baseline justify-between gap-x-2 gap-y-0.5">
 								<h4 className="font-medium text-foreground text-sm uppercase tracking-wide">
 									{category.title}
 								</h4>
@@ -157,17 +204,7 @@ function MenuSection({
 							</div>
 							<ul className="space-y-1">
 								{category.items.map((item) => (
-									<li
-										key={item.id}
-										className="flex items-baseline justify-between gap-3 rounded-md px-2 py-1.5 text-sm hover:bg-default/20 motion-safe:transition-colors"
-									>
-										<span className="text-foreground">{item.name}</span>
-										<span className="shrink-0 text-muted text-xs tabular-nums">
-											{item.price != null
-												? `${item.price} zł${item.unit ? `/${item.unit}` : ''}`
-												: (item.description ?? '')}
-										</span>
-									</li>
+									<MenuItemRow key={item.id} item={item} />
 								))}
 							</ul>
 						</div>
@@ -190,7 +227,7 @@ export function KomunijnaMenu({ sections }: { sections: OfferSection[] }) {
 				<p className="mb-4 text-center font-medium text-muted text-sm uppercase tracking-wide">
 					Ile to kosztuje
 				</p>
-				<div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
+				<div className="grid grid-cols-2 gap-2.5 sm:grid-cols-3 sm:gap-3 lg:grid-cols-5">
 					<PricingCard
 						title="Obiad"
 						price="123 zł"

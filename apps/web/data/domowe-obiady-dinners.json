@@ -1,51 +1,51 @@
 {
-	"weekStart": "2026-04-13",
-	"weekEnd": "2026-04-18",
+	"weekStart": "2026-04-20",
+	"weekEnd": "2026-04-25",
 	"dinners": [
 		{
 			"day": "Poniedziałek",
-			"date": "2026-04-13",
-			"soup": "Gulaszowa.",
-			"set1": "Karkówka duszona w sosie pieczarkowym, ziemniaki, surówka.",
-			"set2": "Pierogi z kapustą i grzybami."
+			"date": "2026-04-20",
+			"soup": "Drobiowo-warzywna.",
+			"set1": "Schab zapiekany w sosie pomidorowym, ziemniaki, surówka.",
+			"set2": "Cukinia zapiekana w sosie pomidorowym, ziemniaki, surówka."
 		},
 		{
 			"day": "Wtorek",
-			"date": "2026-04-14",
-			"soup": "Fasolowa.",
-			"set1": "Kotlet drobiowy, dufinki, surówka.",
-			"set2": "Jajko sadzone, ziemniaki, mizeria."
+			"date": "2026-04-21",
+			"soup": "Pomidorowa z ryżem.",
+			"set1": "Łazanki (kapusta, pieczarki, kiełbasa).",
+			"set2": "Łazanki z warzywami."
 		},
 		{
 			"day": "Środa",
-			"date": "2026-04-15",
-			"soup": "Krem z białych warzyw.",
-			"set1": "Kotlet mielony, ziemniaki, buraczki z chrzanem.",
-			"set2": "Boczniaki duszone, ziemniaki, buraczki z chrzanem."
+			"date": "2026-04-22",
+			"soup": "Botwinka.",
+			"set1": "Klopsiki w sosie ogórkowym, kasza, surówka.",
+			"set2": "Boczniaki duszone, kasza, surówka."
 		},
 		{
 			"day": "Czwartek",
-			"date": "2026-04-16",
-			"soup": "Cebulowa.",
-			"set1": "Naleśniki zapiekane z kurczakiem, surówka.",
-			"set2": "Naleśniki z warzywami, surówka."
+			"date": "2026-04-23",
+			"soup": "Kapuśniak z młodej kapusty.",
+			"set1": "Roladka wieprzowa, ziemniaki, surówka.",
+			"set2": "Roladka z bakłażana z warzywami i serem, ziemniaki, surówka."
 		},
 		{
 			"day": "Piątek",
-			"date": "2026-04-17",
-			"soup": "Żurek.",
-			"set1": "Potrawka z kurczaka, ryż, surówka.",
-			"set2": "Camembert, ziemniaki, surówka."
+			"date": "2026-04-24",
+			"soup": "Paprykowo-pomidorowa z grzankami.",
+			"set1": "Pierogi z mięsem.",
+			"set2": "Pierogi ruskie."
 		},
 		{
 			"day": "Sobota",
-			"date": "2026-04-18",
-			"soup": "Pieczarkowa.",
-			"set1": "Polędwiczki drobiowe w chrupiącej panierce, ziemniaki pieczone, surówka."
+			"date": "2026-04-25",
+			"soup": "Rybna.",
+			"set1": "Bitki wieprzowe, kopytka, surówka."
 		},
 		{
 			"day": "Niedziela",
-			"date": "2026-04-19",
+			"date": "2026-04-26",
 			"description": "Nieczynne."
 		}
 	]

@@ -3,6 +3,7 @@
 import { Toast } from '@heroui/react/toast';
 import { ThemeProvider as NextThemesProvider, useTheme } from 'next-themes';
 import { type ReactNode, useEffect } from 'react';
+import { BannerProvider } from './banner-context';
 
 function DataThemeSync({ children }: { children: ReactNode }) {
 	const { resolvedTheme } = useTheme();
@@ -27,7 +28,9 @@ export function Providers({ children }: { children: ReactNode }) {
 			disableTransitionOnChange
 			enableColorScheme
 		>
-			<DataThemeSync>{children}</DataThemeSync>
+			<DataThemeSync>
+				<BannerProvider>{children}</BannerProvider>
+			</DataThemeSync>
 			<Toast.Provider placement="top end" />
 		</NextThemesProvider>
 	);
