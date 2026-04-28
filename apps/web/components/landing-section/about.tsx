@@ -136,10 +136,10 @@ export function AboutSection() {
 								</div>
 								<Card.Content className="min-w-0 p-0">
 									<p className="font-semibold text-foreground">
-										Andrzej Słociński
+										Andrzej Słociński i Adam Gembalczyk
 									</p>
 									<p className="text-muted text-sm">
-										Założyciel Bryzol Catering
+										Założyciele Bryzol Catering
 									</p>
 								</Card.Content>
 							</Card>

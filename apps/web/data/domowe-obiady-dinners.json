@@ -1,52 +1,53 @@
 {
-	"weekStart": "2026-04-20",
-	"weekEnd": "2026-04-25",
-	"dinners": [
-		{
-			"day": "Poniedziałek",
-			"date": "2026-04-20",
-			"soup": "Drobiowo-warzywna.",
-			"set1": "Schab zapiekany w sosie pomidorowym, ziemniaki, surówka.",
-			"set2": "Cukinia zapiekana w sosie pomidorowym, ziemniaki, surówka."
-		},
-		{
-			"day": "Wtorek",
-			"date": "2026-04-21",
-			"soup": "Pomidorowa z ryżem.",
-			"set1": "Łazanki (kapusta, pieczarki, kiełbasa).",
-			"set2": "Łazanki z warzywami."
-		},
-		{
-			"day": "Środa",
-			"date": "2026-04-22",
-			"soup": "Botwinka.",
-			"set1": "Klopsiki w sosie ogórkowym, kasza, surówka.",
-			"set2": "Boczniaki duszone, kasza, surówka."
-		},
-		{
-			"day": "Czwartek",
-			"date": "2026-04-23",
-			"soup": "Kapuśniak z młodej kapusty.",
-			"set1": "Roladka wieprzowa, ziemniaki, surówka.",
-			"set2": "Roladka z bakłażana z warzywami i serem, ziemniaki, surówka."
-		},
-		{
-			"day": "Piątek",
-			"date": "2026-04-24",
-			"soup": "Paprykowo-pomidorowa z grzankami.",
-			"set1": "Pierogi z mięsem.",
-			"set2": "Pierogi ruskie."
-		},
-		{
-			"day": "Sobota",
-			"date": "2026-04-25",
-			"soup": "Rybna.",
-			"set1": "Bitki wieprzowe, kopytka, surówka."
-		},
-		{
-			"day": "Niedziela",
-			"date": "2026-04-26",
-			"description": "Nieczynne."
-		}
-	]
+  "weekStart": "2026-04-27",
+  "weekEnd": "2026-05-02",
+  "dinners": [
+    {
+      "day": "Poniedziałek",
+      "date": "2026-04-27",
+      "soup": "Szczawiowa.",
+      "set1": "Makaron z sosem bolońskim.",
+      "set2": "Makaron z sosem pomidorowym."
+    },
+    {
+      "day": "Wtorek",
+      "date": "2026-04-28",
+      "soup": "Barszcz biały z jajkiem.",
+      "set1": "Gołąbki z sosem pomidorowym, ziemniaki.",
+      "set2": "Gulasz warzywny, ziemniaki, surówka."
+    },
+    {
+      "day": "Środa",
+      "date": "2026-04-29",
+      "soup": "Pieczarkowa.",
+      "set1": "Medalion z kurczaka, kuskus, surówka.",
+      "set2": "Medalion warzywny, kuskus, surówka."
+    },
+    {
+      "day": "Czwartek",
+      "date": "2026-04-30",
+      "soup": "Krupnik.",
+      "set1": "Udko z kurczaka, ziemniaki, surówka.",
+      "set2": "Kalafior panierowany, ziemniaki, surówka."
+    },
+    {
+      "day": "Piątek",
+      "date": "2026-05-01",
+      "soup": "Ogórkowa.",
+      "set1": "Ryba, ryż czerwony, surówka.",
+      "set2": "Szaszłyk drobiowy, ryż czerwony, surówka."
+    },
+    {
+      "day": "Sobota",
+      "date": "2026-05-02",
+      "soup": "Krem brokułowy z migdałami.",
+      "set1": "Kotlet drobiowy, ziemniaki, surówka.",
+      "set2": "Camembert panierowany, ziemniaki, surówka."
+    },
+    {
+      "day": "Niedziela",
+      "date": "2026-05-03",
+      "description": "Nieczynne."
+    }
+  ]
 }
