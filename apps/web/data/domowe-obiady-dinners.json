@@ -1,52 +1,52 @@
 {
-  "weekStart": "2026-05-04",
-  "weekEnd": "2026-05-09",
+  "weekStart": "2026-05-11",
+  "weekEnd": "2026-05-16",
   "dinners": [
     {
       "day": "Poniedziałek",
-      "date": "2026-05-04",
-      "soup": "Zupa jarzynowa.",
-      "set1": "Pierś z kurczaka z sosem pieczarkowym, ryż, surówka.",
-      "set2": "Cukinia grillowana z sosem pieczarkowym, ryż, surówka."
+      "date": "2026-05-11",
+      "soup": "Zupa pomidorowa.",
+      "set1": "Pierś z kurczaka w panierce, ziemniaki, surówka.",
+      "set2": "Gulasz warzywny, ziemniaki, surówka."
     },
     {
       "day": "Wtorek",
-      "date": "2026-05-05",
-      "soup": "Zupa szczawiowa.",
-      "set1": "Schab w cieście, ziemniaki, surówka.",
-      "set2": "Tortilla z warzywami i serem, surówka."
+      "date": "2026-05-12",
+      "soup": "Zupa grzybowa.",
+      "set1": "Placki ziemniaczane, gulasz, surówka.",
+      "set2": "Placki ziemniaczane ze śmietaną, surówka."
     },
     {
       "day": "Środa",
-      "date": "2026-05-06",
-      "soup": "Zupa z cieciorki.",
-      "set1": "Makaron z kurczakiem i sosem szpinakowo serowym.",
-      "set2": "Makaron z sosem szpinakowo serowym."
+      "date": "2026-05-13",
+      "soup": "Rosół z makaronem.",
+      "set1": "Pieczeń, kluski, kapusta gotowana.",
+      "set2": "Kluski na parze z truskawkami z sosem, marchewka."
     },
     {
       "day": "Czwartek",
-      "date": "2026-05-07",
-      "soup": "Zupa włoska.",
-      "set1": "Wątróbka z cebulą, ziemniaki, surówka.",
-      "set2": "Pierogi z owocami."
+      "date": "2026-05-14",
+      "soup": "Zupa pieczarkowa.",
+      "set1": "Naleśnik z mięsem mielonym i warzywami zapieczony.",
+      "set2": "Naleśnik z warzywami zapieczony."
     },
     {
       "day": "Piątek",
-      "date": "2026-05-08",
-      "soup": "Zupa ogórkowa.",
-      "set1": "Pyzy z mięsem, surówka.",
-      "set2": "Pyzy z owocami, śmietana."
+      "date": "2026-05-15",
+      "soup": "Zupa z kalarepki.",
+      "set1": "Ryba z sosem cytrynowym, kuskus, surówka.",
+      "set2": "Ziemniaki gratin, surówka."
     },
     {
       "day": "Sobota",
-      "date": "2026-05-09",
+      "date": "2026-05-16",
       "soup": "Zupa czosnkowa.",
-      "set1": "Schab z pieczarkami, dufinki, bukiet warzyw.",
-      "set2": "Ser panierowany, dufinki, bukiet warzyw."
+      "set1": "Polędwiczka wieprzowa z sosem grzybowym, ziemniaki, surówka.",
+      "set2": "Pierogi ruskie, surówka."
     },
     {
       "day": "Niedziela",
-      "date": "2026-05-10",
+      "date": "2026-05-17",
       "description": "Nieczynne."
     }
   ]
