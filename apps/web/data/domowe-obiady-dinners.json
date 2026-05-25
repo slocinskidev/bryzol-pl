@@ -1,51 +1,51 @@
 {
-  "weekStart": "2026-05-18",
-  "weekEnd": "2026-05-23",
+  "weekStart": "2026-05-25",
+  "weekEnd": "2026-05-30",
   "dinners": [
     {
       "day": "Poniedziałek",
-      "date": "2026-05-18",
-      "soup": "Zupa pomidorowa.",
-      "set1": "Kotlet schabowy, ziemniaki, surówka.",
-      "set2": "Kotlet z cykani, ziemniaki, surówka."
+      "date": "2026-05-25",
+      "soup": "Zupa gulaszowa.",
+      "set1": "Schab zapiekany w sosie pomidorowym, ziemniaki, surówka.",
+      "set2": "Cukinia zapiekana w sosie pomidorowym, ziemniaki, surówka."
     },
     {
       "day": "Wtorek",
-      "date": "2026-05-19",
-      "soup": "Zupa fasolowa.",
-      "set1": "Filet z kurczaka zapiekany, dufinki, surówka.",
-      "set2": "Jajko sadzone, dufinki, surówka."
+      "date": "2026-05-26",
+      "soup": "Zupa koperkowa z lanym ciastem.",
+      "set1": "Łazanki (kapusta, pieczarki, kiełbasa).",
+      "set2": "Łazanki z warzywami."
     },
     {
       "day": "Środa",
-      "date": "2026-05-20",
-      "soup": "Zupa krem z białych warzyw.",
-      "set1": "Kotlet mielony, ziemniaki, buraczki z chrzanem.",
-      "set2": "Boczniaki duszone, ziemniaki, buraczki z chrzanem."
+      "date": "2026-05-27",
+      "soup": "Zupa botwinka.",
+      "set1": "Klopsiki w sosie ogórkowym, kasza, surówka.",
+      "set2": "Boczniaki duszone, kasza, surówka."
     },
     {
       "day": "Czwartek",
-      "date": "2026-05-21",
-      "soup": "Zupa kalafiorowa.",
-      "set1": "Naleśniki zapiekane z kurczakiem, surówka.",
-      "set2": "Naleśniki z warzywami, surówka."
+      "date": "2026-05-28",
+      "soup": "Zupa kapuśniak z kapusty włoskiej.",
+      "set1": "Roladka wieprzowa, ziemniaki, surówka.",
+      "set2": "Roladka z bakłażana z warzywami i serem, ziemniaki, surówka."
     },
     {
       "day": "Piątek",
-      "date": "2026-05-22",
-      "soup": "Zupa żurek.",
-      "set1": "Potrawka z kurczaka, ryż, surówka.",
-      "set2": "Camembert, ziemniaki, surówka."
+      "date": "2026-05-29",
+      "soup": "Zupa paprykowo-pomidorowa z grzankami.",
+      "set1": "Pierogi z mięsem.",
+      "set2": "Pierogi kapusta-grzyb."
     },
     {
       "day": "Sobota",
-      "date": "2026-05-23",
-      "soup": "Zupa pieczarkowa.",
-      "set1": "Polędwiczki drobiowe w chrupiącej panierce, ziemniaki pieczone, surówka."
+      "date": "2026-05-30",
+      "soup": "Zupa rybna.",
+      "set1": "Bitki wieprzowe, kopytka, surówka."
     },
     {
       "day": "Niedziela",
-      "date": "2026-05-24",
+      "date": "2026-05-31",
       "description": "Nieczynne."
     }
   ]
