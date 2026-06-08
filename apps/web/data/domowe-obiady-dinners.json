@@ -1,52 +1,52 @@
 {
-  "weekStart": "2026-06-01",
-  "weekEnd": "2026-06-06",
+  "weekStart": "2026-06-08",
+  "weekEnd": "2026-06-13",
   "dinners": [
     {
       "day": "Poniedziałek",
-      "date": "2026-06-01",
-      "soup": "Zupa szczawiowa.",
-      "set1": "Makaron z sosem bolońskim.",
-      "set2": "Makaron z sosem pomidorowym."
+      "date": "2026-06-08",
+      "soup": "Zupa jarzynowa.",
+      "set1": "Pierś z kurczaka z sosem pieczarkowym, ryż, surówka.",
+      "set2": "Cukinia grillowana z sosem pieczarkowym, ryż, surówka."
     },
     {
       "day": "Wtorek",
-      "date": "2026-06-02",
-      "soup": "Barszcz biały z jajkiem.",
-      "set1": "Gołąbki z sosem pomidorowym, ziemniaki.",
-      "set2": "Gulasz warzywny, ziemniaki, surówka."
+      "date": "2026-06-09",
+      "soup": "Zupa kalafiorowa.",
+      "set1": "Schab w cieście, ziemniaki, surówka.",
+      "set2": "Tortilla z warzywami i serem, surówka."
     },
     {
       "day": "Środa",
-      "date": "2026-06-03",
-      "soup": "Zupa pieczarkowa.",
-      "set1": "Medalion z kurczaka, kuskus, surówka.",
-      "set2": "Medalion warzywny, kuskus, surówka."
+      "date": "2026-06-10",
+      "soup": "Zupa z cieciorki.",
+      "set1": "Makaron z kurczakiem i sosem szpinakowo-serowym.",
+      "set2": "Makaron z sosem szpinakowo-serowym."
     },
     {
       "day": "Czwartek",
-      "date": "2026-06-04",
-      "soup": "Krupnik.",
-      "set1": "Udko z kurczaka, ziemniaki, surówka.",
-      "set2": "Kalafior panierowany, ziemniaki, surówka."
+      "date": "2026-06-11",
+      "soup": "Zupa włoska.",
+      "set1": "Wątróbka z cebulą, ziemniaki, surówka.",
+      "set2": "Pierogi z kapustą i grzybami."
     },
     {
       "day": "Piątek",
-      "date": "2026-06-05",
-      "soup": "Zupa ogórkowa.",
-      "set1": "Ryba, ryż czerwony, surówka.",
-      "set2": "Szaszłyk drobiowy, ryż czerwony, surówka."
+      "date": "2026-06-12",
+      "soup": "Zupa meksykańska.",
+      "set1": "Pyzy z mięsem, surówka.",
+      "set2": "Pyzy z owocami, śmietana."
     },
     {
       "day": "Sobota",
-      "date": "2026-06-06",
-      "soup": "Krem brokuł z migdałami.",
-      "set1": "Kotlet drobiowy, ziemniaki, surówka.",
-      "set2": "Camembert panierowany, ziemniaki, surówka."
+      "date": "2026-06-13",
+      "soup": "Zupa czosnkowa.",
+      "set1": "Schab z pieczarkami, dufinki, bukiet warzyw.",
+      "set2": "Ser panierowany, dufinki, bukiet warzyw."
     },
     {
       "day": "Niedziela",
-      "date": "2026-06-07",
+      "date": "2026-06-14",
       "description": "Nieczynne."
     }
   ]
