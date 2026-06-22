@@ -1,52 +1,51 @@
 {
-  "weekStart": "2026-06-15",
-  "weekEnd": "2026-06-20",
+  "weekStart": "2026-06-22",
+  "weekEnd": "2026-06-27",
   "dinners": [
     {
       "day": "Poniedziałek",
-      "date": "2026-06-15",
-      "soup": "Zupa pomidorowa.",
-      "set1": "Pierś z kurczaka w panierce, ziemniaki, surówka.",
-      "set2": "Gulasz warzywny, ziemniaki, surówka."
+      "date": "2026-06-22",
+      "soup": "Zupa koperkowa z lanym ciastem.",
+      "set1": "Potrawka z kurczaka, ryż, surówka.",
+      "set2": "Pierogi z kapustą i grzybami."
     },
     {
       "day": "Wtorek",
-      "date": "2026-06-16",
-      "soup": "Zupa grzybowa.",
-      "set1": "Placki ziemniaczane, gulasz, surówka.",
-      "set2": "Placki ziemniaczane ze śmietaną, surówka."
+      "date": "2026-06-23",
+      "soup": "Zupa fasolowa.",
+      "set1": "Żeberka wieprzowe z ciapkapustą.",
+      "set2": "Jajko sadzone, ziemniaki, mizeria."
     },
     {
       "day": "Środa",
-      "date": "2026-06-17",
-      "soup": "Rosół z makaronem.",
-      "set1": "Pieczeń, kluski, kapusta gotowana.",
-      "set2": "Kluski na parze z truskawkami i sosem, marchewka."
+      "date": "2026-06-24",
+      "soup": "Zupa krem z białych warzyw.",
+      "set1": "Kotlet mielony z sosem, ziemniaki, buraczki z chrzanem.",
+      "set2": "Boczniaki duszone, ziemniaki, buraczki z chrzanem."
     },
     {
       "day": "Czwartek",
-      "date": "2026-06-18",
-      "soup": "Zupa pieczarkowa.",
-      "set1": "Naleśnik z mięsem mielonym i warzywami zapiekany.",
-      "set2": "Naleśnik z warzywami zapiekany."
+      "date": "2026-06-25",
+      "soup": "Zupa cebulowa.",
+      "set1": "Naleśniki zapiekane z kurczakiem, surówka.",
+      "set2": "Naleśniki z warzywami, surówka."
     },
     {
       "day": "Piątek",
-      "date": "2026-06-19",
-      "soup": "Zupa z kalarepki.",
-      "set1": "Ryba z sosem cytrynowym, kuskus, surówka.",
-      "set2": "Ziemniaki gratin, surówka."
+      "date": "2026-06-26",
+      "soup": "Zupa żurek.",
+      "set1": "Ryba panierowana, ryż z warzywami, surówka.",
+      "set2": "Camembert, ryż z warzywami, surówka."
     },
     {
       "day": "Sobota",
-      "date": "2026-06-20",
-      "soup": "Zupa czosnkowa.",
-      "set1": "Polędwiczka wieprzowa z sosem grzybowym, ziemniaki, surówka.",
-      "set2": "Pierogi ruskie, surówka."
+      "date": "2026-06-27",
+      "soup": "Zupa pieczarkowa.",
+      "set1": "Polędwiczki drobiowe w chrupiącej panierce, ziemniaki pieczone, surówka."
     },
     {
       "day": "Niedziela",
-      "date": "2026-06-21",
+      "date": "2026-06-28",
       "description": "Nieczynne."
     }
   ]
